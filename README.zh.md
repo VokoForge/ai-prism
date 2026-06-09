@@ -1,0 +1,286 @@
+# 🔮 AI 棱镜
+
+[English](./README.md) | [简体中文](./README.zh.md)
+
+![Hero](assets/hero.svg)
+
+> **两个棱面，一面棱镜 — 从外部洞见与内部实践折射 AI 世界。**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Bilingual](https://img.shields.io/badge/lang-EN_ZH-brightgreen.svg)](#)
+[![External Lens](https://img.shields.io/badge/🔭_External_Lens-16+-6366f1.svg)](posts/external-lens/zh/)
+[![Yason & Roberts](https://img.shields.io/badge/🤖_Yason_&_Roberts-21_ch-ec4899.svg)](posts/yason-and-roberts/zh/)
+
+---
+
+## 🌈 什么是 AI 棱镜？
+
+AI 棱镜是一个双语（中英）AI 日刊，通过两个棱面折射 AI 世界的光：
+
+- 🔭 **外部视角 (External Lens)** — 每日一篇 AI 洞见：GitHub 开源项目深度解读、AI 技术架构剖析、AI 创业与痛点观察
+- 🤖 **内部实践 (Internal Practice)** — 拟人化叙事系列「Yason 和他的罗伯特们」：一个人类和他的 AI Agent 团队的真实故事
+
+---
+
+## 🔮 棱镜隐喻
+
+```mermaid
+graph LR
+    subgraph Input["🌐 AI 世界"]
+        A1["GitHub Trending"]
+        A2["Papers & ArXiv"]
+        A3["Startups & Products"]
+        A4["Real Projects & Pain"]
+    end
+
+    subgraph Prism["🔮 AI 棱镜"]
+        P["棱镜"]
+    end
+
+    subgraph Lens1["🔭 外部视角"]
+        B1["开源深度解读"]
+        B2["架构剖析"]
+        B3["周更热门"]
+    end
+
+    subgraph Lens2["🤖 内部实践"]
+        C1["Agent 编排"]
+        C2["成本与质量"]
+        C3["团队文化"]
+    end
+
+    Input --> P
+    P -->|"折射 #6366f1"| Lens1
+    P -->|"折射 #ec4899"| Lens2
+
+    style Input fill:#1a1035,stroke:#6366f1,color:#e0e7ff
+    style Prism fill:#2e1065,stroke:#818cf8,color:#e0e7ff
+    style Lens1 fill:#1e1044,stroke:#6366f1,color:#a5b4fc
+    style Lens2 fill:#2a0a2e,stroke:#ec4899,color:#f9a8d4
+```
+
+---
+
+## 📖 目录
+
+### 第一部分：🔭 外部视角
+
+> 每日 AI 业界洞见 — GitHub 开源项目深度解读、技术架构剖析、周更热门
+
+| Day | 主题 | 中文 | English |
+|-----|------|------|---------|
+| 01 | Agent 屠榜 GitHub & 向量检索新瓶颈 | [中文](posts/external-lens/zh/day-01.md) | [EN](posts/external-lens/en/day-01.md) |
+| 06 | Skills 生态 6 个值得 star 的项目 | [中文](posts/external-lens/zh/day-06.md) | [EN](posts/external-lens/en/day-06.md) |
+| 07 | MCP 协议生态 5 个生产案例 | [中文](posts/external-lens/zh/day-07.md) | [EN](posts/external-lens/en/day-07.md) |
+| 08 | 6 篇必读 Agent 论文 | [中文](posts/external-lens/zh/day-08.md) | [EN](posts/external-lens/en/day-08.md) |
+| 09 | 8 个 Agent 框架工程实践横评 | [中文](posts/external-lens/zh/day-09.md) | [EN](posts/external-lens/en/day-09.md) |
+| 10 | 2026.05.24 周更热门 AI 工具榜 | [中文](posts/external-lens/zh/day-10.md) | [EN](posts/external-lens/en/day-10.md) |
+| 11 | 自建一个 MCP Server | [中文](posts/external-lens/zh/day-11.md) | [EN](posts/external-lens/en/day-11.md) |
+| 12 | 写作 DNA 蒸馏 | [中文](posts/external-lens/zh/day-12.md) | [EN](posts/external-lens/en/day-12.md) |
+| 13 | 通用 Agent 框架 6 选 1 | [中文](posts/external-lens/zh/day-13.md) | [EN](posts/external-lens/en/day-13.md) |
+| 14 | 2026 H1 Agent 现状图 | [中文](posts/external-lens/zh/day-14.md) | [EN](posts/external-lens/en/day-14.md) |
+| 15 | 2026.05.31 周更热门 AI 仓库 | [中文](posts/external-lens/zh/day-15.md) | [EN](posts/external-lens/en/day-15.md) |
+| 16 | 向量检索的 Rust 革命 & Agent Skills 爆发临界点 | [中文](posts/external-lens/zh/day-16.md) | [EN](posts/external-lens/en/day-16.md) |
+
+---
+
+### 第二部分：🤖 Yason 和他的罗伯特们
+
+> 一个人类和他的 AI Agent 团队的真实故事 — 从零到 7×24 的 14 个月
+
+| Ch | 标题 | 中文 | English |
+|----|------|------|---------|
+| 01 | 罗伯特初现 — 一个 AI 管理者的诞生 | [中文](posts/yason-and-roberts/zh/ch01.md) | [EN](posts/yason-and-roberts/en/ch01.md) |
+| 02 | 团队分工 — 生产、运营、协作 | [中文](posts/yason-and-roberts/zh/ch02.md) | [EN](posts/yason-and-roberts/en/ch02.md) |
+| 03 | 沟通体系 — 从 CLI 到大模型 | [中文](posts/yason-and-roberts/zh/ch03.md) | [EN](posts/yason-and-roberts/en/ch03.md) |
+| 04 | 记忆系统 — 如何让 AI 记住一切 | [中文](posts/yason-and-roberts/zh/ch04.md) | [EN](posts/yason-and-roberts/en/ch04.md) |
+| 05 | 吵架的艺术 — 多模型辩论让输出更可靠 | [中文](posts/yason-and-roberts/zh/ch05.md) | [EN](posts/yason-and-roberts/en/ch05.md) |
+| 06 | 成本与质量的走钢丝 — 用路由经济学榨干每分钱 | [中文](posts/yason-and-roberts/zh/ch06.md) | [EN](posts/yason-and-roberts/en/ch06.md) |
+| 07 | 给罗伯特派活 — 任务拆解与追踪 | [中文](posts/yason-and-roberts/zh/ch07.md) | [EN](posts/yason-and-roberts/en/ch07.md) |
+| 08 | 谁审罗伯特？ — 质量审查与验收机制 | [中文](posts/yason-and-roberts/zh/ch08.md) | [EN](posts/yason-and-roberts/en/ch08.md) |
+| 09 | 不要让罗伯特乱跑 — 安全边界与权限控制 | [中文](posts/yason-and-roberts/zh/ch09.md) | [EN](posts/yason-and-roberts/en/ch09.md) |
+| 10 | 罗伯特翻车了怎么办 — 故障恢复与兜底 | [中文](posts/yason-and-roberts/zh/ch10.md) | [EN](posts/yason-and-roberts/en/ch10.md) |
+| 11 | 给罗伯特一把好工具 — 工具生态与 API 集成 | [中文](posts/yason-and-roberts/zh/ch11.md) | [EN](posts/yason-and-roberts/en/ch11.md) |
+| 12 | 罗伯特的大脑 — 知识库与记忆体系升级 | [中文](posts/yason-and-roberts/zh/ch12.md) | [EN](posts/yason-and-roberts/en/ch12.md) |
+| 13 | *(缺失)* | — | — |
+| 14 | 别烧冤枉钱 — 预算管理与成本控制 | [中文](posts/yason-and-roberts/zh/ch14.md) | [EN](posts/yason-and-roberts/en/ch14.md) |
+| 15 | 罗伯特的文化建设 — 团队规范与行为准则 | [中文](posts/yason-and-roberts/zh/ch15.md) | [EN](posts/yason-and-roberts/en/ch15.md) |
+| 16 | 看穿罗伯特 — 可观测性与性能监控 | [中文](posts/yason-and-roberts/zh/ch16.md) | [EN](posts/yason-and-roberts/en/ch16.md) |
+| 17 | 罗伯特的"复仇者联盟" — 多 Agent 协同作战 | [中文](posts/yason-and-roberts/zh/ch17.md) | [EN](posts/yason-and-roberts/en/ch17.md) |
+| 18 | 人往哪儿站 — 人机分工与创始人的自我管理 | [中文](posts/yason-and-roberts/zh/ch18.md) | [EN](posts/yason-and-roberts/en/ch18.md) |
+| 19 | 让罗伯特变聪明 — 反馈循环与持续改进 | [中文](posts/yason-and-roberts/zh/ch19.md) | [EN](posts/yason-and-roberts/en/ch19.md) |
+| 20 | 高手进阶 — Prompt 工程、上下文管理与缓存技巧 | [中文](posts/yason-and-roberts/zh/ch20.md) | [EN](posts/yason-and-roberts/en/ch20.md) |
+| 21 | 未来已来 — AI Agent 团队的下一阶段 | [中文](posts/yason-and-roberts/zh/ch21.md) | [EN](posts/yason-and-roberts/en/ch21.md) |
+
+---
+
+## 🎨 视觉风格
+
+**配色方案：**
+
+| 颜色 | Hex | 用途 |
+|------|-----|------|
+| 🔮 Indigo | `#6366f1` | 外部视角主色 |
+| 🤖 Pink | `#ec4899` | 内部实践主色 |
+| ✨ Amber | `#f59e0b` | 未来/高亮 |
+| 🌑 Dark | `#0f0b1a` | 背景 |
+| 🌙 Light | `#e0e7ff` | 文字 |
+
+**配图规范：**
+- 所有配图使用 **原创 SVG** — 矢量、可 git diff、GitHub 完美渲染
+- viewBox: `1200×600` 或 `1000×500`
+- 深色主题为主，浅色为辅
+- 文件命名：`day-NN-描述.svg` 或 `NN-描述.svg`
+
+---
+
+## 📊 一些数字
+
+| 指标 | 数值 |
+|------|------|
+| 运营时长 | 14 个月 |
+| 仓库 | 30+ (开源 + 闭源) |
+| 月均 PR | 380 |
+| 代码行数 | 30 万 |
+| 月成本 | ¥6,300 |
+| 常驻 Agent | 7 台 |
+| 应用 | 27+ |
+
+---
+
+## 📁 仓库结构
+
+```
+ai-prism/
+├── README.md                          # 英文版 README
+├── README.zh.md                       # 本文件 (中文)
+├── LICENSE                            # MIT
+├── CONTRIBUTING.md                    # 贡献指南 (英文)
+├── CONTRIBUTING.zh.md                 # 贡献指南 (中文)
+├── .github/
+│   └── workflows/
+│       └── lint.yml                   # CI: 脱敏 + SVG 校验
+├── assets/
+│   ├── hero.svg                       # 🔮 仓库主图
+│   ├── 01-*.svg ... 05-*.svg          # 第二部分配图
+│   └── day-06-*.svg ... day-15-*.svg  # 第一部分配图
+├── posts/
+│   ├── external-lens/                 # 🔭 外部视角
+│   │   ├── en/                        # 英文版
+│   │   │   ├── day-01.md
+│   │   │   └── day-06.md ~ day-16.md
+│   │   └── zh/                        # 中文版
+│   │       ├── day-01.md
+│   │       └── day-06.md ~ day-16.md
+│   └── yason-and-roberts/             # 🤖 内部实践
+│       ├── en/                        # 英文版
+│       │   └── ch01.md ~ ch21.md
+│       └── zh/                        # 中文版
+│           └── ch01.md ~ ch21.md
+├── references/
+│   ├── app-yaml/                      # App YAML schema 参考
+│   ├── feishu-card/                   # 飞书卡片模板
+│   ├── four-brain/                    # 四大脑架构参考
+│   ├── kg-schema/                     # 知识图谱 schema
+│   ├── templates/                     # 文章模板
+│   └── review-pipeline.md            # 审核流水线文档
+└── scripts/
+    ├── call_brain.py                  # 调用大脑 API
+    ├── pull_feishu_material.py        # 拉取飞书素材
+    ├── rex_daily_post.sh              # Rex 日更脚本
+    ├── rex_publish.sh                 # Rex 发布脚本
+    ├── rex_review.sh                  # Rex 审核脚本
+    ├── insights_review.sh             # External Lens 审核
+    ├── split_bilingual.py             # 双语拆分工具
+    └── validate_svg.py               # SVG 校验工具
+```
+
+---
+
+## 🛠 流水线
+
+```mermaid
+graph TD
+    subgraph Source["📥 素材来源"]
+        S1["GitHub Trending"]
+        S2["ArXiv Papers"]
+        S3["飞书 Wiki"]
+    end
+
+    subgraph Rex["🤖 Rex (主笔)"]
+        R1["搜索 & 抓取"]
+        R2["起草初稿"]
+        R3["5-checklist 自检"]
+        R4["7-checklist 脱敏"]
+    end
+
+    subgraph Review["🔍 审核"]
+        V1["OpenCode / Kimi 互审"]
+        V2["人类 20% 抽审"]
+    end
+
+    subgraph Publish["📤 发布"]
+        P1["GitHub Actions"]
+        P2["自动 PR & Merge"]
+    end
+
+    Source --> R1 --> R2 --> R3 --> R4 --> V1 --> V2 --> P1 --> P2
+
+    style Source fill:#1a1035,stroke:#6366f1,color:#e0e7ff
+    style Rex fill:#2e1065,stroke:#818cf8,color:#e0e7ff
+    style Review fill:#1e1044,stroke:#f59e0b,color:#fcd34d
+    style Publish fill:#0a2e1a,stroke:#22c55e,color:#86efac
+```
+
+---
+
+## ⚖️ 合规底线
+
+所有内容**必须**通过 7-checklist：
+
+- [ ] **不违法** — 不涉及盗版、隐私、违禁内容
+- [ ] **不引战** — 不涉及政治、敏感人物、宗教
+- [ ] **不泄露** — 闭源项目名 / 客户名 / API key 全部脱敏
+- [ ] **不夸大** — 项目评级必须有 GitHub 真实数据支撑
+- [ ] **不抄袭** — 引用必须注明，大段复制使用 `> blockquote` 格式
+- [ ] **不误导** — 评分公式公开，主观评价必须标注「我」
+- [ ] **不刷屏** — 每天最多 1 篇，周末不更新
+
+---
+
+## 🤝 贡献
+
+欢迎贡献！请阅读 [CONTRIBUTING.zh.md](CONTRIBUTING.zh.md) 了解详情。
+
+**可投稿：**
+- ✅ Agent 编排、调度、监控、成本控制等方法论
+- ✅ 真实踩坑、复盘、反思
+- ✅ 架构图、YAML schema、CI/CD 模板
+- ✅ 外部视角的 AI 项目深度解读
+
+**不投稿：**
+- ❌ 闭源产品代码
+- ❌ 付费 API 集成
+- ❌ 内部组织信息、姓名、邮箱、凭据
+- ❌ 任何可识别为"客户"或"用户"的数据
+
+---
+
+## 🙏 致谢
+
+- [OpenGithubs](https://github.com/OpenGithubs) — 排行数据源
+- [EvanLi](https://github.com/EvanLi) — Top 100 列表
+- [luo-junyu](https://github.com/luo-junyu) — Agent 论文分类
+- [piglei](https://github.com/piglei) — 写作风格范本
+- [Koalalive](https://github.com/Koalalive) / [wewrite](https://github.com/xtyseven8/wewrite) / [vibe-blog](https://github.com/datawhorechina/vibe-blog) — 写作 skill 范本
+
+---
+
+## 📜 License
+
+[MIT](LICENSE) · 2026 MindApex
+
+---
+
+> **"AI 不会替代人，但会替代不会用 AI 的人。"**
+> — MindApex Team, M14

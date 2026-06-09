@@ -1,126 +1,130 @@
-# Contributing · 投稿与共建 / Contributing Guide
+# Contributing Guide
 
-> 欢迎贡献一篇 / 修一个错 / 提一个 issue。
-> 我们的理念是：**方法论公开，闭源内容不混进来。**
->
+[English](./CONTRIBUTING.md) | [简体中文](./CONTRIBUTING.zh.md)
+
 > Welcome contributions! Our principle: **methodology is open, closed-source content stays out.**
 
 ---
 
-## 📋 范围 / Scope
+## 📋 Scope
 
-**✅ 可投稿 / Accepted：**
-- Agent 编排、调度、监控、成本控制等方法论
-- 真实踩坑、复盘、反思
-- 架构图、YAML schema、CI/CD 模板
-- 外部视角的 AI 项目深度解读
-- 翻译现有中文内容为英文
+**✅ Accepted：**
+- Agent orchestration, scheduling, monitoring, cost control methodologies
+- Real-world lessons learned, retrospectives, reflections
+- Architecture diagrams, YAML schemas, CI/CD templates
+- External Lens AI project deep dives
+- Translating existing Chinese content to English
 
-**❌ 不投稿 / Not Accepted：**
-- 闭源产品代码
-- 付费 API 集成
-- 内部组织信息、姓名、邮箱、凭据
-- 任何可识别为"客户"或"用户"的数据
+**❌ Not Accepted：**
+- Closed-source product code
+- Paid API integrations
+- Internal org info, names, emails, credentials
+- Any data identifiable as "customer" or "user"
 
 ---
 
-## 🔄 投稿流程 / Contribution Flow
+## 🔄 Contribution Flow
 
 ```mermaid
 graph LR
-    A[Idea / 想法] --> B[Fork + 创建分支]
-    B --> C[写文章 / Write post]
-    C --> D[配图: SVG / Add SVG]
-    D --> E[本地预览 / Preview]
-    E --> F{通过 checklist?}
-    F -- no --> G[修订 / Revise]
+    A[Idea] --> B[Fork + Create branch]
+    B --> C[Write post]
+    C --> D[Add SVG illustration]
+    D --> E[Local preview]
+    E --> F{Pass checklist?}
+    F -- no --> G[Revise]
     G --> E
-    F -- yes --> H[开 PR]
-    H --> I[CI 自动 lint]
-    I -- pass --> J[人类 review]
+    F -- yes --> H[Open PR]
+    H --> I[CI auto lint]
+    I -- pass --> J[Human review]
     I -- fail --> G
-    J --> K[merge]
+    J --> K[Merge]
 ```
 
 ---
 
-## ✅ Checklist（必过 / Required）
+## ✅ Checklist (Required)
 
-每篇 PR 提交前自查 / Pre-PR checklist：
+Pre-PR checklist for every submission:
 
-- [ ] **双语完整** — 中英两版都写完，不是"先写中文、英文 TODO"
-- [ ] **脱敏** — 没有人名 / 客户名 / 内部凭证 / 内部 GitHub org 名
-- [ ] **代码片段用通用示例** — 不暴露内部项目名 / 业务逻辑
-- [ ] **图用 SVG** — 不要 PNG / 外部链接（GitHub 渲染 SVG 最好）
-- [ ] **每篇 600-1500 字** — 短了不够深，长了读者跑掉
+- [ ] **Bilingual complete** — Both EN and ZH versions are done, not "ZH first, EN TODO"
+- [ ] **Desensitized** — No names / client names / internal credentials / internal GitHub org names
+- [ ] **Generic code snippets** — Don't expose internal project names / business logic
+- [ ] **SVG illustrations** — No PNG / external links (GitHub renders SVG best)
+- [ ] **600-1500 words per post** — Too short lacks depth, too long loses readers
 
 ---
 
-## 📝 文章结构 / Post Structure
+## 📝 Post Structure
 
-### External Lens / 外部视角
+### External Lens
 
-每篇 `day-NN.zh.md` / `day-NN.en.md` 必须有：
+Every `en/day-NN.md` / `zh/day-NN.md` must have:
 
 ```markdown
-# AI棱镜 · 外部视角 · Day NN
-> 日期 · 第 N 期
+# AI Prism · External Lens · Day NN
+
+[English](./day-NN.md) | [简体中文](../zh/day-NN.md)
+
+> Date · Issue #N
 
 ---
 
 ## TL;DR
 
-[3-5 行要点]
+[3-5 key points]
 
-## 正文
+## Main Content
 
-[深度解读内容]
+[Deep dive content]
 
 ## Appendix: Tools & Links
 
-[关联链接 + 下篇预告]
+[Related links + next post preview]
 ```
 
-### Yason and His Roberts / Yason 和他的罗伯特们
+### Yason and His Roberts
 
-每篇 `chNN.zh.md` 必须有：
+Every `en/chNN.md` / `zh/chNN.md` must have:
 
 ```markdown
-# 第N章：标题
+# Chapter N: Title
 
-> **核心观点：一句话概括**
+[English](./chNN.md) | [简体中文](../zh/chNN.md)
+
+> **Core insight: one-sentence summary**
 
 ---
 
-[正文内容]
+[Main content]
 ```
 
 ---
 
-## 🎨 图标准 / Illustration Standards
+## 🎨 Illustration Standards
 
-- **格式 / Format**：SVG（矢量、可 git diff、GitHub 完美渲染）
-- **viewBox**：1200×600 或 1000×500
-- **字号 / Font size**：标题 28-32px，正文 11-14px
-- **色板 / Palette**：
+- **Format**：SVG (vector, git-diffable, GitHub-perfect rendering)
+- **viewBox**：1200×600 or 1000×500
+- **Font size**：Title 28-32px, body 11-14px
+- **Palette**：
   - 🔮 Indigo `#6366f1` — External Lens
   - 🤖 Pink `#ec4899` — Internal Practice
   - ✨ Amber `#f59e0b` — Highlights
   - 🌑 Dark `#0f0b1a` — Background
-- **文件命名 / Naming**：`day-NN-描述.svg` 或 `NN-描述.svg`
+- **Naming**：`day-NN-description.svg` or `NN-description.svg`
 
 ---
 
-## 📌 Commit & PR 规范 / Commit & PR Conventions
+## 📌 Commit & PR Conventions
 
-- **Commit**: `post: day-NN` / `post: chNN` 或 `fix: day-NN typo`
-- **Branch**: `post/day-NN-主题` 或 `fix/day-NN-具体问题`
-- **PR Title**: `Day NN: 中文标题` 或 `Ch NN: 中文标题`
+- **Commit**: `post: day-NN` / `post: chNN` or `fix: day-NN typo`
+- **Branch**: `post/day-NN-topic` or `fix/day-NN-specific-issue`
+- **PR Title**: `Day NN: English title` or `Ch NN: English title`
 
 ---
 
-## 🤝 行为准则 / Code of Conduct
+## 🤝 Code of Conduct
 
-- 友善、尊重、就事论事
-- 接受建设性批评
-- 不接受人身攻击 / 歧视 / 骚扰
+- Be friendly, respectful, and constructive
+- Accept constructive criticism
+- No personal attacks / discrimination / harassment
