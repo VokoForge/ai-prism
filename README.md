@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Bilingual](https://img.shields.io/badge/lang-中_英-brightgreen.svg)](#)
-[![External Lens](https://img.shields.io/badge/🔭_External_Lens-15+-6366f1.svg)](posts/external-lens/)
+[![External Lens](https://img.shields.io/badge/🔭_External_Lens-16+-6366f1.svg)](posts/external-lens/)
 [![Yason & Roberts](https://img.shields.io/badge/🤖_Yason_&_Roberts-21_ch-ec4899.svg)](posts/yason-and-roberts/)
 
 ---
@@ -87,6 +87,7 @@ graph LR
 | 13 | 通用 Agent 框架 6 选 1 | [中文](posts/external-lens/day-13.zh.md) | [EN](posts/external-lens/day-13.en.md) |
 | 14 | 2026 H1 Agent 现状图 | [中文](posts/external-lens/day-14.zh.md) | [EN](posts/external-lens/day-14.en.md) |
 | 15 | 2026.05.31 周更热门 AI 仓库 | [中文](posts/external-lens/day-15.zh.md) | [EN](posts/external-lens/day-15.en.md) |
+| 16 | 向量检索的 Rust 革命 & Agent Skills 爆发临界点 | [中文](posts/external-lens/day-16.zh.md) | [EN](posts/external-lens/day-16.en.md) |
 
 ---
 
