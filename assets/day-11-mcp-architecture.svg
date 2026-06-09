@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="600" fill="#f8fafc"/>
+  <text x="480" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">MCP Architecture: host → client → server</text>
+  <text x="480" y="58" text-anchor="middle" font-size="13" fill="#64748b">3 RPCs over stdio · 200 lines of Python · 5 places to break</text>
+
+  <!-- Host layer -->
+  <rect x="60" y="90" width="840" height="80" rx="10" fill="url(#g1)" opacity="0.9"/>
+  <text x="80" y="120" font-size="16" font-weight="700" fill="#fff">HOST</text>
+  <text x="80" y="142" font-size="12" fill="#e0f2fe">Claude Desktop · Cursor · Cline · Continue · any MCP-aware client</text>
+  <text x="80" y="158" font-size="11" fill="#e0f2fe" font-style="italic">"the LLM lives here; picks tools, formats calls"</text>
+
+  <!-- arrow -->
+  <line x1="480" y1="172" x2="480" y2="220" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="495" y="200" font-size="11" fill="#475569">JSON-RPC 2.0 over stdio (one JSON object per line)</text>
+
+  <!-- Server layer -->
+  <rect x="60" y="220" width="840" height="240" rx="10" fill="url(#g2)" opacity="0.9"/>
+  <text x="80" y="250" font-size="16" font-weight="700" fill="#fff">MCP SERVER (your code)</text>
+  <text x="80" y="270" font-size="12" fill="#fce7f3">3 mandatory RPCs:</text>
+
+  <g font-family="ui-monospace, 'SF Mono', monospace" font-size="11" fill="#fff">
+    <rect x="80" y="285" width="240" height="50" rx="6" fill="#fff" opacity="0.15"/>
+    <text x="90" y="305" font-weight="700">1. initialize</text>
+    <text x="90" y="322">→ protocolVersion</text>
+    <text x="90" y="336">→ capabilities.tools</text>
+
+    <rect x="340" y="285" width="240" height="50" rx="6" fill="#fff" opacity="0.15"/>
+    <text x="350" y="305" font-weight="700">2. tools/list</text>
+    <text x="350" y="322">→ JSON Schema per tool</text>
+    <text x="350" y="336">→ model reads the schemas</text>
+
+    <rect x="600" y="285" width="280" height="50" rx="6" fill="#fff" opacity="0.15"/>
+    <text x="610" y="305" font-weight="700">3. tools/call</text>
+    <text x="610" y="322">→ dispatch by name</text>
+    <text x="610" y="336">→ return content[] or error</text>
+  </g>
+
+  <text x="80" y="360" font-size="11" fill="#fce7f3" font-style="italic">also: notifications/initialized (client→server, no id, no reply)</text>
+
+  <g font-size="11" fill="#fff" font-family="ui-monospace, monospace">
+    <rect x="80" y="380" width="800" height="60" rx="6" fill="#fff" opacity="0.15"/>
+    <text x="90" y="400" font-weight="700">your tool code (the only part that's yours to write):</text>
+    <text x="90" y="418">def tool_create(args): ...  def tool_search(args): ...  def tool_delete(args): ...</text>
+    <text x="90" y="432">DISPATCH = {"note_create": tool_create, "note_search": tool_search, "note_delete": tool_delete}</text>
+  </g>
+
+  <!-- arrow -->
+  <line x1="480" y1="462" x2="480" y2="510" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="495" y="490" font-size="11" fill="#475569">tool calls hit your code via the dispatcher</text>
+
+  <!-- Storage layer -->
+  <rect x="60" y="510" width="840" height="70" rx="10" fill="#0f172a"/>
+  <text x="80" y="540" font-size="16" font-weight="700" fill="#fff">STORAGE (your choice)</text>
+  <text x="80" y="560" font-size="12" fill="#cbd5e1">SQLite · Postgres · JSON file · in-memory · remote API</text>
+  <text x="80" y="576" font-size="11" fill="#cbd5e1" font-style="italic">the server dies with the host session — rebuild state from storage on startup</text>
+</svg>

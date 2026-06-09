@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <rect width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Solo vs Hybrid</text>
+
+  <g transform="translate(60, 80)">
+    <text x="160" y="0" text-anchor="middle" font-size="16" font-weight="600" fill="#475569">M01 启动</text>
+    <rect x="0" y="20" width="320" height="80" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+    <text x="20" y="50" font-size="14" fill="#7f1d1d">仓库: 1</text>
+    <text x="20" y="70" font-size="14" fill="#7f1d1d">PR/月: 12</text>
+    <text x="160" y="50" font-size="14" fill="#7f1d1d">LOC: 0.2万</text>
+    <text x="160" y="70" font-size="14" fill="#7f1d1d">成本: ¥0</text>
+  </g>
+
+  <g transform="translate(60, 180)">
+    <text x="160" y="0" text-anchor="middle" font-size="16" font-weight="600" fill="#475569">M09 拐点</text>
+    <rect x="0" y="20" width="320" height="80" rx="8" fill="#fef3c7" stroke="#fbbf24" stroke-width="2"/>
+    <text x="20" y="50" font-size="14" fill="#78350f">⚠️ 凌晨 3 点事故</text>
+    <text x="20" y="70" font-size="14" fill="#78350f">⚠️ 4h 修复 + 1.5h 回滚</text>
+    <text x="20" y="90" font-size="12" fill="#92400e">→ 第一次意识到带宽 = 天花板</text>
+  </g>
+
+  <g transform="translate(440, 80)">
+    <text x="160" y="0" text-anchor="middle" font-size="16" font-weight="600" fill="#475569">M12 转折</text>
+    <rect x="0" y="20" width="320" height="80" rx="8" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="50" font-size="14" fill="#064e3b">仓库: 22</text>
+    <text x="20" y="70" font-size="14" fill="#064e3b">PR/月: 220</text>
+    <text x="180" y="50" font-size="14" fill="#064e3b">LOC: 18万</text>
+    <text x="180" y="70" font-size="14" fill="#064e3b">成本: ¥4.8k</text>
+  </g>
+
+  <g transform="translate(440, 180)">
+    <text x="160" y="0" text-anchor="middle" font-size="16" font-weight="600" fill="#475569">M14 今天</text>
+    <rect x="0" y="20" width="320" height="80" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="50" font-size="14" fill="#1e3a8a">仓库: 30+</text>
+    <text x="20" y="70" font-size="14" fill="#1e3a8a">PR/月: 380</text>
+    <text x="180" y="50" font-size="14" fill="#1e3a8a">LOC: 30万</text>
+    <text x="180" y="70" font-size="14" fill="#1e3a8a">成本: ¥6.3k</text>
+  </g>
+
+  <g transform="translate(60, 320)">
+    <text x="340" y="0" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">从 1 个大脑 → 1 + N 大脑</text>
+    <rect x="0" y="20" width="700" height="120" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <g transform="translate(30, 50)">
+      <circle cx="30" cy="30" r="30" fill="#475569"/>
+      <text x="30" y="35" text-anchor="middle" font-size="13" fill="#fff">1×You</text>
+    </g>
+    <g transform="translate(120, 50)">
+      <rect x="0" y="0" width="60" height="60" rx="8" fill="#3b82f6"/>
+      <text x="30" y="35" text-anchor="middle" font-size="12" fill="#fff">CEO</text>
+    </g>
+    <g transform="translate(200, 50)">
+      <rect x="0" y="0" width="60" height="60" rx="8" fill="#10b981"/>
+      <text x="30" y="35" text-anchor="middle" font-size="12" fill="#fff">Rex</text>
+    </g>
+    <g transform="translate(280, 50)">
+      <rect x="0" y="0" width="60" height="60" rx="8" fill="#10b981"/>
+      <text x="30" y="35" text-anchor="middle" font-size="12" fill="#fff">Kai</text>
+    </g>
+    <g transform="translate(360, 50)">
+      <rect x="0" y="0" width="60" height="60" rx="8" fill="#f59e0b"/>
+      <text x="30" y="35" text-anchor="middle" font-size="12" fill="#fff">Nexus</text>
+    </g>
+    <g transform="translate(440, 50)">
+      <rect x="0" y="0" width="60" height="60" rx="8" fill="#f59e0b"/>
+      <text x="30" y="35" text-anchor="middle" font-size="12" fill="#fff">R&amp;D</text>
+    </g>
+    <g transform="translate(520, 50)">
+      <rect x="0" y="0" width="60" height="60" rx="8" fill="#ef4444"/>
+      <text x="30" y="35" text-anchor="middle" font-size="12" fill="#fff">PM</text>
+    </g>
+    <g transform="translate(600, 50)">
+      <rect x="0" y="0" width="60" height="60" rx="8" fill="#ef4444"/>
+      <text x="30" y="35" text-anchor="middle" font-size="12" fill="#fff">Memory</text>
+    </g>
+  </g>
+</svg>

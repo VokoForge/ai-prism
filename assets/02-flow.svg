@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="800" height="460" fill="#f8fafc"/>
+  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Four-Brain Scheduling Flow</text>
+
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="700" height="50" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+    <text x="350" y="32" text-anchor="middle" font-size="14" font-weight="600" fill="#1e3a8a">1. Task comes in (kind, budget, sla, risk)</text>
+  </g>
+
+  <line x1="400" y1="130" x2="400" y2="155" stroke="#475569" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <g transform="translate(50, 155)">
+    <rect x="0" y="0" width="700" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+    <text x="350" y="32" text-anchor="middle" font-size="14" font-weight="600" fill="#78350f">2. select_brain(task) → Brain (B1/B2/B3/B4)</text>
+  </g>
+
+  <line x1="400" y1="205" x2="400" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="700" height="50" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1"/>
+    <text x="350" y="32" text-anchor="middle" font-size="14" font-weight="600" fill="#064e3b">3. brain.run(task) → result { quality_score, cost, latency }</text>
+  </g>
+
+  <line x1="400" y1="280" x2="400" y2="305" stroke="#475569" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <g transform="translate(50, 305)">
+    <rect x="0" y="0" width="335" height="50" rx="8" fill="#dcfce7" stroke="#10b981" stroke-width="1"/>
+    <text x="167" y="32" text-anchor="middle" font-size="13" font-weight="600" fill="#064e3b">✓ quality ≥ min → return</text>
+  </g>
+  <g transform="translate(415, 305)">
+    <rect x="0" y="0" width="335" height="50" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+    <text x="167" y="32" text-anchor="middle" font-size="13" font-weight="600" fill="#7f1d1d">✗ quality &lt; min → fallback next brain</text>
+  </g>
+
+  <g transform="translate(50, 380)">
+    <text x="350" y="0" text-anchor="middle" font-size="13" fill="#475569">4. retry chain: 1→2→3→4 → if all fail → human review</text>
+  </g>
+</svg>

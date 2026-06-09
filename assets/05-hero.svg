@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="500" fill="url(#bg6)"/>
+  <text x="500" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#f0f9ff">Daily Ops &amp; Cost</text>
+  <text x="500" y="80" text-anchor="middle" font-size="14" fill="#bae6fd">让 Agent Team 持续运行 · 7×24</text>
+
+  <g font-size="14" fill="#fff" text-anchor="middle">
+    <g transform="translate(80, 130)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <text x="100" y="32" font-weight="700">实时成本看板</text>
+      <text x="100" y="55" font-size="11" fill="#7dd3fc">每小时刷新</text>
+      <text x="100" y="72" font-size="11" fill="#7dd3fc">预算 ≥ 80% 自动降级</text>
+    </g>
+    <g transform="translate(400, 130)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <text x="100" y="32" font-weight="700">飞书卡片汇报</text>
+      <text x="100" y="55" font-size="11" fill="#7dd3fc">3 秒看完</text>
+      <text x="100" y="72" font-size="11" fill="#7dd3fc">自动入 KG</text>
+    </g>
+    <g transform="translate(720, 130)">
+      <rect x="0" y="0" width="200" height="80" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <text x="100" y="32" font-weight="700">3 个省钱开关</text>
+      <text x="100" y="55" font-size="11" fill="#7dd3fc">预算 / 缓存 / 夜间</text>
+      <text x="100" y="72" font-size="11" fill="#7dd3fc">自动降级不拒服</text>
+    </g>
+  </g>
+
+  <g transform="translate(80, 270)">
+    <rect x="0" y="0" width="840" height="170" rx="12" fill="#0f172a" stroke="#1e3a8a" stroke-width="2"/>
+    <text x="420" y="35" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">4 个卫生指标 · 每天 9:00 自动跑</text>
+    <g font-size="13" fill="#cbd5e1">
+      <g transform="translate(40, 60)">
+        <rect x="0" y="0" width="180" height="80" rx="8" fill="#1e293b"/>
+        <text x="90" y="30" text-anchor="middle" font-weight="700" fill="#fbbf24">① 成本 / 预算 ≤ 80%</text>
+        <text x="90" y="55" text-anchor="middle" font-size="11">超 → 飞书告警</text>
+      </g>
+      <g transform="translate(230, 60)">
+        <rect x="0" y="0" width="180" height="80" rx="8" fill="#1e293b"/>
+        <text x="90" y="30" text-anchor="middle" font-weight="700" fill="#fbbf24">② PR 失败率 ≤ 10%</text>
+        <text x="90" y="55" text-anchor="middle" font-size="11">超 → 强制 Brain 4</text>
+      </g>
+      <g transform="translate(420, 60)">
+        <rect x="0" y="0" width="180" height="80" rx="8" fill="#1e293b"/>
+        <text x="90" y="30" text-anchor="middle" font-weight="700" fill="#fbbf24">③ KG 错误率 ≤ 8%</text>
+        <text x="90" y="55" text-anchor="middle" font-size="11">超 → 触发治理</text>
+      </g>
+      <g transform="translate(610, 60)">
+        <rect x="0" y="0" width="180" height="80" rx="8" fill="#1e293b"/>
+        <text x="90" y="30" text-anchor="middle" font-weight="700" fill="#fbbf24">④ 4 脑可用性 ≥ 99%</text>
+        <text x="90" y="55" text-anchor="middle" font-size="11">降 → 故障切换</text>
+      </g>
+    </g>
+  </g>
+</svg>

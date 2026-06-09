@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="-apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1a1f3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="540" fill="url(#bg)"/>
+  <text x="450" y="38" font-size="22" fill="#fff" text-anchor="middle" font-weight="600">6 篇 Agent 论文 — 影响力 × 可复现性</text>
+  <text x="450" y="60" font-size="12" fill="#94a3b8" text-anchor="middle">横轴: 影响力 · 纵轴: 可复现性 · 气泡大小: arXiv 引用数</text>
+
+  <line x1="90" y1="480" x2="850" y2="480" stroke="#475569" stroke-width="1.5"/>
+  <line x1="90" y1="100" x2="90" y2="480" stroke="#475569" stroke-width="1.5"/>
+
+  <text x="470" y="510" font-size="11" fill="#94a3b8" text-anchor="middle">影响力 (1-10)</text>
+  <text x="40" y="290" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 40 290)">可复现性 (1-10)</text>
+
+  <text x="90" y="498" font-size="10" fill="#64748b" text-anchor="middle">1</text>
+  <text x="280" y="498" font-size="10" fill="#64748b" text-anchor="middle">4</text>
+  <text x="470" y="498" font-size="10" fill="#64748b" text-anchor="middle">7</text>
+  <text x="660" y="498" font-size="10" fill="#64748b" text-anchor="middle">10</text>
+  <text x="80" y="484" font-size="10" fill="#64748b" text-anchor="end">1</text>
+  <text x="80" y="340" font-size="10" fill="#64748b" text-anchor="end">5</text>
+  <text x="80" y="195" font-size="10" fill="#64748b" text-anchor="end">10</text>
+
+  <line x1="470" y1="100" x2="470" y2="480" stroke="#334155" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="90" y1="290" x2="850" y2="290" stroke="#334155" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- 1 MAST: high impact (9), high repro (8), big bubble -->
+  <g>
+    <circle cx="804" cy="245" r="36" fill="#ef4444" opacity="0.7" stroke="#fca5a5" stroke-width="2"/>
+    <text x="804" y="249" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+    <text x="804" y="295" font-size="11" fill="#fff" text-anchor="middle">MAST</text>
+    <text x="804" y="309" font-size="9" fill="#cbd5e1" text-anchor="middle">9/8</text>
+  </g>
+
+  <!-- 2 Protocols: high impact (8), med repro (6) -->
+  <g>
+    <circle cx="735" cy="291" r="32" fill="#f59e0b" opacity="0.7" stroke="#fcd34d" stroke-width="2"/>
+    <text x="735" y="295" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+    <text x="735" y="338" font-size="11" fill="#fff" text-anchor="middle">Protocols</text>
+    <text x="735" y="352" font-size="9" fill="#cbd5e1" text-anchor="middle">8/6</text>
+  </g>
+
+  <!-- 3 AgentRxiv: med impact (6), med-high repro (7) -->
+  <g>
+    <circle cx="595" cy="262" r="22" fill="#22c55e" opacity="0.7" stroke="#86efac" stroke-width="2"/>
+    <text x="595" y="266" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+    <text x="595" y="298" font-size="10" fill="#fff" text-anchor="middle">AgentRxiv</text>
+    <text x="595" y="312" font-size="9" fill="#cbd5e1" text-anchor="middle">6/7</text>
+  </g>
+
+  <!-- 4 Multiagent FT: high impact (7), high repro (8) -->
+  <g>
+    <circle cx="660" cy="245" r="26" fill="#3b82f6" opacity="0.7" stroke="#93c5fd" stroke-width="2"/>
+    <text x="660" y="249" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">4</text>
+    <text x="660" y="285" font-size="10" fill="#fff" text-anchor="middle">Multiagent FT</text>
+    <text x="660" y="299" font-size="9" fill="#cbd5e1" text-anchor="middle">7/8</text>
+  </g>
+
+  <!-- 5 Self-Improvement: high impact (8), med repro (5) -->
+  <g>
+    <circle cx="735" cy="340" r="28" fill="#a855f7" opacity="0.7" stroke="#d8b4fe" stroke-width="2"/>
+    <text x="735" y="344" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">5</text>
+    <text x="735" y="383" font-size="10" fill="#fff" text-anchor="middle">Self-Improvement</text>
+    <text x="735" y="397" font-size="9" fill="#cbd5e1" text-anchor="middle">8/5</text>
+  </g>
+
+  <!-- 6 Foam-Agent: med impact (6), high repro (8) -->
+  <g>
+    <circle cx="595" cy="245" r="22" fill="#14b8a6" opacity="0.7" stroke="#5eead4" stroke-width="2"/>
+    <text x="595" y="249" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">6</text>
+    <text x="595" y="221" font-size="10" fill="#fff" text-anchor="middle">Foam-Agent</text>
+    <text x="595" y="235" font-size="9" fill="#cbd5e1" text-anchor="middle">6/8</text>
+  </g>
+
+  <!-- Quadrant labels -->
+  <text x="660" y="155" font-size="11" fill="#475569" text-anchor="middle" opacity="0.6">高影响 + 高可复现 = 必读</text>
+  <text x="280" y="155" font-size="11" fill="#475569" text-anchor="middle" opacity="0.6">低影响 + 高可复现 = 练手</text>
+  <text x="660" y="455" font-size="11" fill="#475569" text-anchor="middle" opacity="0.6">高影响 + 低可复现 = 概念</text>
+  <text x="280" y="455" font-size="11" fill="#475569" text-anchor="middle" opacity="0.6">低影响 + 低可复现 = 跳过</text>
+</svg>

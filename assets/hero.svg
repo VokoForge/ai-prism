@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0b1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1035;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d0a1a;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Prism body gradient -->
+    <linearGradient id="prismGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0.6" />
+    </linearGradient>
+
+    <!-- Indigo beam gradient -->
+    <linearGradient id="indigoBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.05" />
+    </linearGradient>
+
+    <!-- Pink beam gradient -->
+    <linearGradient id="pinkBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.05" />
+    </linearGradient>
+
+    <!-- Amber beam gradient -->
+    <linearGradient id="amberBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.05" />
+    </linearGradient>
+
+    <!-- Input beam gradient (white light) -->
+    <linearGradient id="inputBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.05" />
+      <stop offset="70%" style="stop-color:#e0e7ff;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.9" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Prism face highlight -->
+    <linearGradient id="prismHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c7d2fe;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bgGrad)" />
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.06">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="600" stroke="#6366f1" stroke-width="0.5"/>
+  </g>
+
+  <!-- Input beam (white light from left) -->
+  <polygon points="0,280 480,290 480,310 0,320" fill="url(#inputBeam)" filter="url(#softGlow)" />
+
+  <!-- Prism (triangle) -->
+  <g transform="translate(480, 300)">
+    <!-- Prism shadow -->
+    <polygon points="0,-110 0,110 120,0" fill="#6366f1" opacity="0.15" transform="translate(4,4)" />
+
+    <!-- Prism body -->
+    <polygon points="0,-110 0,110 120,0" fill="url(#prismGrad)" stroke="#818cf8" stroke-width="1.5" />
+
+    <!-- Prism highlight face (left) -->
+    <polygon points="0,-110 0,110 60,-55" fill="url(#prismHighlight)" />
+
+    <!-- Prism internal refraction lines -->
+    <line x1="20" y1="-70" x2="80" y2="0" stroke="#c7d2fe" stroke-width="0.5" opacity="0.3" />
+    <line x1="20" y1="70" x2="80" y2="0" stroke="#c7d2fe" stroke-width="0.5" opacity="0.3" />
+    <line x1="10" y1="-30" x2="100" y2="0" stroke="#c7d2fe" stroke-width="0.3" opacity="0.2" />
+    <line x1="10" y1="30" x2="100" y2="0" stroke="#c7d2fe" stroke-width="0.3" opacity="0.2" />
+  </g>
+
+  <!-- Refracted beam 1: Indigo (upward) — External Lens -->
+  <polygon points="600,285 1200,120 1200,155 600,295" fill="url(#indigoBeam)" filter="url(#softGlow)" />
+
+  <!-- Refracted beam 2: Pink (middle) — Internal Practice -->
+  <polygon points="600,295 1200,280 1200,320 600,305" fill="url(#pinkBeam)" filter="url(#softGlow)" />
+
+  <!-- Refracted beam 3: Amber (downward) — Future -->
+  <polygon points="600,305 1200,445 1200,480 600,315" fill="url(#amberBeam)" filter="url(#softGlow)" />
+
+  <!-- Beam endpoint glows -->
+  <circle cx="1180" cy="137" r="20" fill="#6366f1" opacity="0.3" filter="url(#glow)" />
+  <circle cx="1180" cy="300" r="20" fill="#ec4899" opacity="0.3" filter="url(#glow)" />
+  <circle cx="1180" cy="462" r="20" fill="#f59e0b" opacity="0.3" filter="url(#glow)" />
+
+  <!-- Labels for beams -->
+  <!-- External Lens label -->
+  <g transform="translate(920, 115)">
+    <rect x="-10" y="-18" width="200" height="36" rx="6" fill="#6366f1" opacity="0.2" />
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#a5b4fc">
+      🔭 External Lens
+    </text>
+  </g>
+
+  <!-- Internal Practice label -->
+  <g transform="translate(880, 275)">
+    <rect x="-10" y="-18" width="230" height="36" rx="6" fill="#ec4899" opacity="0.2" />
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#f9a8d4">
+      🤖 Internal Practice
+    </text>
+  </g>
+
+  <!-- Future label -->
+  <g transform="translate(920, 440)">
+    <rect x="-10" y="-18" width="180" height="36" rx="6" fill="#f59e0b" opacity="0.2" />
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#fcd34d">
+      ✨ What's Next
+    </text>
+  </g>
+
+  <!-- Input label -->
+  <g transform="translate(60, 260)">
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8" opacity="0.7">
+      AI World
+    </text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="540" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700" fill="#e0e7ff" filter="url(#softGlow)">
+    🔮 AI Prism
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="575" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#94a3b8">
+    Two lenses, one prism — refracting the AI world
+  </text>
+
+  <!-- Decorative particles -->
+  <circle cx="150" cy="80" r="2" fill="#6366f1" opacity="0.5">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="350" cy="450" r="1.5" fill="#ec4899" opacity="0.4">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="750" cy="520" r="2" fill="#f59e0b" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.5;0.1" dur="3.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1050" cy="60" r="1.5" fill="#818cf8" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="900" cy="550" r="2" fill="#6366f1" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.5;0.1" dur="3.2s" repeatCount="indefinite" />
+  </circle>
+</svg>

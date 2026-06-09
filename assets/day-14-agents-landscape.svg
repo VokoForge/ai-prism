@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="s1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="s2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="s3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="s4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="s5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="640" fill="#f8fafc"/>
+  <text x="480" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">AI Agent Landscape 2026 H1</text>
+  <text x="480" y="62" text-anchor="middle" font-size="13" fill="#64748b">5 scenarios · 16 representative projects · 4 cross-cutting shifts</text>
+
+  <!-- 5 scenarios arranged in pentagon-ish layout -->
+  <!-- S1: top-left -->
+  <g transform="translate(60, 100)">
+    <rect width="380" height="180" rx="14" fill="url(#s1)" opacity="0.92"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#fff">1. LOCAL EXECUTION</text>
+    <text x="20" y="52" font-size="11" fill="#e0f2fe" font-style="italic">latency + trust, single user</text>
+    <text x="20" y="80" font-size="12" fill="#fff">▸ OpenHands    (sandboxed dev)</text>
+    <text x="20" y="100" font-size="12" fill="#fff">▸ Aider        (terminal pair)</text>
+    <text x="20" y="120" font-size="12" fill="#fff">▸ Continue     (IDE extension)</text>
+    <text x="20" y="140" font-size="12" fill="#fff">▸ Cline        (MCP-native IDE)</text>
+    <text x="20" y="162" font-size="10" fill="#e0f2fe" font-style="italic">ceiling: what 1 person can review</text>
+  </g>
+
+  <!-- S2: top-right -->
+  <g transform="translate(520, 100)">
+    <rect width="380" height="180" rx="14" fill="url(#s2)" opacity="0.92"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#fff">2. AUTONOMOUS TASK</text>
+    <text x="20" y="52" font-size="11" fill="#ede9fe" font-style="italic">long horizon, self-directed</text>
+    <text x="20" y="80" font-size="12" fill="#fff">▸ Deep Research (citation chain)</text>
+    <text x="20" y="100" font-size="12" fill="#fff">▸ Manus        (cloud, computer use)</text>
+    <text x="20" y="120" font-size="12" fill="#fff">▸ Forge        (outcome = spec)</text>
+    <text x="20" y="140" font-size="12" fill="#fff" opacity="0">.</text>
+    <text x="20" y="162" font-size="10" fill="#ede9fe" font-style="italic">bottleneck: verification loop</text>
+  </g>
+
+  <!-- S3: middle -->
+  <g transform="translate(290, 305)">
+    <rect width="380" height="180" rx="14" fill="url(#s3)" opacity="0.92"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#fff">3. MULTI-AGENT</text>
+    <text x="20" y="52" font-size="11" fill="#fce7f3" font-style="italic">teams of specialists</text>
+    <text x="20" y="80" font-size="12" fill="#fff">▸ LangGraph     (graph-based, industry std)</text>
+    <text x="20" y="100" font-size="12" fill="#fff">▸ CrewAI        (role-based, fast to start)</text>
+    <text x="20" y="120" font-size="12" fill="#fff">▸ AutoGen       (conversation, OTel-native)</text>
+    <text x="20" y="140" font-size="12" fill="#fff" opacity="0">.</text>
+    <text x="20" y="162" font-size="10" fill="#fce7f3" font-style="italic">wins: clear roles + explicit handoff</text>
+  </g>
+
+  <!-- S4: bottom-left -->
+  <g transform="translate(60, 510)">
+    <rect width="380" height="120" rx="14" fill="url(#s4)" opacity="0.92"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#fff">4. LOW-CODE / VISUAL</text>
+    <text x="20" y="52" font-size="11" fill="#fffbeb" font-style="italic">non-developer builders</text>
+    <text x="20" y="78" font-size="12" fill="#fff">▸ n8n     (workflow + AI nodes)</text>
+    <text x="20" y="98" font-size="12" fill="#fff">▸ Flowise (visual LangChain)</text>
+    <text x="20" y="116" font-size="12" fill="#fff">▸ Dify    (LLMOps, BAAI baked-in)</text>
+  </g>
+
+  <!-- S5: bottom-right -->
+  <g transform="translate(520, 510)">
+    <rect width="380" height="120" rx="14" fill="url(#s5)" opacity="0.92"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#fff">5. VERTICAL / DOMAIN</text>
+    <text x="20" y="52" font-size="11" fill="#d1fae5" font-style="italic">hottest growth area</text>
+    <text x="20" y="78" font-size="12" fill="#fff">▸ StoryForge   (fiction + style DNA)</text>
+    <text x="20" y="98" font-size="12" fill="#fff">▸ NOVIX        (multi-agent novel)</text>
+    <text x="20" y="116" font-size="12" fill="#fff">▸ DeepResearch-style (read 50 papers)</text>
+  </g>
+</svg>

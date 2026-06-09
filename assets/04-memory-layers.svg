@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <marker id="arr4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Memory Layers: Short-term vs Long-term</text>
+
+  <g transform="translate(60, 90)">
+    <rect x="0" y="0" width="320" height="340" rx="12" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+    <text x="160" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#7f1d1d">Short-term · LLM 上下文</text>
+    <g font-size="12" fill="#7f1d1d">
+      <text x="20" y="65">容量: 8k-200k token</text>
+      <text x="20" y="90">检索: 全量 + 滑动窗口</text>
+      <text x="20" y="115">衰减: 越远越糊</text>
+      <text x="20" y="140">准确率: 长任务 50%↓</text>
+      <text x="20" y="165">写入: 一次性</text>
+      <text x="20" y="190">治理: 无</text>
+    </g>
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="280" height="50" rx="6" fill="#fecaca"/>
+      <text x="140" y="30" text-anchor="middle" font-size="13" fill="#7f1d1d">⚠️ 越近越清楚 · 越远越糊</text>
+    </g>
+    <g transform="translate(20, 285)">
+      <rect x="0" y="0" width="280" height="50" rx="6" fill="#fecaca"/>
+      <text x="140" y="30" text-anchor="middle" font-size="13" fill="#7f1d1d">⚠️ 模糊处会自信地编造</text>
+    </g>
+  </g>
+
+  <g transform="translate(420, 90)">
+    <rect x="0" y="0" width="320" height="340" rx="12" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+    <text x="160" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#064e3b">Long-term · Knowledge Graph</text>
+    <g font-size="12" fill="#064e3b">
+      <text x="20" y="65">容量: 无限（图算法）</text>
+      <text x="20" y="90">检索: 图查询（毫秒）</text>
+      <text x="20" y="115">衰减: 显式声明 stale</text>
+      <text x="20" y="140">准确率: 有证据链 95%+</text>
+      <text x="20" y="165">写入: 持续 + 审计</text>
+      <text x="20" y="190">治理: RBAC + 审批 + 审计</text>
+    </g>
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="280" height="50" rx="6" fill="#a7f3d0"/>
+      <text x="140" y="30" text-anchor="middle" font-size="13" fill="#064e3b">✓ 4 个查询模式（ms 级）</text>
+    </g>
+    <g transform="translate(20, 285)">
+      <rect x="0" y="0" width="280" height="50" rx="6" fill="#a7f3d0"/>
+      <text x="140" y="30" text-anchor="middle" font-size="13" fill="#064e3b">✓ 没有证据的实体不进入</text>
+    </g>
+  </g>
+
+  <text x="400" y="465" text-anchor="middle" font-size="13" fill="#475569">核心理念：用图查询代替滑动窗口</text>
+</svg>

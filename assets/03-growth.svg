@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="500" fill="url(#bg7)"/>
+  <text x="500" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#eef2ff">27+ Apps on One Brain</text>
+  <text x="500" y="80" text-anchor="middle" font-size="14" fill="#c7d2fe">M01 → M14 growth curve</text>
+
+  <g font-size="12" fill="#cbd5e1">
+    <g transform="translate(80, 120)">
+      <text x="0" y="0" font-weight="600">30</text>
+      <line x1="20" y1="-3" x2="900" y2="-3" stroke="#475569" stroke-dasharray="2 4"/>
+    </g>
+    <g transform="translate(80, 200)">
+      <text x="0" y="0" font-weight="600">20</text>
+      <line x1="20" y1="-3" x2="900" y2="-3" stroke="#475569" stroke-dasharray="2 4"/>
+    </g>
+    <g transform="translate(80, 280)">
+      <text x="0" y="0" font-weight="600">10</text>
+      <line x1="20" y1="-3" x2="900" y2="-3" stroke="#475569" stroke-dasharray="2 4"/>
+    </g>
+    <g transform="translate(80, 360)">
+      <text x="0" y="0" font-weight="600">0</text>
+    </g>
+  </g>
+
+  <g>
+    <polyline points="120,360 240,350 360,330 480,300 600,260 720,200 840,140" fill="none" stroke="#34d399" stroke-width="4"/>
+    <circle cx="120" cy="360" r="6" fill="#34d399"/>
+    <circle cx="240" cy="350" r="6" fill="#34d399"/>
+    <circle cx="360" cy="330" r="6" fill="#34d399"/>
+    <circle cx="480" cy="300" r="6" fill="#34d399"/>
+    <circle cx="600" cy="260" r="6" fill="#34d399"/>
+    <circle cx="720" cy="200" r="6" fill="#34d399"/>
+    <circle cx="840" cy="140" r="6" fill="#34d399"/>
+  </g>
+
+  <g font-size="11" fill="#e2e8f0" text-anchor="middle">
+    <g transform="translate(120, 380)">
+      <text x="0" y="0">M01</text>
+      <text x="0" y="14" font-size="10" fill="#94a3b8">1 app</text>
+    </g>
+    <g transform="translate(240, 380)">
+      <text x="0" y="0">M03</text>
+      <text x="0" y="14" font-size="10" fill="#94a3b8">3 apps</text>
+    </g>
+    <g transform="translate(360, 380)">
+      <text x="0" y="0">M06</text>
+      <text x="0" y="14" font-size="10" fill="#94a3b8">8 apps</text>
+    </g>
+    <g transform="translate(480, 380)">
+      <text x="0" y="0">M09</text>
+      <text x="0" y="14" font-size="10" fill="#94a3b8">15 apps</text>
+    </g>
+    <g transform="translate(600, 380)">
+      <text x="0" y="0">M12</text>
+      <text x="0" y="14" font-size="10" fill="#94a3b8">22 apps</text>
+    </g>
+    <g transform="translate(720, 380)">
+      <text x="0" y="0">M13</text>
+      <text x="0" y="14" font-size="10" fill="#94a3b8">23 apps</text>
+    </g>
+    <g transform="translate(840, 380)">
+      <text x="0" y="0">M14</text>
+      <text x="0" y="14" font-size="10" fill="#94a3b8">27+ apps</text>
+    </g>
+  </g>
+
+  <g transform="translate(420, 250)">
+    <rect x="0" y="0" width="200" height="50" rx="6" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="100" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#e9d5ff">⚡ M07 拐点</text>
+    <text x="100" y="38" text-anchor="middle" font-size="11" fill="#c4b5fd">App 模板化 · 30 分钟搭一个</text>
+  </g>
+</svg>

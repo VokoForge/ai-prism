@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="600" fill="url(#bg3)"/>
+  <text x="500" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#faf5ff">27+ Apps on One Brain</text>
+  <text x="500" y="78" text-anchor="middle" font-size="14" fill="#e9d5ff">1 个调度器 + 1 个 yaml 仓库 = 27+ 应用</text>
+
+  <g transform="translate(100, 110)">
+    <rect x="0" y="0" width="800" height="60" rx="8" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="400" y="36" text-anchor="middle" font-size="14" font-weight="600" fill="#f5f3ff">👤 User (CLI / Web / Feishu)</text>
+  </g>
+
+  <line x1="500" y1="170" x2="500" y2="195" stroke="#a78bfa" stroke-width="2"/>
+
+  <g transform="translate(100, 195)">
+    <rect x="0" y="0" width="800" height="70" rx="10" fill="#1e1b4b" stroke="#fbbf24" stroke-width="2"/>
+    <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#fbbf24">🧠 Router + Four-Brain Scheduler</text>
+    <text x="400" y="55" text-anchor="middle" font-size="12" fill="#e9d5ff">keyword match (ms) → Brain 1 picks (s) → fallback</text>
+  </g>
+
+  <line x1="500" y1="265" x2="500" y2="290" stroke="#a78bfa" stroke-width="2"/>
+
+  <g transform="translate(60, 290)">
+    <rect x="0" y="0" width="290" height="240" rx="10" fill="#1e1b4b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="145" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#22d3ee">📦 App Registry (yaml)</text>
+    <g font-size="12" fill="#cffafe">
+      <text x="20" y="60">✓ code-review</text>
+      <text x="20" y="85">✓ incident-postmortem</text>
+      <text x="20" y="110">✓ daily-standup</text>
+      <text x="20" y="135">✓ pr-draft</text>
+      <text x="20" y="160">✓ test-gen</text>
+      <text x="20" y="185">✓ doc-gen</text>
+      <text x="20" y="210">✓ +21 more…</text>
+    </g>
+  </g>
+
+  <g transform="translate(380, 290)">
+    <rect x="0" y="0" width="280" height="240" rx="10" fill="#1e1b4b" stroke="#34d399" stroke-width="2"/>
+    <text x="140" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#34d399">🛠️ Tool Pool (50+)</text>
+    <g font-size="12" fill="#a7f3d0">
+      <text x="20" y="60">✓ git.diff / git.log</text>
+      <text x="20" y="85">✓ test.runner</text>
+      <text x="20" y="110">✓ repo.lint_runner</text>
+      <text x="20" y="135">✓ comment.pr_poster</text>
+      <text x="20" y="160">✓ feishu.card_sender</text>
+      <text x="20" y="185">✓ kg.entity_writer</text>
+      <text x="20" y="210">✓ +44 more…</text>
+    </g>
+  </g>
+
+  <g transform="translate(690, 290)">
+    <rect x="0" y="0" width="260" height="240" rx="10" fill="#1e1b4b" stroke="#f472b6" stroke-width="2"/>
+    <text x="130" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#f472b6">📚 Knowledge Graph</text>
+    <g font-size="12" fill="#fbcfe8">
+      <text x="20" y="60">✓ Run history</text>
+      <text x="20" y="85">✓ Cost / quality</text>
+      <text x="20" y="110">✓ Incidents</text>
+      <text x="20" y="135">✓ Decisions</text>
+      <text x="20" y="160">✓ PRs (linked)</text>
+      <text x="20" y="185">✓ RBAC enforced</text>
+      <text x="20" y="210">✓ Audit log</text>
+    </g>
+  </g>
+</svg>

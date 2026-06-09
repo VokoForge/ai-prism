@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="600" fill="#f8fafc"/>
+  <text x="500" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">App Stack: User → Router → Brain → Tools</text>
+
+  <g transform="translate(60, 80)">
+    <rect x="0" y="0" width="880" height="100" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+    <text x="440" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Layer 1 · User Surface</text>
+    <g font-size="12" fill="#1e40af">
+      <text x="30" y="60">⌨️ CLI 入口 (myagent run --app=…)</text>
+      <text x="30" y="80">🪟 Web Console (Brain + App 管理)</text>
+      <text x="490" y="60">💬 Feishu Bot (卡片触发)</text>
+      <text x="490" y="80">⏰ Cron / Scheduler (定时任务)</text>
+    </g>
+  </g>
+
+  <g transform="translate(60, 200)">
+    <rect x="0" y="0" width="880" height="100" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+    <text x="440" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">Layer 2 · App Registry (27+ apps, 1 yaml each)</text>
+    <g font-size="12" fill="#92400e">
+      <text x="30" y="60">code-review · test-gen · pr-draft · postmortem · doc-gen · daily-standup</text>
+      <text x="30" y="80">+21 more apps (incident, kg, deploy, migration, …)</text>
+    </g>
+  </g>
+
+  <g transform="translate(60, 320)">
+    <rect x="0" y="0" width="880" height="100" rx="12" fill="#dcfce7" stroke="#10b981" stroke-width="1"/>
+    <text x="440" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">Layer 3 · Four-Brain Scheduler (B1/B2/B3/B4 + 失败降级)</text>
+    <g font-size="12" fill="#065f46">
+      <text x="30" y="60">Brain 1: 长上下文 · Brain 2: 快 · Brain 3: 深 · Brain 4: 兜底</text>
+      <text x="30" y="80">统一 quality_score 信号 · 预排序降级链</text>
+    </g>
+  </g>
+
+  <g transform="translate(60, 440)">
+    <rect x="0" y="0" width="880" height="100" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="1"/>
+    <text x="440" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#831843">Layer 4 · Tool Pool (50+ shared tools) + KG</text>
+    <g font-size="12" fill="#9d174d">
+      <text x="30" y="60">git · repo · test · deploy · feishu · kg · vault</text>
+      <text x="30" y="80">所有 App 共用同一组工具 + 同一知识图谱（RBAC）</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="bgkg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="600" fill="url(#bgkg)"/>
+  <text x="500" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#e0f2fe">Knowledge Graph · Entity × Relation × Event</text>
+
+  <g font-size="11" fill="#fff">
+    <g transform="translate(120, 180)">
+      <circle r="50" fill="#10b981" stroke="#34d399" stroke-width="2"/>
+      <text x="0" y="-3" text-anchor="middle" font-weight="700">Person</text>
+      <text x="0" y="14" text-anchor="middle" font-size="10">CEO</text>
+    </g>
+    <g transform="translate(380, 120)">
+      <circle r="50" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+      <text x="0" y="-3" text-anchor="middle" font-weight="700">Project</text>
+      <text x="0" y="14" text-anchor="middle" font-size="10">hermes</text>
+    </g>
+    <g transform="translate(640, 130)">
+      <circle r="50" fill="#a855f7" stroke="#c084fc" stroke-width="2"/>
+      <text x="0" y="-3" text-anchor="middle" font-weight="700">Run</text>
+      <text x="0" y="14" text-anchor="middle" font-size="10">R-484</text>
+    </g>
+    <g transform="translate(840, 250)">
+      <circle r="50" fill="#ec4899" stroke="#f472b6" stroke-width="2"/>
+      <text x="0" y="-3" text-anchor="middle" font-weight="700">Artifact</text>
+      <text x="0" y="14" text-anchor="middle" font-size="10">PR #493</text>
+    </g>
+    <g transform="translate(500, 360)">
+      <circle r="50" fill="#f59e0b" stroke="#fbbf24" stroke-width="2"/>
+      <text x="0" y="-3" text-anchor="middle" font-weight="700">Decision</text>
+      <text x="0" y="14" text-anchor="middle" font-size="10">D-19</text>
+    </g>
+    <g transform="translate(180, 460)">
+      <circle r="50" fill="#ef4444" stroke="#f87171" stroke-width="2"/>
+      <text x="0" y="-3" text-anchor="middle" font-weight="700">Incident</text>
+      <text x="0" y="14" text-anchor="middle" font-size="10">INC-19</text>
+    </g>
+  </g>
+
+  <g stroke="#7dd3fc" stroke-width="1.5" fill="none">
+    <path d="M 170 180 Q 280 150 330 130" stroke-dasharray="3 3"/>
+    <path d="M 430 130 Q 540 120 590 130" stroke-dasharray="3 3"/>
+    <path d="M 685 145 Q 770 200 800 240" stroke-dasharray="3 3"/>
+    <path d="M 640 175 Q 580 280 530 320" stroke-dasharray="3 3"/>
+    <path d="M 460 360 Q 350 410 220 440" stroke-dasharray="3 3"/>
+  </g>
+
+  <g font-size="10" fill="#bae6fd" text-anchor="middle">
+    <text x="250" y="148">OWNS</text>
+    <text x="510" y="118">GENERATED</text>
+    <text x="780" y="200">PRODUCED</text>
+    <text x="600" y="265">CAUSED</text>
+    <text x="330" y="410">DOCUMENTED_IN</text>
+  </g>
+</svg>

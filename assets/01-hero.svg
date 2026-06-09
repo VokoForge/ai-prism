@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="brain1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="brain2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="brain3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="brain4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="600" y="50" text-anchor="middle" font-size="32" font-weight="700" fill="#f8fafc">Why an Agent Team?</text>
+  <text x="600" y="78" text-anchor="middle" font-size="16" fill="#94a3b8">从单兵到 1+N · 14 个月的演进</text>
+
+  <g transform="translate(120, 130)">
+    <text x="180" y="0" text-anchor="middle" font-size="18" font-weight="600" fill="#cbd5e1">Solo · 1 人单干</text>
+    <rect x="0" y="20" width="360" height="380" rx="16" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <circle cx="180" cy="120" r="50" fill="#475569"/>
+    <text x="180" y="128" text-anchor="middle" font-size="20" font-weight="600" fill="#f8fafc">1×You</text>
+    <text x="180" y="200" text-anchor="middle" font-size="14" fill="#94a3b8">带宽有限</text>
+    <text x="180" y="225" text-anchor="middle" font-size="14" fill="#94a3b8">24h × 7d</text>
+    <text x="180" y="270" text-anchor="middle" font-size="32" font-weight="700" fill="#ef4444">30+ 仓库</text>
+    <text x="180" y="295" text-anchor="middle" font-size="14" fill="#94a3b8">= 危机</text>
+    <text x="180" y="345" text-anchor="middle" font-size="12" fill="#64748b">第 9 个月踩雷</text>
+    <text x="180" y="365" text-anchor="middle" font-size="12" fill="#64748b">凌晨 3 点事故</text>
+  </g>
+
+  <g transform="translate(540, 130)">
+    <text x="240" y="0" text-anchor="middle" font-size="18" font-weight="600" fill="#cbd5e1">Hybrid · 1 + N</text>
+    <rect x="0" y="20" width="480" height="380" rx="16" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+    <circle cx="240" cy="100" r="45" fill="#3b82f6"/>
+    <text x="240" y="106" text-anchor="middle" font-size="16" font-weight="600" fill="#f8fafc">1×You</text>
+    <text x="240" y="125" text-anchor="middle" font-size="11" fill="#cbd5e1">+ 7 台 Agent</text>
+
+    <g transform="translate(40, 180)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain1)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">CEO</text>
+    </g>
+    <g transform="translate(140, 180)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain2)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">Rex</text>
+    </g>
+    <g transform="translate(240, 180)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain2)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">Kai</text>
+    </g>
+    <g transform="translate(340, 180)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain3)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">Nexus</text>
+    </g>
+
+    <g transform="translate(40, 240)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain3)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">Research</text>
+    </g>
+    <g transform="translate(140, 240)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain4)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">PM</text>
+    </g>
+    <g transform="translate(240, 240)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain4)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">Memory</text>
+    </g>
+    <g transform="translate(340, 240)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="url(#brain2)"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" fill="#fff">+1</text>
+    </g>
+
+    <text x="240" y="335" text-anchor="middle" font-size="32" font-weight="700" fill="#22c55e">380 PR/月</text>
+    <text x="240" y="360" text-anchor="middle" font-size="14" fill="#94a3b8">96% Agent 起草 · 人类 review</text>
+  </g>
+
+  <g transform="translate(60, 540)">
+    <text x="0" y="0" font-size="13" fill="#64748b">Solo 模式 → 带宽 = 天花板</text>
+    <text x="540" y="0" font-size="13" fill="#64748b">1+N 模式 → 复用 = 上限</text>
+  </g>
+</svg>
