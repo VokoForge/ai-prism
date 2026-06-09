@@ -67,18 +67,18 @@ graph LR
 
 | Day | Topic | English | 中文 |
 |-----|-------|---------|------|
-| 01 | Agents Colonize GitHub & Vector Search Bottleneck | [EN](posts/external-lens/en/day-01.md) | [中文](posts/external-lens/zh/day-01.md) |
-| 06 | 6 Skills Projects Worth Starring | [EN](posts/external-lens/en/day-06.md) | [中文](posts/external-lens/zh/day-06.md) |
-| 07 | 5 MCP Protocol Production Cases | [EN](posts/external-lens/en/day-07.md) | [中文](posts/external-lens/zh/day-07.md) |
-| 08 | 6 Must-Read Agent Papers | [EN](posts/external-lens/en/day-08.md) | [中文](posts/external-lens/zh/day-08.md) |
-| 09 | 8 Agent Frameworks Engineering Comparison | [EN](posts/external-lens/en/day-09.md) | [中文](posts/external-lens/zh/day-09.md) |
-| 10 | 2026.05.24 Weekly AI Tools | [EN](posts/external-lens/en/day-10.md) | [中文](posts/external-lens/zh/day-10.md) |
-| 11 | Build Your Own MCP Server | [EN](posts/external-lens/en/day-11.md) | [中文](posts/external-lens/zh/day-11.md) |
-| 12 | Writing DNA Distillation | [EN](posts/external-lens/en/day-12.md) | [中文](posts/external-lens/zh/day-12.md) |
-| 13 | 6-in-1 General Agent Framework | [EN](posts/external-lens/en/day-13.md) | [中文](posts/external-lens/zh/day-13.md) |
-| 14 | 2026 H1 Agent Landscape | [EN](posts/external-lens/en/day-14.md) | [中文](posts/external-lens/zh/day-14.md) |
-| 15 | 2026.05.31 Weekly AI Repos | [EN](posts/external-lens/en/day-15.md) | [中文](posts/external-lens/zh/day-15.md) |
-| 16 | Rust Revolution in Vector Search & Agent Skills Tipping Point | [EN](posts/external-lens/en/day-16.md) | [中文](posts/external-lens/zh/day-16.md) |
+| 01 | While You're Still Hand-writing Vector Search, I Compressed Indexes by 95% with Rust | [EN](posts/external-lens/en/day-01.md) | [中文](posts/external-lens/zh/day-01.md) |
+| 06 | 6 AI Skill Projects — I Picked These 3 | [EN](posts/external-lens/en/day-06.md) | [中文](posts/external-lens/zh/day-06.md) |
+| 07 | What Does an MCP with 1M Daily Calls Look Like? | [EN](posts/external-lens/en/day-07.md) | [中文](posts/external-lens/zh/day-07.md) |
+| 08 | I Read 6 Papers and Only Remembered 3 Conclusions | [EN](posts/external-lens/en/day-08.md) | [中文](posts/external-lens/zh/day-08.md) |
+| 09 | I Hit Pitfalls in All 8 Frameworks — Here's the One I Chose | [EN](posts/external-lens/en/day-09.md) | [中文](posts/external-lens/zh/day-09.md) |
+| 10 | Top 5 Hottest AI Projects on GitHub This Week | [EN](posts/external-lens/en/day-10.md) | [中文](posts/external-lens/zh/day-10.md) |
+| 11 | I Built an MCP Server in 200 Lines of Code | [EN](posts/external-lens/en/day-11.md) | [中文](posts/external-lens/zh/day-11.md) |
+| 12 | Why Does Your Writing Sound Like AI? I Found the Antidote | [EN](posts/external-lens/en/day-12.md) | [中文](posts/external-lens/zh/day-12.md) |
+| 13 | I Tried All 6 Frameworks — Only 2 Are Production-Ready | [EN](posts/external-lens/en/day-13.md) | [中文](posts/external-lens/zh/day-13.md) |
+| 14 | What Can AI Agents Actually Do Now? I Drew a Map | [EN](posts/external-lens/en/day-14.md) | [中文](posts/external-lens/zh/day-14.md) |
+| 15 | What Happened in AI This Week? 5 Big Things | [EN](posts/external-lens/en/day-15.md) | [中文](posts/external-lens/zh/day-15.md) |
+| 16 | The Vector Search Bottleneck, Broken by a Rust Project | [EN](posts/external-lens/en/day-16.md) | [中文](posts/external-lens/zh/day-16.md) |
 
 ---
 

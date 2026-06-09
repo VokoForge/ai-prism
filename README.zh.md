@@ -67,18 +67,18 @@ graph LR
 
 | Day | 主题 | 中文 | English |
 |-----|------|------|---------|
-| 01 | Agent 屠榜 GitHub & 向量检索新瓶颈 | [中文](posts/external-lens/zh/day-01.md) | [EN](posts/external-lens/en/day-01.md) |
-| 06 | Skills 生态 6 个值得 star 的项目 | [中文](posts/external-lens/zh/day-06.md) | [EN](posts/external-lens/en/day-06.md) |
-| 07 | MCP 协议生态 5 个生产案例 | [中文](posts/external-lens/zh/day-07.md) | [EN](posts/external-lens/en/day-07.md) |
-| 08 | 6 篇必读 Agent 论文 | [中文](posts/external-lens/zh/day-08.md) | [EN](posts/external-lens/en/day-08.md) |
-| 09 | 8 个 Agent 框架工程实践横评 | [中文](posts/external-lens/zh/day-09.md) | [EN](posts/external-lens/en/day-09.md) |
-| 10 | 2026.05.24 周更热门 AI 工具榜 | [中文](posts/external-lens/zh/day-10.md) | [EN](posts/external-lens/en/day-10.md) |
-| 11 | 自建一个 MCP Server | [中文](posts/external-lens/zh/day-11.md) | [EN](posts/external-lens/en/day-11.md) |
-| 12 | 写作 DNA 蒸馏 | [中文](posts/external-lens/zh/day-12.md) | [EN](posts/external-lens/en/day-12.md) |
-| 13 | 通用 Agent 框架 6 选 1 | [中文](posts/external-lens/zh/day-13.md) | [EN](posts/external-lens/en/day-13.md) |
-| 14 | 2026 H1 Agent 现状图 | [中文](posts/external-lens/zh/day-14.md) | [EN](posts/external-lens/en/day-14.md) |
-| 15 | 2026.05.31 周更热门 AI 仓库 | [中文](posts/external-lens/zh/day-15.md) | [EN](posts/external-lens/en/day-15.md) |
-| 16 | 向量检索的 Rust 革命 & Agent Skills 爆发临界点 | [中文](posts/external-lens/zh/day-16.md) | [EN](posts/external-lens/en/day-16.md) |
+| 01 | 别人还在手写向量检索，我已经用Rust把索引压缩了95% | [中文](posts/external-lens/zh/day-01.md) | [EN](posts/external-lens/en/day-01.md) |
+| 06 | 6个AI技能项目，我选了这3个 | [中文](posts/external-lens/zh/day-06.md) | [EN](posts/external-lens/en/day-06.md) |
+| 07 | 日调100万次的MCP，长什么样 | [中文](posts/external-lens/zh/day-07.md) | [EN](posts/external-lens/en/day-07.md) |
+| 08 | 6篇论文读完了，我只记住这3个结论 | [中文](posts/external-lens/zh/day-08.md) | [EN](posts/external-lens/en/day-08.md) |
+| 09 | 8个框架我全踩过坑，最后选了这1个 | [中文](posts/external-lens/zh/day-09.md) | [EN](posts/external-lens/en/day-09.md) |
+| 10 | 这周GitHub上最火的5个AI项目 | [中文](posts/external-lens/zh/day-10.md) | [EN](posts/external-lens/en/day-10.md) |
+| 11 | 200行代码，我手搓了一个MCP Server | [中文](posts/external-lens/zh/day-11.md) | [EN](posts/external-lens/en/day-11.md) |
+| 12 | 你的文章为什么有AI味？我找到了解药 | [中文](posts/external-lens/zh/day-12.md) | [EN](posts/external-lens/en/day-12.md) |
+| 13 | 6个框架我全试了，只有2个能上生产 | [中文](posts/external-lens/zh/day-13.md) | [EN](posts/external-lens/en/day-13.md) |
+| 14 | AI Agent现在到底能干什么？我画了张图 | [中文](posts/external-lens/zh/day-14.md) | [EN](posts/external-lens/en/day-14.md) |
+| 15 | 这周AI圈发生了什么？5件大事 | [中文](posts/external-lens/zh/day-15.md) | [EN](posts/external-lens/en/day-15.md) |
+| 16 | 向量检索的瓶颈，被一个Rust项目打破了 | [中文](posts/external-lens/zh/day-16.md) | [EN](posts/external-lens/en/day-16.md) |
 
 ---
 
