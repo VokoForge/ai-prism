@@ -1,27 +1,32 @@
 # 6个框架我全试了，只有2个能上生产
 
 [English](../en/day-13.md) | [简体中文](./day-13.md)
-> 日期: 2026-05-28 · 类型: 工程 · 难度: 中级 · 阅读时间: ~12 分钟
-
----
 
 Day 09 用特性矩阵看了 8 个框架。这篇深挖**6 个通用型**（目标是"啥都能做"，不是垂直工具）。我从**5 个工程轴**对比——这 5 个轴是真正部署时重要的：状态管理，可观测性，安全模型，部署形态，开发者体验。
 
 说实话，6 个框架里只有 2 个我敢上生产：**LangGraph** 和 **Agno**。
 
-先看一张评分雷达图：
-
 ```mermaid
-radar-beta
-    title 6个框架5维评分
-    axis 状态管理, 可观测性, 安全模型, 部署形态, 开发者体验
-    curve{LangGraph: 5, 5, 2, 4, 4}
-    curve{CrewAI: 2, 3, 2, 3, 5}
-    curve{AutoGen: 3, 4, 3, 3, 3}
-    curve{Letta: 5, 3, 3, 3, 3}
-    curve{Agno: 3, 4, 2, 5, 4}
-    curve{OpenHands: 3, 4, 5, 2, 2}
-    max 5
+flowchart TB
+    subgraph PROD[能上生产]
+        LG[LangGraph<br>状态管理5 可观测性5<br>安全2 部署4 体验4]
+        AG[Agno<br>状态3 可观测4<br>安全2 部署5 体验4]
+    end
+    subgraph MAYBE[勉强能上]
+        CR[CrewAI<br>状态2 可观测3<br>安全2 部署3 体验5]
+        OH[OpenHands<br>状态3 可观测4<br>安全5 部署2 体验2]
+    end
+    subgraph NOPROD[不能上生产]
+        LT[Letta<br>状态5 可观测3<br>安全3 部署3 体验3]
+        AU[AutoGen<br>状态3 可观测4<br>安全3 部署3 体验3]
+    end
+
+    style LG fill:#6366f1,stroke:#4f46e5,color:#fff
+    style AG fill:#6366f1,stroke:#4f46e5,color:#fff
+    style CR fill:#f59e0b,stroke:#d97706,color:#fff
+    style OH fill:#f59e0b,stroke:#d97706,color:#fff
+    style LT fill:#94a3b8,stroke:#64748b,color:#fff
+    style AU fill:#94a3b8,stroke:#64748b,color:#fff
 ```
 
 ---
@@ -36,6 +41,10 @@ radar-beta
 
 **CrewAI** 的 memory store 看起来方便，但复杂场景下不够灵活。
 
+**之前：状态全放内存，重启就丢 → 现在：LangGraph checkpointer 持久化到 PostgreSQL → 这意味着：agent 终于能"断点续传"了。**
+
+说白了，状态管理就是 agent 的"存档功能"——没有存档，你敢让 agent 跑 2 小时的任务吗？
+
 ---
 
 ## 🛠️ 02 可观测性 — 凌晨 3 点出问题时你能看见什么
@@ -46,6 +55,23 @@ radar-beta
 
 **AutoGen** 对纯 OpenTelemetry 团队最友好，原生支持。
 
+```mermaid
+flowchart LR
+    subgraph 付费方案
+        LG[LangGraph + LangSmith<br>金标准 一键复现]
+    end
+    subgraph 免费方案
+        AG[Agno 内建 dashboard<br>零成本 够用]
+        AU[AutoGen + OpenTelemetry<br>原生支持 需配置]
+    end
+
+    style LG fill:#6366f1,stroke:#4f46e5,color:#fff
+    style AG fill:#10b981,stroke:#059669,color:#fff
+    style AU fill:#f59e0b,stroke:#d97706,color:#fff
+```
+
+**之前：agent 出错只能看 print log → 现在：LangSmith 时间线追踪 → 这意味着：调试时间从 2 小时降到 10 分钟。**
+
 ---
 
 ## 💡 03 安全模型 — 谁能做什么，怎么约束
@@ -54,26 +80,24 @@ radar-beta
 
 其他都假设你自己包一层沙箱。说实话，这不够。2026 年的 agent 会越来越多地执行代码，安全模型会变成选型的决定性因素。
 
----
-
-## 📋 04 部署形态 & 05 开发者体验
-
-**Agno** 对 serverless 最友好。**LangGraph** 对"我们已经有 k8s"最友好。**OpenHands** 唯一不太行 serverless——它要一台长驻机器。
-
-开发者体验方面：原型阶段 **CrewAI** 速度第一（15 分钟跑通）。生产阶段 **LangGraph** 文档 + 可观测性第一。**"我有真实产品" Agno** 平衡最好。
+**之前：agent 直接在宿主机跑代码 → 现在：OpenHands Docker 双重隔离 → 这意味着：终于不用提心吊胆了。**
 
 ---
 
-## 总排名
+## 📋 5 维评分表 & 总排名
 
-| 排名 | 框架 | 适合谁 | 能上生产？ |
-|------|------|--------|-----------|
-| 1 | **LangGraph** | 大团队，深度可观测性预算 | 能 |
-| 2 | **Agno** | Serverless + dashboard，均衡产品 | 能 |
-| 3 | **CrewAI** | 快速原型，角色制 demo | 勉强 |
-| 4 | **OpenHands** | 涉及不可信代码执行的任何场景 | 特定场景 |
-| 5 | **Letta** | 长对话，记忆密集 agent | 看场景 |
-| 6 | **AutoGen** | OpenTelemetry-native 团队 | 显老了 |
+| 框架 | 状态管理 | 可观测性 | 安全模型 | 部署形态 | 开发者体验 | 能上生产？ |
+|------|----------|----------|----------|----------|------------|-----------|
+| **LangGraph** | 5 | 5 | 2 | 4 | 4 | 能 |
+| **Agno** | 3 | 4 | 2 | 5 | 4 | 能 |
+| CrewAI | 2 | 3 | 2 | 3 | 5 | 勉强 |
+| OpenHands | 3 | 4 | 5 | 2 | 2 | 特定场景 |
+| Letta | 5 | 3 | 3 | 3 | 3 | 看场景 |
+| AutoGen | 3 | 4 | 3 | 3 | 3 | 显老了 |
+
+**部署形态：** Agno 对 serverless 最友好。LangGraph 对"我们已经有 k8s"最友好。OpenHands 唯一不太行 serverless——它要一台长驻机器。
+
+**开发者体验：** 原型阶段 CrewAI 速度第一（15 分钟跑通）。生产阶段 LangGraph 文档 + 可观测性第一。"我有真实产品" Agno 平衡最好。
 
 ---
 

@@ -1,9 +1,6 @@
 # AI Agent现在到底能干什么？我画了张图
 
 [English](../en/day-14.md) | [简体中文](./day-14.md)
-> 日期: 2026-05-29 · 类型: 景观 · 难度: 各级别 · 阅读时间: ~14 分钟
-
----
 
 每次有人问我"AI Agent 现在到底能干什么"，我都得花 10 分钟解释。今天我画了张图，一图胜千言。
 
@@ -18,22 +15,22 @@ flowchart TB
 
     subgraph S2[场景2: 自主任务]
         DR[Deep Research] --- Man[Manus]
-        For[Forge] ---
+        For[Forge] --- Spec[Spec驱动]
     end
 
     subgraph S3[场景3: 多智能体]
         LG[LangGraph] --- CR[CrewAI]
-        AG[AutoGen] ---
+        AG[AutoGen] --- OTel[OpenTelemetry]
     end
 
     subgraph S4[场景4: 低代码]
         N8N[n8n] --- FL[Flowise]
-        DIF[Dify] ---
+        DIF[Dify] --- CN[中国市场]
     end
 
     subgraph S5[场景5: 垂直专用]
         SF[StoryForge] --- NX[NOVIX]
-        DS[DeepResearch类] ---
+        DS[DeepResearch类] --- VER[垂直]
     end
 
     S1 --> S2
@@ -61,7 +58,9 @@ flowchart TB
 | **Continue** | VS Code / JetBrains 插件 | 最可扩展的 IDE 侧 agent（开源，MCP 原生） |
 | **Cline** | 带 MCP 的 VS Code 插件 | IDE 圈最激进的 MCP 拥抱者 |
 
-**这档的教训：** 本地 agent 赢在**延迟和信任**——用户看到每个动作，沙箱是一个容器，循环紧凑（亚秒级每次工具调用）。天花板是"一个人一节会能审完的东西"。
+**之前：AI 编程工具各自为战 → 现在：4 个项目都在向 MCP-native 收敛 → 这意味着：工具互操作性终于不是梦了。**
+
+这档的教训：本地 agent 赢在**延迟和信任**——用户看到每个动作，沙箱是一个容器，循环紧凑（亚秒级每次工具调用）。天花板是"一个人一节会能审完的东西"。
 
 ---
 
@@ -75,7 +74,25 @@ flowchart TB
 | **Manus** | 通才云 agent（闭测） | 第一个把"computer use"真正部署上线的 |
 | **Forge** | 结果驱动的编排 | 把成功定义为规范而不是流程——最干净的契约 |
 
-**这档的教训：** 设计瓶颈已经不是 LLM；是**验证循环**。Forge 的"spec 作为契约，agent 决定怎么做"模式是最有希望的方向。
+```mermaid
+flowchart LR
+    subgraph 传统[传统: 流程驱动]
+        T1[定义步骤] --> T2[执行步骤] --> T3[检查结果]
+    end
+    subgraph FORGE[Forge: 结果驱动]
+        F1[定义目标 Spec] --> F2[Agent自己决定怎么做] --> F3[验证是否达标]
+    end
+
+    传统 -.->|僵化| BAD[改需求要重跑]
+    FORGE -.->|灵活| GOOD[Agent自适应]
+
+    style 传统 fill:#fef2f2,stroke:#ef4444,color:#991b1b
+    style FORGE fill:#f0fdf4,stroke:#22c55e,color:#166534
+```
+
+**之前：定义步骤 → 执行 → 出错重来 → 现在：定义目标 → Agent 自己决定怎么做 → 这意味着：设计瓶颈从"流程设计"转移到"验证设计"。**
+
+这档的教训：设计瓶颈已经不是 LLM；是**验证循环**。Forge 的"spec 作为契约，agent 决定怎么做"模式是最有希望的方向。
 
 ---
 
@@ -89,7 +106,7 @@ flowchart TB
 | **CrewAI** | 角色制 crew | 学习曲线最低；对 agent-as-person 最有主张 |
 | **AutoGen** | 对话优先 | OpenTelemetry 故事最好；学术研究最友好 |
 
-**这档的教训：** "多智能体"不等于"更多 agent"。赢在**清晰的角色边界**和**显式交接协议**，不是堆更多 LLM。
+这档的教训："多智能体"不等于"更多 agent"。赢在**清晰的角色边界**和**显式交接协议**，不是堆更多 LLM。
 
 ---
 

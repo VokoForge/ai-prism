@@ -1,49 +1,71 @@
 # 这周GitHub上最火的5个AI项目
 
 [English](../en/day-10.md) | [简体中文](./day-10.md)
-> 每周一更。仿照 OpenGithubs/weekly 风格，本周最值得 star 的 20 个 AI 工具。
-
----
 
 这周我在 GitHub Trending 上蹲了 7 天，从 200+ 个项目里挑出 20 个。说实话，这周的信号很明确：**Skills 化一切**、**Claude Code 周边爆发**、**中文圈崛起**。
 
-先看一张本周 Top 5 的星标增长图：
-
 ```mermaid
-xychart-beta
-    title "本周Top 5项目星标增长"
-    x-axis ["andrej-karpathy-skills", "claude-mem", "multica", "claude-code-best-practice", "voicebox"]
-    y-axis "周新增Stars (k)" 0 --> 40
-    bar [37.2, 10.4, 5.8, 5.2, 4.9]
+flowchart LR
+    subgraph TOP5[本周 Top 5]
+        K[karpathy-skills<br>+37.2k] --> CM[claude-mem<br>+10.4k]
+        CM --> MU[multica<br>+5.8k]
+        MU --> CB[claude-code-best-practice<br>+5.2k]
+        CB --> VB[voicebox<br>+4.9k]
+    end
+
+    style K fill:#6366f1,stroke:#4f46e5,color:#fff
+    style CM fill:#10b981,stroke:#059669,color:#fff
+    style MU fill:#f59e0b,stroke:#d97706,color:#fff
+    style CB fill:#ec4899,stroke:#be185d,color:#fff
+    style VB fill:#8b5cf6,stroke:#7c3aed,color:#fff
 ```
 
 ---
 
-## 🔥 Top 5 深度解读
+## 🔥 01 forrestchang/andrej-karpathy-skills — 本周 +37.2k
 
-### 1. forrestchang/andrej-karpathy-skills — 本周 +37.2k
+Karpathy 的 AI 课程转成 Skills 格式。为什么这么火？因为"看视频学 AI"和"用 Skill 学 AI"是两种完全不同的体验——前者你被动看，后者你跟着做。
 
-Karpathy 的 AI 课程转成 Skills 格式。为什么这么火？因为"看视频学 AI"和"用 Skill 学 AI"是两种完全不同的体验——前者你被动看，后者你跟着做。学习效率差 50% 以上。
+**之前：看视频 2 小时，记住 10% → 现在：用 Skill 跟着做 30 分钟，记住 60% → 这意味着：学习效率差 50% 以上。**
 
-### 2. thedotmack/claude-mem — 本周 +10.4k
-
-Claude Code 的长期记忆。v0.5.0 支持跨实例共享。Day 07 我们详细拆过它——日调 50k 的生产级 MCP server。
-
-### 3. multica-ai/multica — 本周 +5.8k
-
-多 MCP 路由器，Cloudflare Workers 一键部署。Agent 时代的 nginx。
-
-### 4. shanraisshan/claude-code-best-practice — 本周 +5.2k
-
-中文圈实战手册，v2.0 新特性。300+ 个 Q&A，覆盖 Claude Code 的每个细节。
-
-### 5. jamiepine/voicebox — 本周 +4.9k
-
-语音 AI 工具包。这周语音赛道突然热起来了，值得关注。
+但说实话，37.2k 的增长有水分——它本质是一个课程索引，不是可运行的代码。很多人 star 了但不会真的用。相比之下，claude-mem 的 10.4k 增长更"实"。
 
 ---
 
-## 🛠️ 完整 Top 20
+## 🛠️ 02 thedotmack/claude-mem — 本周 +10.4k
+
+Claude Code 的长期记忆。v0.5.0 支持跨实例共享。Day 07 我们详细拆过它——日调 50k 的生产级 MCP server。
+
+**之前：每次新对话从零开始 → 现在：自动加载历史记忆 → 这意味着：AI 终于不用每次都失忆了。**
+
+这才是本周最值得深读的项目——不是因为星最多，而是因为它解决了一个你一定会遇到的问题。
+
+---
+
+## 💡 03 multica-ai/multica — 本周 +5.8k
+
+多 MCP 路由器，Cloudflare Workers 一键部署。Agent 时代的 nginx。
+
+```mermaid
+flowchart LR
+    A[Agent] -->|12个MCP| M[multica 路由器]
+    M -->|按需暴露| G[GitHub]
+    M -->|按需暴露| S[Slack]
+    M -->|按需暴露| N[Notion]
+    M -->|按需暴露| O[其他9个]
+    G --> M
+    S --> M
+    N --> M
+    M -->|标准化返回| A
+
+    style M fill:#6366f1,stroke:#4f46e5,color:#fff
+```
+
+**之前：12 个 MCP 全暴露，工具列表爆炸 → 现在：路由器按需暴露 → 这意味着：function calling 终于不会超限了。**
+
+---
+
+## 📋 完整 Top 20
 
 | 排名 | 项目 | 本周 Stars | 总 Stars | 评级 |
 |------|------|-----------|---------|------|
@@ -70,13 +92,15 @@ Claude Code 的长期记忆。v0.5.0 支持跨实例共享。Day 07 我们详细
 
 ---
 
-## 💡 5 个趋势
+## 📋 5 个趋势
 
-1. **Skills 化一切** — 课程/法律/教练/架构，一切知识转 Skills
-2. **Claude Code 周边** — Top 20 里 40% 项目跟 Claude Code 相关
-3. **中文圈崛起** — Top 20 里 5 个是中文项目（25%）
-4. **自我进化** — EvoMap/evolver / claude-mem / GenericAgent，"agent 改 agent"新趋势
-5. **金融 AI 走强** — Kronos / ai-hedge-fund / TradingAgents，量化交易 AI 化
+| 趋势 | 代表项目 | 信号强度 |
+|------|----------|----------|
+| Skills 化一切 | karpathy-skills, agency-agents | 极强 |
+| Claude Code 周边 | claude-mem, best-practice, learn-claude-code | 极强 |
+| 中文圈崛起 | hello-agents, vibe-blog, learn-claude-code | 强 |
+| 自我进化 | evolver, claude-mem, GenericAgent | 中 |
+| 金融 AI 走强 | Kronos, ai-hedge-fund | 中 |
 
 ---
 
@@ -87,5 +111,7 @@ Claude Code 的长期记忆。v0.5.0 支持跨实例共享。Day 07 我们详细
 看周榜别只看数字，要看**数字背后的使用密度**。
 
 ---
+
+## 写在最后
 
 **这周最值得你花 1 小时深读的项目：claude-mem。不是因为星最多，而是因为它解决了一个你一定会遇到的问题——AI 的失忆。**

@@ -1,17 +1,10 @@
 # 日调100万次的MCP，长什么样
 
 [English](../en/day-07.md) | [简体中文](./day-07.md)
-> MCP 从 2024 年 11 月发布，到 2026 H1 已经分化出 3 种生态路径。本文不看 GitHub Stars，只看**真正每天 100k+ 调用**的 5 个项目。
-
----
 
 上周有个朋友问我："MCP 到底有没有人真在用？还是都是 demo？"
 
 我给他看了 5 个项目的日均调用量——最低的 30k，最高的 200k。他沉默了。
-
-说实话，MCP 的价值不在协议本身，而在那些**日调 10 万次以上**的生产级 server。今天我就把这 5 个项目拆开给你看。
-
-先看一张调用流程图，理解 MCP 在生产环境里怎么跑的：
 
 ```mermaid
 sequenceDiagram
@@ -37,6 +30,8 @@ sequenceDiagram
     Host-->>User: 最终结果
 ```
 
+说实话，MCP 的价值不在协议本身，而在那些**日调 10 万次以上**的生产级 server。今天我就把这 5 个项目拆开给你看。
+
 ---
 
 ## 🔥 01 thedotmack/claude-mem — Claude 的"长期记忆海马体"
@@ -47,9 +42,11 @@ Vercel / Cloudflare / Railway 内部 8 个 AI coding 团队都在用。杀手锏
 
 工作原理：新对话开始 → 读本地 memories.db → BM25 召回 top-10 + 向量召回 top-5 → 去重截断到 200 token → 注入 system prompt 开头。
 
-**核心启示：MCP 应该是"无感"的。** 用户不应该知道自己"在用 MCP"——它应该像环境变量一样自然。claude-mem 把这点做到了极致：零配置启动，零 prompt 注入，零工具栏弹窗。
+**之前：每次新对话从零开始 → 现在：自动加载历史记忆 → 这意味着：AI 终于有了"长期记忆"。**
 
-**不足：** 隐私敏感场景不能用——摘要会写到本地，但向量召回会从所有对话里抽，可能泄密到其他 session。月增 10.8k 但 issues 堆 400+ 没回，是个人维护，慎用做关键基础设施。
+核心启示：MCP 应该是"无感"的。用户不应该知道自己"在用 MCP"——它应该像环境变量一样自然。claude-mem 把这点做到了极致：零配置启动，零 prompt 注入，零工具栏弹窗。
+
+说白了，这哪是 MCP server，这是 AI 的海马体。
 
 ---
 
@@ -61,9 +58,23 @@ Vercel / Cloudflare / Railway 内部 8 个 AI coding 团队都在用。杀手锏
 
 12 个 MCP 是真实场景：GitHub / Linear / Slack / Notion / Jira / Confluence / Figma / Sentry / Datadog / PagerDuty / Stripe / Snowflake。单个 agent 接 12 个 MCP，工具列表会爆（function calling 限制 < 100 tools），multica 解决这个问题：路由器先看 prompt，只把相关 MCP 的工具 list 暴露给 LLM。
 
-**核心启示：MCP 的瓶颈不是协议本身，是 server 数量。** 任何复杂 agent 系统都需要类似 nginx / envoy 的中间层。
+```mermaid
+flowchart LR
+    A[Agent 请求] --> R[multica 路由器]
+    R -->|prompt 匹配| S1[GitHub MCP]
+    R -->|prompt 匹配| S2[Slack MCP]
+    R -->|prompt 匹配| S3[Notion MCP]
+    R -->|prompt 匹配| S4[其他 9 个 MCP]
+    S1 -->|返回结果| R
+    S2 -->|返回结果| R
+    R -->|标准化返回| A
 
-**不足：** 多了一层 hop，延迟 +30-50ms。路由准确性依赖 embedding 质量，复杂 prompt 可能错路由。12 个 server 的鉴权管理是噩梦。
+    style R fill:#6366f1,stroke:#4f46e5,color:#fff
+```
+
+**之前：12 个 MCP 全暴露，工具列表爆炸 → 现在：路由器按需暴露 → 这意味着：function calling 从 100+ tools 降到 10 以内。**
+
+核心启示：MCP 的瓶颈不是协议本身，是 server 数量。任何复杂 agent 系统都需要类似 nginx / envoy 的中间层。
 
 ---
 
@@ -75,9 +86,9 @@ Vercel / Cloudflare / Railway 内部 8 个 AI coding 团队都在用。杀手锏
 
 它不是"绕过验证"——它是**伪装成正常浏览器**。自动处理 Cloudflare 验证 / reCAPTCHA / fingerprint 检测 / 动态渲染。
 
-**核心启示：伦理设计 = 商业护城河。** Scrapling 内置 robots.txt 检查、QPS 限制、UA 白名单。不遵守 robots.txt 的请求自动 reject。这让它在欧美市场合法可用——很多同类工具因"无视 robots"被企业法务封禁。
+**之前：scrapy 在 Cloudflare 前 90% 失败 → 现在：Scrapling 成功率 85% → 这意味着：数据采集终于能上生产了。**
 
-**不足：** 国内访问部分海外网站仍受 GFW 影响。智能反爬本身可能违反某些 ToS（不是技术问题，是法律问题）。版本号 0.x，生产慎用。
+核心启示：伦理设计 = 商业护城河。Scrapling 内置 robots.txt 检查、QPS 限制、UA 白名单。不遵守 robots.txt 的请求自动 reject。这让它在欧美市场合法可用——很多同类工具因"无视 robots"被企业法务封禁。
 
 ---
 

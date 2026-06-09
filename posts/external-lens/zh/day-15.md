@@ -1,13 +1,8 @@
 # 这周AI圈发生了什么？5件大事
 
 [English](../en/day-15.md) | [简体中文](./day-15.md)
-> 日期: 2026-05-31 · 类型: 周榜 · 阅读时间: ~8 分钟
-
----
 
 这周 AI 圈信息量爆炸。我从 200+ 条动态里筛出 5 件真正影响格局的事。
-
-先看一张本周 Top 20 的类别分布：
 
 ```mermaid
 pie title 本周Top 20项目类别分布
@@ -28,7 +23,20 @@ pie title 本周Top 20项目类别分布
 - **子 agent 上下文隔离** — 长 session 不再污染主上下文
 - **Repo map 压缩** — 首轮 token 省 30-40%
 
-**这意味着什么：** Aider 不再只是"配对编程"工具了。它现在是认真的自主编程工具。跟 OpenHands、Claude Code 形成三足鼎立。
+**之前：Aider 只是"配对编程"工具 → 现在：认真的自主编程工具 → 这意味着：跟 OpenHands、Claude Code 形成三足鼎立。**
+
+```mermaid
+flowchart LR
+    subgraph 三足鼎立
+        A[Aider v0.85<br>MCP原生 + 上下文隔离]
+        B[OpenHands<br>沙箱 + CodeAct]
+        C[Claude Code<br>官方 + 生态]
+    end
+
+    style A fill:#6366f1,stroke:#4f46e5,color:#fff
+    style B fill:#10b981,stroke:#059669,color:#fff
+    style C fill:#f59e0b,stroke:#d97706,color:#fff
+```
 
 ---
 
@@ -36,7 +44,7 @@ pie title 本周Top 20项目类别分布
 
 第一个中国出身的 agent 相邻项目破 10 万。BAAI 集成是主要差异点。
 
-**这意味着什么：** 中国 AI 开源生态不再是"跟随者"了。Dify、StoryForge、vibe-blog、wewrite——这些项目在各自领域已经是全球最佳。
+**之前：中国 AI 开源 = 跟随者 → 现在：Dify、StoryForge、vibe-blog 在各自领域已经是全球最佳 → 这意味着：中国 AI 开源生态不再是"跟随者"了。**
 
 ---
 
@@ -44,27 +52,24 @@ pie title 本周Top 20项目类别分布
 
 Day 12 提的"风格 DNA 指纹 + 3 候选选优"模式现在生产上线了。StoryForge 正在变成**风格约束长篇生成的事实参考实现**。
 
-**这意味着什么：** 写作 DNA 从"有趣的实验"变成了"可用的工具"。如果你在做 AI 写作产品，StoryForge 的架构值得深读。
+**之前：写作 DNA 是"有趣的实验" → 现在：生产上线的可用工具 → 这意味着：如果你在做 AI 写作产品，StoryForge 的架构值得深读。**
 
 ---
 
-## 📋 大事四：Anthropic Skills 教程 +512 Stars
+## 📋 大事四 & 五
+
+| 大事 | 核心信号 | 意味着什么 |
+|------|----------|------------|
+| Anthropic Skills 教程 +512 Stars | Anthropic 官方下场推 SKILL.md 规范 | Skills 不是风潮，是基础设施 |
+| 写作/创意 Agent 占 Top 20 四席 | vibe-blog、writing-agent、wewrite、shenbi-maliang | 垂直写作工具是下一个编程 Agent |
 
 Anthropic 在 Skills 格式上砸了真金白银。预期 SKILL.md 规范会是 2026 H2 第一个要学的新格式。
 
-**这意味着什么：** Skills 不是一时的风潮。当 Anthropic 官方下场推格式，说明它要成为基础设施了。
+写作/创意 Agent 的能量、速度、开源质量，看起来都像 2024 H2 的编程 Agent 爆发期。如果你是投资者或构建者，**垂直写作工具是你该看的地方**。
 
 ---
 
-## 📊 大事五：写作/创意 Agent 是下一个编程 Agent
-
-本周 Top 20 里，写作/垂直 skill 占了 4 席（vibe-blog、writing-agent、wewrite、shenbi-maliang）。能量、速度、开源质量，看起来都像 2024 H2 的编程 Agent 爆发期。
-
-**这意味着什么：** 如果你是投资者或构建者，**垂直写作工具是你该看的地方**。
-
----
-
-## ⚠️ 值得注意的下跌
+## 📋 值得注意的下跌
 
 | 仓库 | 上周 | 本周 | 为何 |
 |------|------|------|------|
@@ -73,7 +78,7 @@ Anthropic 在 Skills 格式上砸了真金白银。预期 SKILL.md 规范会是 
 
 ---
 
-## 本周 Top 20 速览
+## 📋 本周 Top 20 速览
 
 | # | 仓库 | Stars | 周增 | 类别 |
 |---|------|-------|------|------|
@@ -97,6 +102,14 @@ Anthropic 在 Skills 格式上砸了真金白银。预期 SKILL.md 规范会是 
 | 18 | n8n-io/n8n | 6.3k | +187 | 低代码 |
 | 19 | luo-junyu/awesome-agent-papers | 5.9k | +234 | 榜单 |
 | 20 | konglong87/shenbi-maliang | 5.4k | +198 | 写作 skill |
+
+---
+
+## ⚠️ 不足与反思
+
+本周榜有个隐忧：**Agent 框架的 Top 6 全是老面孔**（LangGraph、OpenHands、LangChain、CrewAI、AutoGen、Letta）。没有新框架杀进来，说明这个赛道可能已经进入"赢家通吃"阶段。新入局者要考虑换个角度切入。
+
+另外，写作 Agent 虽然声量大，但 4 个项目的用户量都还在早期。能不能从"开发者玩具"变成"大众工具"，是 2026 H2 的关键看点。
 
 ---
 

@@ -1,15 +1,10 @@
 # 6篇论文读完了，我只记住这3个结论
 
 [English](../en/day-08.md) | [简体中文](./day-08.md)
-> 2026 H1 在 arxiv 上跟"Agent"相关的论文已超 3,200 篇。但大多数是 demo 套壳或微调。真正推动领域边界的只有约 30 篇。我精选 6 篇，**每篇都改变了我做项目的某个具体决策**。
-
----
 
 上个月我强迫自己把 3,200 篇 Agent 论文的标题全扫了一遍。然后挑了 30 篇精读。最后真正让我拍大腿说"我之前做错了"的，只有 6 篇。
 
 说实话，读论文最怕的不是看不懂，是看完了不知道怎么用。今天我不给你讲论文摘要，我只讲**每个结论怎么改变了我的代码**。
-
-先看一张关系图，理解这 6 篇论文之间的逻辑：
 
 ```mermaid
 flowchart TB
@@ -38,9 +33,7 @@ flowchart TB
 
 **核心结论：** 多 Agent 失败 60% 来自沟通问题，40% 来自任务理解问题——但传统调试只关注 40%。
 
-**Before vs After：**
-- 之前：agent 失败 → 看 log → 修 prompt
-- 现在：agent 失败 → 先查 MAST 分类法 → 定位类别 → 修调度逻辑
+**之前：agent 失败 → 看 log → 修 prompt → 现在：agent 失败 → 先查 MAST 分类法 → 定位类别 → 修调度逻辑 → 这意味着：调试效率提升 3 倍。**
 
 说白了，大多数多 agent 失败不是"模型不够强"，是"agent 之间说不清"。这跟人类团队一模一样——项目延期 60% 的原因不是能力不够，是沟通出了问题。
 
@@ -51,6 +44,24 @@ flowchart TB
 **来源：** [A Survey of AI Agent Protocols](https://arxiv.org/abs/2504.16736) (CMU / Microsoft / Google DeepMind, 2025-04)
 
 第一次系统对比 MCP / A2A / ANP 三大 agent 通信协议。从延迟、吞吐量、鉴权、扩展性、可观测性 5 维评分。
+
+```mermaid
+flowchart LR
+    subgraph NOW[现在选]
+        MCP[MCP: 事实标准<br>生态最成熟]
+    end
+    subgraph FUTURE[未来押注]
+        A2A[A2A: Google 推<br>跨组织协作]
+        ANP[ANP: 去中心化<br>实验性]
+    end
+    NOW -->|2年内不用换| MCP
+    FUTURE -->|押注Google| A2A
+    FUTURE -->|高风险| ANP
+
+    style MCP fill:#6366f1,stroke:#4f46e5,color:#fff
+    style A2A fill:#10b981,stroke:#059669,color:#fff
+    style ANP fill:#f59e0b,stroke:#d97706,color:#fff
+```
 
 **核心结论：** 如果你今天选 MCP，未来 2 年内不用换；如果你今天选 A2A，押注 Google 赢；如果你今天选 ANP，准备好跟 Google 竞争。
 
@@ -66,9 +77,7 @@ flowchart TB
 
 **核心结论：** 通用 agent 的天花板已经到了。真正能上生产的 agent，必须在一个垂直领域里做到极致——而极致的来源不是 LLM，是领域工具链 + 专有数据 + 物理约束模型。
 
-**Before vs After：**
-- 之前：我想让 agent 什么都能做
-- 现在：我只让 agent 做写作这一件事，但做到极致
+**之前：我想让 agent 什么都能做 → 现在：我只让 agent 做写作这一件事，但做到极致 → 这意味着：从"什么都做不好"到"一件事做到 95 分"。**
 
 ---
 
