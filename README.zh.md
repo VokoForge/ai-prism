@@ -68,6 +68,10 @@ graph LR
 | Day | 主题 | 中文 | English |
 |-----|------|------|---------|
 | 01 | 别人还在手写向量检索，我已经用Rust把索引压缩了95% | [中文](posts/external-lens/zh/day-01.md) | [EN](posts/external-lens/en/day-01.md) |
+| 02 | 4个AI编程工具我全用了，最后留下了这1个 | [中文](posts/external-lens/zh/day-02.md) | [EN](posts/external-lens/en/day-02.md) |
+| 03 | 你的AI助手为什么总是失忆？我试了5种解药 | [中文](posts/external-lens/zh/day-03.md) | [EN](posts/external-lens/en/day-03.md) |
+| 04 | AI创业的3个死法，90%的人都踩了 | [中文](posts/external-lens/zh/day-04.md) | [EN](posts/external-lens/en/day-04.md) |
+| 05 | MCP协议出来半年了，到底改变了什么？ | [中文](posts/external-lens/zh/day-05.md) | [EN](posts/external-lens/en/day-05.md) |
 | 06 | 6个AI技能项目，我选了这3个 | [中文](posts/external-lens/zh/day-06.md) | [EN](posts/external-lens/en/day-06.md) |
 | 07 | 日调100万次的MCP，长什么样 | [中文](posts/external-lens/zh/day-07.md) | [EN](posts/external-lens/en/day-07.md) |
 | 08 | 6篇论文读完了，我只记住这3个结论 | [中文](posts/external-lens/zh/day-08.md) | [EN](posts/external-lens/en/day-08.md) |

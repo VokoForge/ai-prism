@@ -68,6 +68,10 @@ graph LR
 | Day | Topic | English | 中文 |
 |-----|-------|---------|------|
 | 01 | While You're Still Hand-writing Vector Search, I Compressed Indexes by 95% with Rust | [EN](posts/external-lens/en/day-01.md) | [中文](posts/external-lens/zh/day-01.md) |
+| 02 | I Used All 4 AI Coding Tools — Here's the One I Kept | [EN](posts/external-lens/en/day-02.md) | [中文](posts/external-lens/zh/day-02.md) |
+| 03 | Why Does Your AI Assistant Keep Forgetting? I Tried 5 Cures | [EN](posts/external-lens/en/day-03.md) | [中文](posts/external-lens/zh/day-03.md) |
+| 04 | 3 Ways AI Startups Die — and 90% of Founders Walk Right Into Them | [EN](posts/external-lens/en/day-04.md) | [中文](posts/external-lens/zh/day-04.md) |
+| 05 | MCP Is Six Months Old — What Has It Actually Changed? | [EN](posts/external-lens/en/day-05.md) | [中文](posts/external-lens/zh/day-05.md) |
 | 06 | 6 AI Skill Projects — I Picked These 3 | [EN](posts/external-lens/en/day-06.md) | [中文](posts/external-lens/zh/day-06.md) |
 | 07 | What Does an MCP with 1M Daily Calls Look Like? | [EN](posts/external-lens/en/day-07.md) | [中文](posts/external-lens/zh/day-07.md) |
 | 08 | I Read 6 Papers and Only Remembered 3 Conclusions | [EN](posts/external-lens/en/day-08.md) | [中文](posts/external-lens/zh/day-08.md) |
