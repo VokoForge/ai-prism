@@ -116,6 +116,25 @@ graph LR
 
 ---
 
+### Part III: 🚀 GitHub AI Open-Source Column
+
+> Tracking the fastest-growing AI open-source projects on GitHub — deep dives, architecture analysis, and real-world use cases
+
+| # | Project | Stars | Topic | Article |
+|---|---------|-------|-------|---------|
+| 01 | Career-Ops | ⭐ 51,912 | AI Job Search / Anti-ATS | [中文](posts/github-ai-column/zh/article-01-career-ops.md) |
+| 02 | last30days-skill | ⭐ 30,748 | AI Agent Skill / Info Aggregation | [中文](posts/github-ai-column/zh/article-02-last30days-skill.md) |
+| 03 | Agent-Reach | ⭐ 20,000+ | Cross-platform Scraping / MCP | [中文](posts/github-ai-column/zh/article-03-agent-reach.md) |
+| 04 | OpenMed | ⭐ 15,000+ | Medical AI / Local-first / Privacy | [中文](posts/github-ai-column/zh/article-04-openmed.md) |
+| 05 | Turbovec | ⭐ 12,000+ | Vector Search / Rust / RAG | [中文](posts/github-ai-column/zh/article-05-turbovec.md) |
+| 06 | WhichLLM | ⭐ 3,233 | Local LLM / Hardware Detection | [中文](posts/github-ai-column/zh/article-06-whichllm.md) |
+| 07 | Tolaria | ⭐ 12,827 | Knowledge Management / Markdown | [中文](posts/github-ai-column/zh/article-07-tolaria.md) |
+| 08 | System Prompts | ⭐ 136,000+ | Prompt Engineering / OSINT | [中文](posts/github-ai-column/zh/article-08-system-prompts.md) |
+| 09 | MemPalace | ⭐ 52,000+ | AI Memory / LongMemEval | [中文](posts/github-ai-column/zh/article-09-mempalace.md) |
+| 10 | CodeGraph | ⭐ 28,400+ | Code Knowledge Graph / Tree-sitter | [中文](posts/github-ai-column/zh/article-10-codegraph.md) |
+
+---
+
 ## 📜 License
 
 [MIT](LICENSE) · 2026

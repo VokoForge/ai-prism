@@ -116,6 +116,25 @@ graph LR
 
 ---
 
+### 第三部分：🚀 GitHub AI 开源专栏
+
+> 追踪 GitHub Star 增长最快的 AI 开源项目 — 深度解读、架构剖析、实战案例
+
+| # | 项目 | Stars | 主题 | 文章 |
+|---|------|-------|------|------|
+| 01 | Career-Ops | ⭐ 51,912 | AI求职 / 反ATS筛选 | [中文](posts/github-ai-column/zh/article-01-career-ops.md) |
+| 02 | last30days-skill | ⭐ 30,748 | AI Agent Skill / 信息聚合 | [中文](posts/github-ai-column/zh/article-02-last30days-skill.md) |
+| 03 | Agent-Reach | ⭐ 20,000+ | 跨平台抓取 / MCP | [中文](posts/github-ai-column/zh/article-03-agent-reach.md) |
+| 04 | OpenMed | ⭐ 15,000+ | 医疗AI / 本地运行 / 隐私 | [中文](posts/github-ai-column/zh/article-04-openmed.md) |
+| 05 | Turbovec | ⭐ 12,000+ | 向量检索 / Rust / RAG | [中文](posts/github-ai-column/zh/article-05-turbovec.md) |
+| 06 | WhichLLM | ⭐ 3,233 | 本地LLM / 硬件检测 | [中文](posts/github-ai-column/zh/article-06-whichllm.md) |
+| 07 | Tolaria | ⭐ 12,827 | 知识管理 / Markdown | [中文](posts/github-ai-column/zh/article-07-tolaria.md) |
+| 08 | System Prompts | ⭐ 136,000+ | Prompt Engineering / OSINT | [中文](posts/github-ai-column/zh/article-08-system-prompts.md) |
+| 09 | MemPalace | ⭐ 52,000+ | AI记忆 / LongMemEval | [中文](posts/github-ai-column/zh/article-09-mempalace.md) |
+| 10 | CodeGraph | ⭐ 28,400+ | 代码知识图谱 / Tree-sitter | [中文](posts/github-ai-column/zh/article-10-codegraph.md) |
+
+---
+
 ## 📜 License
 
 [MIT](LICENSE) · 2026
