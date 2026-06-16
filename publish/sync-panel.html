@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文章同步发布面板</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f23; color: #e0e0e0; padding: 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { color: #00d4ff; text-align: center; margin-bottom: 10px; font-size: 24px; }
+  .subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
+  .article-card { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+  .article-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+  .article-meta { font-size: 13px; color: #888; margin-bottom: 16px; }
+  .platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+  @media (max-width: 600px) { .platform-grid { grid-template-columns: repeat(2, 1fr); } }
+  .platform-btn { padding: 12px; border: 1px solid #3a3a5a; border-radius: 8px; background: #16213e; color: #ccc; cursor: pointer; font-size: 14px; text-align: center; transition: all 0.2s; }
+  .platform-btn:hover { background: #1a3a5e; border-color: #00d4ff; color: #00d4ff; }
+  .platform-btn.syncing { background: #1a3a2e; border-color: #00ff88; color: #00ff88; }
+  .platform-btn.success { background: #0a2a1a; border-color: #00ff88; color: #00ff88; }
+  .platform-btn.error { background: #3a1a1a; border-color: #ff4444; color: #ff4444; }
+  .sync-all-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #00d4ff, #7b2ff7); border: none; border-radius: 8px; color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+  .sync-all-btn:hover { opacity: 0.85; }
+  .sync-all-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .status { text-align: center; padding: 8px; margin-top: 12px; font-size: 13px; border-radius: 6px; }
+  .status.info { background: #1a2a3e; color: #00d4ff; }
+  .status.success { background: #0a2a1a; color: #00ff88; }
+  .status.error { background: #3a1a1a; color: #ff4444; }
+  .tag-section { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag { background: #2a2a4a; color: #aaa; padding: 4px 10px; border-radius: 12px; font-size: 12px; }
+  .cover-preview { width: 100%; max-width: 300px; border-radius: 8px; margin-bottom: 12px; border: 1px solid #2a2a4a; }
+  .tips { background: #1a2a3e; border: 1px solid #2a4a6e; border-radius: 8px; padding: 16px; margin-top: 24px; }
+  .tips h3 { color: #00d4ff; margin-bottom: 8px; font-size: 15px; }
+  .tips ul { padding-left: 20px; font-size: 13px; line-height: 1.8; color: #aaa; }
+  .log-area { background: #0a0a1a; border: 1px solid #2a2a4a; border-radius: 8px; padding: 12px; margin-top: 16px; max-height: 200px; overflow-y: auto; font-size: 12px; font-family: monospace; color: #888; }
+  .log-line { padding: 2px 0; }
+  .log-line.success { color: #00ff88; }
+  .log-line.error { color: #ff4444; }
+  .log-line.info { color: #00d4ff; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🚀 文章同步发布面板</h1>
+  <p class="subtitle">Wechatsync JS SDK · 一键同步到6大平台</p>
+
+  <!-- 文章1 -->
+  <div class="article-card" id="article11">
+    <div class="article-title">文章1：OpenClaw — 248K Star！黄仁勋说它是"下一个Linux"</div>
+    <div class="article-meta">
+      平台：微信公众号 / 知乎 / 掘金 / 微博 / 头条 / CSDN | 标签：OpenClaw, AI助手, 开源, GitHub, 黄仁勋, Rust
+    </div>
+    <div class="tag-section">
+      <span class="tag">#OpenClaw</span><span class="tag">#AI助手</span><span class="tag">#开源</span>
+      <span class="tag">#GitHub</span><span class="tag">#黄仁勋</span><span class="tag">#Rust</span>
+    </div>
+    <div class="platform-grid">
+      <button class="platform-btn" data-article="11" data-platform="wechat">微信公众号</button>
+      <button class="platform-btn" data-article="11" data-platform="zhihu">知乎</button>
+      <button class="platform-btn" data-article="11" data-platform="juejin">掘金</button>
+      <button class="platform-btn" data-article="11" data-platform="weibo">微博</button>
+      <button class="platform-btn" data-article="11" data-platform="toutiao">头条</button>
+      <button class="platform-btn" data-article="11" data-platform="csdn">CSDN</button>
+    </div>
+    <button class="sync-all-btn" data-article="11" onclick="syncAll('11')">一键同步全部平台</button>
+    <div class="status hidden" id="status-11"></div>
+  </div>
+
+  <!-- 文章2 -->
+  <div class="article-card" id="article15">
+    <div class="article-title">文章2：System Prompts Leaks — 20K Star！撕开AI的遮羞布</div>
+    <div class="article-meta">
+      平台：微信公众号 / 知乎 / 掘金 / 微博 / 头条 / CSDN | 标签：AI安全, 提示词泄露, ChatGPT, Claude, 大模型, GPT5
+    </div>
+    <div class="tag-section">
+      <span class="tag">#AI安全</span><span class="tag">#提示词泄露</span><span class="tag">#ChatGPT</span>
+      <span class="tag">#Claude</span><span class="tag">#大模型</span><span class="tag">#GPT5</span>
+    </div>
+    <div class="platform-grid">
+      <button class="platform-btn" data-article="15" data-platform="wechat">微信公众号</button>
+      <button class="platform-btn" data-article="15" data-platform="zhihu">知乎</button>
+      <button class="platform-btn" data-article="15" data-platform="juejin">掘金</button>
+      <button class="platform-btn" data-article="15" data-platform="weibo">微博</button>
+      <button class="platform-btn" data-article="15" data-platform="toutiao">头条</button>
+      <button class="platform-btn" data-article="15" data-platform="csdn">CSDN</button>
+    </div>
+    <button class="sync-all-btn" data-article="15" onclick="syncAll('15')">一键同步全部平台</button>
+    <div class="status hidden" id="status-15"></div>
+  </div>
+
+  <div class="tips">
+    <h3>使用说明</h3>
+    <ul>
+      <li>确保已安装 <strong>Wechatsync Chrome 扩展</strong>（<a href="https://www.wechatsync.com/#install" target="_blank" style="color:#00d4ff">安装链接</a>）</li>
+      <li>确保已在浏览器中登录各平台账号</li>
+      <li>点击平台按钮 → 弹出 Wechatsync 同步对话框 → 选择平台 → 点击同步</li>
+      <li>文章同步后保存在各平台<strong>草稿箱</strong>，不会自动发布</li>
+      <li>发布前请在各平台草稿箱中确认标题、封面图、话题标签</li>
+    </ul>
+  </div>
+
+  <div class="log-area" id="logArea">
+    <div class="log-line info">📋 等待同步操作...</div>
+  </div>
+</div>
+
+<script>
+  // 文章数据
+  const articles = {
+    '11': {
+      id: '11',
+      title: '60天24万星！黄仁勋说它是下一个Linux，这个AI助手凭什么？',
+      wechatTitle: '248K Star！黄仁勋说它是"下一个Linux"，60天刷新GitHub纪录！',
+      zhihuTitle: '为什么OpenClaw能在60天内拿下24万Star？深度解析开源AI助手的现象级爆发',
+      juejinTitle: '开源AI助手OpenClaw：248K Star的终端革命，从安装到实战',
+      weiboTitle: '炸裂！60天24万星，这个开源AI助手让黄仁勋都坐不住了',
+      toutiaoTitle: '炸裂！60天24万星，这个开源AI助手让黄仁勋都坐不住了',
+      csdnTitle: 'OpenClaw深度解析：248K Star的开源AI终端助手，Rust性能实测',
+      content: '',
+      contentFile: '../article11/article11.md',
+      tags: 'OpenClaw,AI助手,开源,CLI,Rust,效率工具',
+      cover: '../article11/images/cover.png'
+    },
+    '15': {
+      id: '15',
+      title: '20K Star！撕开AI的遮羞布，所有大模型的"底层剧本"全泄露',
+      wechatTitle: '20K Star！撕开AI的遮羞布，所有大模型的"底层剧本"全泄露！',
+      zhihuTitle: '大模型的"人格"全是演出来的？System Prompts泄露事件深度解析',
+      juejinTitle: '系统提示词泄露全解析：GPT-5、Claude的"灵魂"只是一段文本',
+      weiboTitle: '惊天泄露！GitHub 20K Star项目曝光：所有大模型的"灵魂"只是一段文本',
+      toutiaoTitle: '惊天泄露！GitHub 20K Star项目曝光：所有大模型的"灵魂"只是一段文本',
+      csdnTitle: '系统提示词泄露技术分析：GPT-5、Claude底层逻辑全曝光',
+      content: '',
+      contentFile: '../article15/article15.md',
+      tags: 'AI安全,Prompt,ChatGPT,Claude,大模型,开源',
+      cover: '../article15/images/cover.png'
+    }
+  };
+
+  // 平台标题映射
+  const platformTitles = {
+    wechat: 'wechatTitle',
+    zhihu: 'zhihuTitle',
+    juejin: 'juejinTitle',
+    weibo: 'weiboTitle',
+    toutiao: 'toutiaoTitle',
+    csdn: 'csdnTitle'
+  };
+
+  function log(msg, type) {
+    type = type || 'info';
+    const logArea = document.getElementById('logArea');
+    const line = document.createElement('div');
+    line.className = 'log-line ' + type;
+    line.textContent = new Date().toLocaleTimeString() + ' ' + msg;
+    logArea.appendChild(line);
+    logArea.scrollTop = logArea.scrollHeight;
+  }
+
+  function showStatus(articleId, msg, type) {
+    const el = document.getElementById('status-' + articleId);
+    el.className = 'status ' + type;
+    el.textContent = msg;
+    el.classList.remove('hidden');
+  }
+
+  async function syncToPlatform(articleId, platform) {
+    const article = articles[articleId];
+    const title = article[platformTitles[platform]] || article.title;
+    
+    log(`🔄 [文章${articleId}] 正在同步到 ${platform}...`, 'info');
+    console.log(`[Wechatsync] Syncing article ${articleId} to ${platform}:`, title);
+
+    try {
+      if (typeof window.syncPost !== 'function') {
+        throw new Error('Wechatsync 扩展未检测到，请确保已安装并启用');
+      }
+
+      window.syncPost({
+        title: title,
+        content: article.content,
+        thumb: article.cover,
+        tags: article.tags,
+        platforms: [platform]
+      });
+
+      log(`✅ [文章${articleId}] ${platform} 同步对话框已打开`, 'success');
+      showStatus(articleId, `✅ ${platform} 同步已触发，请在弹窗中确认`, 'success');
+    } catch (error) {
+      log(`❌ [文章${articleId}] ${platform} 同步失败: ${error.message}`, 'error');
+      showStatus(articleId, `❌ ${platform} 失败: ${error.message}`, 'error');
+    }
+  }
+
+  async function syncAll(articleId) {
+    const article = articles[articleId];
+    const btn = document.querySelector(`.sync-all-btn[data-article="${articleId}"]`);
+    btn.disabled = true;
+    btn.textContent = '同步中...';
+    
+    const platforms = ['wechat', 'zhihu', 'juejin', 'weibo', 'toutiao', 'csdn'];
+    const title = article[platformTitles[platforms[0]]] || article.title;
+    
+    log(`🚀 [文章${articleId}] 开始一键同步全部6个平台...`, 'info');
+    
+    try {
+      if (typeof window.syncPost !== 'function') {
+        throw new Error('Wechatsync 扩展未检测到');
+      }
+
+      window.syncPost({
+        title: title,
+        content: article.content,
+        thumb: article.cover,
+        tags: article.tags,
+        platforms: platforms
+      });
+      
+      log(`✅ [文章${articleId}] 全部平台同步弹窗已打开`, 'success');
+      showStatus(articleId, `✅ 全部6个平台同步已触发！请在弹窗中确认每个平台`, 'success');
+    } catch (error) {
+      log(`❌ [文章${articleId}] 同步失败: ${error.message}`, 'error');
+      showStatus(articleId, `❌ 失败: ${error.message}`, 'error');
+    }
+    
+    btn.disabled = false;
+    btn.textContent = '一键同步全部平台';
+  }
+
+  // 初始化
+  async function init() {
+    log('🔍 检测 Wechatsync 扩展状态...', 'info');
+    
+    // 检查 Wechatsync SDK
+    if (typeof window.syncPost === 'function') {
+      log('✅ Wechatsync 扩展已检测到，可以开始同步', 'success');
+    } else {
+      log('⚠️ Wechatsync 扩展未检测到，请确保已安装并启用', 'error');
+      log('💡 安装地址: https://www.wechatsync.com/#install', 'info');
+      showStatus('11', '⚠️ 请先安装 Wechatsync 扩展', 'error');
+      showStatus('15', '⚠️ 请先安装 Wechatsync 扩展', 'error');
+    }
+
+    // 加载文章内容
+    for (const [id, article] of Object.entries(articles)) {
+      try {
+        const resp = await fetch(article.contentFile);
+        if (resp.ok) {
+          article.content = await resp.text();
+          log(`📄 文章${id} 已加载 (${article.content.length} 字符)`, 'success');
+        } else {
+          log(`❌ 文章${id} 加载失败: ${resp.status}`, 'error');
+        }
+      } catch (e) {
+        log(`❌ 文章${id} 加载失败: ${e.message}`, 'error');
+      }
+    }
+  }
+
+  // 绑定按钮事件
+  document.querySelectorAll('.platform-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const articleId = this.dataset.article;
+      const platform = this.dataset.platform;
+      this.classList.add('syncing');
+      this.textContent = '同步中...';
+      syncToPlatform(articleId, platform).finally(() => {
+        this.classList.remove('syncing');
+        this.classList.add('success');
+        this.textContent = '✅ 已触发';
+      });
+    });
+  });
+
+  init();
+</script>
+</body>
+</html>
