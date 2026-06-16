@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020210"/>
+      <stop offset="100%" style="stop-color:#0a0a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <text x="400" y="35" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold" font-family="sans-serif">TurboVec 架构一览</text>
+
+  <!-- Architecture layers -->
+  <!-- Layer 1: Python -->
+  <rect x="60" y="65" width="680" height="50" rx="8" fill="#667eea" opacity="0.15" stroke="#667eea" stroke-width="2"/>
+  <text x="400" y="85" text-anchor="middle" fill="#667eea" font-size="15" font-weight="bold" font-family="sans-serif">Python绑定层</text>
+  <text x="400" y="102" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">pip install turbovec  ·  import turbovec  ·  与numpy无缝协作</text>
+
+  <!-- Arrow -->
+  <text x="400" y="133" text-anchor="middle" fill="#888" font-size="14" font-family="sans-serif">⬇ FFI 零拷贝调用 ⬇</text>
+
+  <!-- Layer 2: Rust Core -->
+  <rect x="60" y="145" width="680" height="50" rx="8" fill="#f093fb" opacity="0.15" stroke="#f093fb" stroke-width="2"/>
+  <text x="400" y="165" text-anchor="middle" fill="#f093fb" font-size="15" font-weight="bold" font-family="sans-serif">Rust 核心引擎</text>
+  <text x="400" y="182" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">内存安全  ·  零成本抽象  ·  极致并行  ·  无GC停顿</text>
+
+  <!-- Arrow -->
+  <text x="400" y="213" text-anchor="middle" fill="#888" font-size="14" font-family="sans-serif">⬇ 核心算法 ⬇</text>
+
+  <!-- Layer 3: Algorithms -->
+  <rect x="60" y="225" width="320" height="60" rx="8" fill="#43e97b" opacity="0.12" stroke="#43e97b" stroke-width="2"/>
+  <text x="220" y="250" text-anchor="middle" fill="#43e97b" font-size="14" font-weight="bold" font-family="sans-serif">TurboQuant 量化</text>
+  <text x="220" y="270" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">向量压缩到1/10 精度无损</text>
+
+  <rect x="420" y="225" width="320" height="60" rx="8" fill="#fa709a" opacity="0.12" stroke="#fa709a" stroke-width="2"/>
+  <text x="580" y="250" text-anchor="middle" fill="#fa709a" font-size="14" font-weight="bold" font-family="sans-serif">SIMD 加速检索</text>
+  <text x="580" y="270" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">AVX2/NEON 单指令多数据</text>
+
+  <!-- Arrow -->
+  <text x="400" y="305" text-anchor="middle" fill="#888" font-size="14" font-family="sans-serif">⬇ 存储层 ⬇</text>
+
+  <!-- Layer 4: Storage -->
+  <rect x="60" y="315" width="320" height="55" rx="8" fill="#4facfe" opacity="0.12" stroke="#4facfe" stroke-width="2"/>
+  <text x="220" y="340" text-anchor="middle" fill="#4facfe" font-size="14" font-weight="bold" font-family="sans-serif">内存索引</text>
+  <text x="220" y="358" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">纳秒级查询 · 热数据驻留</text>
+
+  <rect x="420" y="315" width="320" height="55" rx="8" fill="#ff6a00" opacity="0.12" stroke="#ff6a00" stroke-width="2"/>
+  <text x="580" y="340" text-anchor="middle" fill="#ff6a00" font-size="14" font-weight="bold" font-family="sans-serif">磁盘持久化</text>
+  <text x="580" y="358" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">mmap映射 · 毫秒级加载</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a2e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <text x="400" y="35" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold" font-family="sans-serif">传统方案 vs TurboVec · 全面碾压</text>
+
+  <!-- Traditional side -->
+  <text x="220" y="75" text-anchor="middle" fill="#f5576c" font-size="16" font-weight="bold" font-family="sans-serif">传统向量检索方案</text>
+
+  <g opacity="0.9">
+    <rect x="40" y="95" width="360" height="55" rx="8" fill="#f5576c" opacity="0.1" stroke="#f5576c" stroke-width="1.5"/>
+    <text x="220" y="118" text-anchor="middle" fill="#f5576c" font-size="13" font-weight="bold" font-family="sans-serif">检索速度</text>
+    <text x="220" y="140" text-anchor="middle" fill="#f5576c" font-size="16" font-weight="bold" font-family="sans-serif">1000微秒/查询</text>
+
+    <rect x="40" y="160" width="360" height="55" rx="8" fill="#f5576c" opacity="0.1" stroke="#f5576c" stroke-width="1.5"/>
+    <text x="220" y="183" text-anchor="middle" fill="#f5576c" font-size="13" font-weight="bold" font-family="sans-serif">内存占用</text>
+    <text x="220" y="205" text-anchor="middle" fill="#f5576c" font-size="16" font-weight="bold" font-family="sans-serif">8 GB / 百万向量</text>
+
+    <rect x="40" y="225" width="360" height="55" rx="8" fill="#f5576c" opacity="0.1" stroke="#f5576c" stroke-width="1.5"/>
+    <text x="220" y="248" text-anchor="middle" fill="#f5576c" font-size="13" font-weight="bold" font-family="sans-serif">准确率</text>
+    <text x="220" y="270" text-anchor="middle" fill="#f5576c" font-size="16" font-weight="bold" font-family="sans-serif">96%</text>
+
+    <rect x="40" y="290" width="360" height="55" rx="8" fill="#f5576c" opacity="0.1" stroke="#f5576c" stroke-width="1.5"/>
+    <text x="220" y="313" text-anchor="middle" fill="#f5576c" font-size="13" font-weight="bold" font-family="sans-serif">索引构建</text>
+    <text x="220" y="335" text-anchor="middle" fill="#f5576c" font-size="16" font-weight="bold" font-family="sans-serif">120秒</text>
+  </g>
+
+  <!-- VS -->
+  <rect x="375" y="200" width="50" height="30" rx="15" fill="#ff6a00"/>
+  <text x="400" y="221" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold" font-family="sans-serif">VS</text>
+
+  <!-- TurboVec side -->
+  <text x="580" y="75" text-anchor="middle" fill="#43e97b" font-size="16" font-weight="bold" font-family="sans-serif">TurboVec (Rust)</text>
+
+  <g opacity="0.9">
+    <rect x="400" y="95" width="360" height="55" rx="8" fill="#43e97b" opacity="0.1" stroke="#43e97b" stroke-width="1.5"/>
+    <text x="580" y="118" text-anchor="middle" fill="#43e97b" font-size="13" font-weight="bold" font-family="sans-serif">检索速度</text>
+    <text x="580" y="140" text-anchor="middle" fill="#43e97b" font-size="16" font-weight="bold" font-family="sans-serif">10微秒/查询 ⚡</text>
+
+    <rect x="400" y="160" width="360" height="55" rx="8" fill="#43e97b" opacity="0.1" stroke="#43e97b" stroke-width="1.5"/>
+    <text x="580" y="183" text-anchor="middle" fill="#43e97b" font-size="13" font-weight="bold" font-family="sans-serif">内存占用</text>
+    <text x="580" y="205" text-anchor="middle" fill="#43e97b" font-size="16" font-weight="bold" font-family="sans-serif">0.8 GB / 百万向量 💪</text>
+
+    <rect x="400" y="225" width="360" height="55" rx="8" fill="#43e97b" opacity="0.1" stroke="#43e97b" stroke-width="1.5"/>
+    <text x="580" y="248" text-anchor="middle" fill="#43e97b" font-size="13" font-weight="bold" font-family="sans-serif">准确率</text>
+    <text x="580" y="270" text-anchor="middle" fill="#43e97b" font-size="16" font-weight="bold" font-family="sans-serif">99.5%</text>
+
+    <rect x="400" y="290" width="360" height="55" rx="8" fill="#43e97b" opacity="0.1" stroke="#43e97b" stroke-width="1.5"/>
+    <text x="580" y="313" text-anchor="middle" fill="#43e97b" font-size="13" font-weight="bold" font-family="sans-serif">索引构建</text>
+    <text x="580" y="335" text-anchor="middle" fill="#43e97b" font-size="16" font-weight="bold" font-family="sans-serif">8秒 🚀</text>
+  </g>
+
+  <!-- Footnote -->
+  <text x="400" y="380" text-anchor="middle" fill="#888" font-size="11" font-family="sans-serif">基准：百万级768维向量 / 单线程测试</text>
+</svg>

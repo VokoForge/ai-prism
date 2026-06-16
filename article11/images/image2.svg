@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="700" height="350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1a3e;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="700" height="350" fill="url(#bg)"/>
+  
+  <!-- Architecture layers -->
+  <!-- Layer 1: User Input -->
+  <rect x="50" y="30" width="600" height="50" rx="8" fill="#0f0f23" stroke="#ffcc00" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="350" y="48" fill="#ffcc00" font-size="12" font-weight="bold" text-anchor="middle" font-family="sans-serif">用户输入层：自然语言指令 / 代码片段 / 文件路径</text>
+  <text x="350" y="66" fill="#ffcc00" font-size="9" text-anchor="middle" font-family="sans-serif" opacity="0.7">支持多模态输入，终端直接对话</text>
+  
+  <!-- Arrow 1 -->
+  <polygon points="330,82 350,82 350,95 370,95 340,110 310,95 330,95" fill="#00f0ff" opacity="0.5"/>
+  
+  <!-- Layer 2: OpenClaw Core -->
+  <rect x="50" y="115" width="600" height="60" rx="8" fill="#0f0f23" stroke="#00f0ff" stroke-width="2" filter="url(#glow)"/>
+  <text x="350" y="138" fill="#00f0ff" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">OpenClaw 核心引擎</text>
+  <text x="350" y="158" fill="#00f0ff" font-size="10" text-anchor="middle" font-family="sans-serif" opacity="0.8">意图解析 → 任务编排 → 代码生成 → 沙箱执行 → 结果验证</text>
+  
+  <!-- Arrow 2 -->
+  <polygon points="330,177 350,177 350,190 370,190 340,205 310,190 330,190" fill="#7b2ff7" opacity="0.5"/>
+  
+  <!-- Layer 3: Tool Ecosystem -->
+  <rect x="50" y="210" width="185" height="55" rx="6" fill="#0f0f23" stroke="#7b2ff7" stroke-width="1.2"/>
+  <text x="142" y="232" fill="#7b2ff7" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">工具集成</text>
+  <text x="142" y="250" fill="#7b2ff7" font-size="8" text-anchor="middle" font-family="sans-serif">Shell/Git/文件系统</text>
+  
+  <rect x="257" y="210" width="185" height="55" rx="6" fill="#0f0f23" stroke="#ff2d95" stroke-width="1.2"/>
+  <text x="350" y="232" fill="#ff2d95" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">模型适配</text>
+  <text x="350" y="250" fill="#ff2d95" font-size="8" text-anchor="middle" font-family="sans-serif">Claude/GPT/本地模型</text>
+  
+  <rect x="465" y="210" width="185" height="55" rx="6" fill="#0f0f23" stroke="#00ff88" stroke-width="1.2"/>
+  <text x="557" y="232" fill="#00ff88" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">沙箱安全</text>
+  <text x="557" y="250" fill="#00ff88" font-size="8" text-anchor="middle" font-family="sans-serif">隔离执行/权限控制</text>
+  
+  <!-- Arrow 3 -->
+  <polygon points="330,267 350,267 350,280 370,280 340,295 310,280 330,280" fill="#00ff88" opacity="0.5"/>
+  
+  <!-- Layer 4: Output -->
+  <rect x="50" y="300" width="600" height="38" rx="6" fill="#0f0f23" stroke="#00ff88" stroke-width="1.2"/>
+  <text x="350" y="324" fill="#00ff88" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">输出：可执行代码 / 文件变更 / 终端结果 / 分析报告</text>
+  
+  <!-- Title -->
+  <text x="350" y="18" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">OpenClaw 四层架构一览</text>
+</svg>

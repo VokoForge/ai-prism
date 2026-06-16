@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phase1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f87171;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phase2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phase3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phase4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phase5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">agent-skills 覆盖的开发周期</text>
+  <text x="400" y="65" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">7个命令贯穿软件工程全生命周期</text>
+
+  <!-- Timeline base -->
+  <line x1="80" y1="250" x2="720" y2="250" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Phase 1: Code Writing -->
+  <g transform="translate(160, 250)">
+    <!-- Timeline node -->
+    <circle cx="0" cy="0" r="12" fill="url(#phase1)" filter="url(#glow)"/>
+    <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+    <!-- Label top -->
+    <text x="0" y="-35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#f87171">编码阶段</text>
+    <!-- Skills box -->
+    <rect x="-60" y="-120" width="120" height="70" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="1"/>
+    <text x="0" y="-95" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">使用技能</text>
+    <text x="0" y="-75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#f87171">/review</text>
+    <text x="0" y="-55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">实时代码审查</text>
+    <!-- Arrow down -->
+    <line x1="0" y1="-50" x2="0" y2="-12" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- Phase 2: Testing -->
+  <g transform="translate(300, 250)">
+    <circle cx="0" cy="0" r="12" fill="url(#phase2)" filter="url(#glow)"/>
+    <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="bold" fill="white">2</text>
+    <!-- Label bottom -->
+    <text x="0" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#60a5fa">测试阶段</text>
+    <!-- Skills box -->
+    <rect x="-60" y="55" width="120" height="70" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+    <text x="0" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">使用技能</text>
+    <text x="0" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#60a5fa">/test</text>
+    <text x="0" y="118" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">自动生成测试用例</text>
+    <!-- Arrow up -->
+    <line x1="0" y1="55" x2="0" y2="12" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- Phase 3: Refactoring -->
+  <g transform="translate(440, 250)">
+    <circle cx="0" cy="0" r="12" fill="url(#phase3)" filter="url(#glow)"/>
+    <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="bold" fill="white">3</text>
+    <!-- Label top -->
+    <text x="0" y="-35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#34d399">重构阶段</text>
+    <!-- Skills box -->
+    <rect x="-60" y="-120" width="120" height="70" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+    <text x="0" y="-95" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">使用技能</text>
+    <text x="0" y="-75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#34d399">/refactor</text>
+    <text x="0" y="-55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">代码优化建议</text>
+    <!-- Arrow down -->
+    <line x1="0" y1="-50" x2="0" y2="-12" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- Phase 4: Security & Performance -->
+  <g transform="translate(580, 250)">
+    <circle cx="0" cy="0" r="12" fill="url(#phase4)" filter="url(#glow)"/>
+    <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="bold" fill="white">4</text>
+    <!-- Label bottom -->
+    <text x="0" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#a78bfa">安全与性能</text>
+    <!-- Skills box -->
+    <rect x="-70" y="55" width="140" height="85" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="0" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">使用技能</text>
+    <text x="0" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#a78bfa">/security + /perf</text>
+    <text x="0" y="118" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">漏洞扫描 + 性能分析</text>
+    <!-- Arrow up -->
+    <line x1="0" y1="55" x2="0" y2="12" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- Phase 5: Documentation & Architecture -->
+  <g transform="translate(720, 250)">
+    <circle cx="0" cy="0" r="12" fill="url(#phase5)" filter="url(#glow)"/>
+    <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="bold" fill="white">5</text>
+    <!-- Label top -->
+    <text x="0" y="-35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#fbbf24">文档与架构</text>
+    <!-- Skills box -->
+    <rect x="-70" y="-135" width="140" height="85" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <text x="0" y="-110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">使用技能</text>
+    <text x="0" y="-90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#fbbf24">/docs + /arch</text>
+    <text x="0" y="-72" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">文档生成 + 架构评估</text>
+    <!-- Arrow down -->
+    <line x1="0" y1="-50" x2="0" y2="-12" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- Flow arrows between phases -->
+  <g opacity="0.6">
+    <line x1="172" y1="250" x2="288" y2="250" stroke="#475569" stroke-width="2"/>
+    <polygon points="288,250 280,245 280,255" fill="#475569"/>
+    
+    <line x1="312" y1="250" x2="428" y2="250" stroke="#475569" stroke-width="2"/>
+    <polygon points="428,250 420,245 420,255" fill="#475569"/>
+    
+    <line x1="452" y1="250" x2="568" y2="250" stroke="#475569" stroke-width="2"/>
+    <polygon points="568,250 560,245 560,255" fill="#475569"/>
+    
+    <line x1="592" y1="250" x2="708" y2="250" stroke="#475569" stroke-width="2"/>
+    <polygon points="708,250 700,245 700,255" fill="#475569"/>
+  </g>
+
+  <!-- Bottom info box -->
+  <g transform="translate(400, 420)">
+    <rect x="-300" y="-40" width="600" height="80" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="-15" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">不是替代开发者，而是增强工程能力</text>
+    <text x="0" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">每个技能都基于 Google 内部最佳实践和真实生产代码库训练</text>
+    <text x="0" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">上下文感知 | 可扩展插件 | CI/CD 集成</text>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="50" cy="100" r="4" fill="#ef4444" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="400" r="5" fill="#3b82f6" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="80" r="3" fill="#10b981" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

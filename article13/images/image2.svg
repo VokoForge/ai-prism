@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="700" height="350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1a3e;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.5"/><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="700" height="350" fill="url(#bg)"/>
+  
+  <!-- Three security layers -->
+  <!-- Layer 1: User -->
+  <rect x="50" y="80" width="180" height="90" rx="10" fill="#0f0f23" stroke="#ffcc00" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="140" y="105" fill="#ffcc00" font-size="12" font-weight="bold" text-anchor="middle" font-family="sans-serif">第一层：用户</text>
+  <text x="140" y="125" fill="#ffcc00" font-size="9" text-anchor="middle" font-family="sans-serif" opacity="0.8">身份认证</text>
+  <text x="140" y="142" fill="#ffcc00" font-size="9" text-anchor="middle" font-family="sans-serif" opacity="0.8">权限控制</text>
+  <text x="140" y="159" fill="#ffcc00" font-size="9" text-anchor="middle" font-family="sans-serif" opacity="0.8">操作审计</text>
+  
+  <!-- Arrow -->
+  <text x="280" y="130" fill="#00f0ff" font-size="20" text-anchor="middle" opacity="0.5">→</text>
+  
+  <!-- Layer 2: Model -->
+  <rect x="310" y="80" width="180" height="90" rx="10" fill="#0f0f23" stroke="#ff2d95" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="400" y="105" fill="#ff2d95" font-size="12" font-weight="bold" text-anchor="middle" font-family="sans-serif">第二层：模型</text>
+  <text x="400" y="125" fill="#ff2d95" font-size="9" text-anchor="middle" font-family="sans-serif" opacity="0.8">提示注入防护</text>
+  <text x="400" y="142" fill="#ff2d95" font-size="9" text-anchor="middle" font-family="sans-serif" opacity="0.8">输出过滤</text>
+  <text x="400" y="159" fill="#ff2d95" font-size="9" text-anchor="middle" font-family="sans-serif" opacity="0.8">偏见检测</text>
+  
+  <!-- Arrow -->
+  <text x="540" y="130" fill="#00f0ff" font-size="20" text-anchor="middle" opacity="0.5">→</text>
+  
+  <!-- Layer 3: Skills (SkillSpector focus) -->
+  <rect x="570" y="55" width="110" height="140" rx="10" fill="#0f0f23" stroke="#00f0ff" stroke-width="2" filter="url(#glow)"/>
+  <text x="625" y="80" fill="#00f0ff" font-size="12" font-weight="bold" text-anchor="middle" font-family="sans-serif">第三层</text>
+  <text x="625" y="98" fill="#00f0ff" font-size="10" font-weight="bold" text-anchor="middle" font-family="sans-serif">技能扫描</text>
+  <line x1="590" y1="108" x2="660" y2="108" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+  <text x="625" y="125" fill="#00f0ff" font-size="8" text-anchor="middle" font-family="sans-serif">代码漏洞检测</text>
+  <text x="625" y="142" fill="#00f0ff" font-size="8" text-anchor="middle" font-family="sans-serif">恶意行为识别</text>
+  <text x="625" y="159" fill="#00f0ff" font-size="8" text-anchor="middle" font-family="sans-serif">权限越界检查</text>
+  <text x="625" y="176" fill="#00f0ff" font-size="8" text-anchor="middle" font-family="sans-serif">依赖链分析</text>
+  
+  <!-- Highlight box -->
+  <rect x="555" y="48" width="140" height="7" rx="3" fill="#00f0ff" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Bottom: SkillSpector description -->
+  <rect x="50" y="220" width="600" height="70" rx="8" fill="#0f0f23" stroke="#7b2ff7" stroke-width="1"/>
+  <text x="80" y="245" fill="#7b2ff7" font-size="11" font-weight="bold" font-family="sans-serif">SkillSpector 核心能力</text>
+  
+  <rect x="70" y="255" width="130" height="28" rx="4" fill="#7b2ff7" opacity="0.1"/>
+  <text x="135" y="274" fill="#aaa" font-size="9" text-anchor="middle" font-family="sans-serif">静态代码分析</text>
+  
+  <rect x="215" y="255" width="130" height="28" rx="4" fill="#7b2ff7" opacity="0.1"/>
+  <text x="280" y="274" fill="#aaa" font-size="9" text-anchor="middle" font-family="sans-serif">动态沙箱执行</text>
+  
+  <rect x="360" y="255" width="130" height="28" rx="4" fill="#7b2ff7" opacity="0.1"/>
+  <text x="425" y="274" fill="#aaa" font-size="9" text-anchor="middle" font-family="sans-serif">威胁情报匹配</text>
+  
+  <rect x="505" y="255" width="130" height="28" rx="4" fill="#7b2ff7" opacity="0.1"/>
+  <text x="570" y="274" fill="#aaa" font-size="9" text-anchor="middle" font-family="sans-serif">安全报告生成</text>
+  
+  <!-- Title -->
+  <text x="350" y="25" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">Anthropic 三层安全模型与 SkillSpector 定位</text>
+</svg>

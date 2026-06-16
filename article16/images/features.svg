@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="380" fill="url(#bg)"/>
+  
+  <text x="350" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#818cf8" text-anchor="middle">五大开箱即用的AI副驾驶能力</text>
+  
+  <!-- Feature 1 -->
+  <rect x="20" y="48" width="200" height="130" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="120" y="74" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#a5b4fc" text-anchor="middle">智能文本补全</text>
+  <circle cx="120" cy="96" r="16" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="120" y="102" font-family="Arial, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">T</text>
+  <text x="120" y="130" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">在任何文本框里</text>
+  <text x="120" y="146" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">输入 "/" 触发AI辅助</text>
+  <text x="120" y="162" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">无需离开当前界面</text>
+  
+  <!-- Feature 2 -->
+  <rect x="240" y="48" width="200" height="130" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="340" y="74" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#a5b4fc" text-anchor="middle">对话面板</text>
+  <circle cx="340" cy="96" r="16" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="340" y="102" font-family="Arial, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">C</text>
+  <text x="340" y="130" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">一键嵌入AI聊天窗口</text>
+  <text x="340" y="146" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">支持多轮对话上下文</text>
+  <text x="340" y="162" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">可自定义品牌样式</text>
+  
+  <!-- Feature 3 -->
+  <rect x="460" y="48" width="220" height="130" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="570" y="74" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#a5b4fc" text-anchor="middle">数据协同更新</text>
+  <circle cx="570" cy="96" r="16" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="570" y="102" font-family="Arial, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">D</text>
+  <text x="570" y="130" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">AI直接读取和修改界面数据</text>
+  <text x="570" y="146" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">对话即操作，所见即所得</text>
+  <text x="570" y="162" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">表格/图表实时刷新</text>
+  
+  <!-- Feature 4 -->
+  <rect x="80" y="195" width="220" height="130" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="190" y="221" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#a5b4fc" text-anchor="middle">自定义Actions</text>
+  <circle cx="190" cy="243" r="16" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="190" y="249" font-family="Arial, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">A</text>
+  <text x="190" y="277" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">定义AI可触发的业务操作</text>
+  <text x="190" y="293" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">"帮我生成周报"</text>
+  <text x="190" y="309" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">→ 自动执行并返回结果</text>
+  
+  <!-- Feature 5 -->
+  <rect x="360" y="195" width="260" height="130" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="490" y="221" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#a5b4fc" text-anchor="middle">生成式界面</text>
+  <circle cx="490" cy="243" r="16" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="490" y="249" font-family="Arial, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">U</text>
+  <text x="490" y="277" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">AI直接渲染交互组件</text>
+  <text x="490" y="293" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">对话输出图表/表单/卡片</text>
+  <text x="490" y="309" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">告别纯文本回复</text>
+  
+  <!-- Bottom -->
+  <rect x="150" y="340" width="400" height="30" rx="15" fill="#312e81" opacity="0.6"/>
+  <text x="350" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#a5b4fc" text-anchor="middle">只需 3 行代码 即可为你的 React 应用接入AI</text>
+</svg>

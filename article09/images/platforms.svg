@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="40" text-anchor="middle" fill="#00d9ff" font-size="22" font-family="sans-serif" font-weight="bold">Agent-Reach 15+ 平台覆盖</text>
+  
+  <!-- Center -->
+  <circle cx="400" cy="250" r="55" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="3"/>
+  <text x="400" y="245" text-anchor="middle" fill="#fff" font-size="14" font-family="sans-serif" font-weight="bold">Agent-Reach</text>
+  <text x="400" y="262" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">Zero API Cost</text>
+  
+  <!-- English platforms -->
+  <text x="200" y="90" text-anchor="middle" fill="#00d9ff" font-size="13" font-family="sans-serif" font-weight="bold">英文社区</text>
+  <g transform="translate(120, 105)">
+    <rect x="0" y="0" width="70" height="30" rx="5" fill="url(#nodeGrad)" stroke="#00d9ff" stroke-width="1"/>
+    <text x="35" y="20" text-anchor="middle" fill="#00d9ff" font-size="10" font-family="sans-serif">Twitter/X</text>
+    <line x1="35" y1="30" x2="350" y2="210" stroke="#00d9ff" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(200, 105)">
+    <rect x="0" y="0" width="60" height="30" rx="5" fill="url(#nodeGrad)" stroke="#00d9ff" stroke-width="1"/>
+    <text x="30" y="20" text-anchor="middle" fill="#00d9ff" font-size="10" font-family="sans-serif">Reddit</text>
+    <line x1="30" y1="30" x2="360" y2="210" stroke="#00d9ff" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(120, 145)">
+    <rect x="0" y="0" width="70" height="30" rx="5" fill="url(#nodeGrad)" stroke="#00d9ff" stroke-width="1"/>
+    <text x="35" y="20" text-anchor="middle" fill="#00d9ff" font-size="10" font-family="sans-serif">YouTube</text>
+    <line x1="35" y1="0" x2="350" y2="220" stroke="#00d9ff" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(200, 145)">
+    <rect x="0" y="0" width="80" height="30" rx="5" fill="url(#nodeGrad)" stroke="#00d9ff" stroke-width="1"/>
+    <text x="40" y="20" text-anchor="middle" fill="#00d9ff" font-size="10" font-family="sans-serif">HackerNews</text>
+    <line x1="40" y1="0" x2="360" y2="220" stroke="#00d9ff" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(155, 185)">
+    <rect x="0" y="0" width="70" height="30" rx="5" fill="url(#nodeGrad)" stroke="#00d9ff" stroke-width="1"/>
+    <text x="35" y="20" text-anchor="middle" fill="#00d9ff" font-size="10" font-family="sans-serif">GitHub</text>
+    <line x1="35" y1="0" x2="355" y2="230" stroke="#00d9ff" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Chinese platforms -->
+  <text x="600" y="90" text-anchor="middle" fill="#e94560" font-size="13" font-family="sans-serif" font-weight="bold">中文社区</text>
+  <g transform="translate(530, 105)">
+    <rect x="0" y="0" width="50" height="30" rx="5" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="1"/>
+    <text x="25" y="20" text-anchor="middle" fill="#e94560" font-size="10" font-family="sans-serif">B站</text>
+    <line x1="25" y1="30" x2="445" y2="210" stroke="#e94560" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(590, 105)">
+    <rect x="0" y="0" width="70" height="30" rx="5" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="1"/>
+    <text x="35" y="20" text-anchor="middle" fill="#e94560" font-size="10" font-family="sans-serif">小红书</text>
+    <line x1="35" y1="30" x2="450" y2="210" stroke="#e94560" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(530, 145)">
+    <rect x="0" y="0" width="50" height="30" rx="5" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="1"/>
+    <text x="25" y="20" text-anchor="middle" fill="#e94560" font-size="10" font-family="sans-serif">知乎</text>
+    <line x1="25" y1="0" x2="445" y2="220" stroke="#e94560" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(590, 145)">
+    <rect x="0" y="0" width="50" height="30" rx="5" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="1"/>
+    <text x="25" y="20" text-anchor="middle" fill="#e94560" font-size="10" font-family="sans-serif">微博</text>
+    <line x1="25" y1="0" x2="450" y2="220" stroke="#e94560" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(560, 185)">
+    <rect x="0" y="0" width="60" height="30" rx="5" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="1"/>
+    <text x="30" y="20" text-anchor="middle" fill="#e94560" font-size="10" font-family="sans-serif">V2EX</text>
+    <line x1="30" y1="0" x2="448" y2="230" stroke="#e94560" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Professional platforms -->
+  <text x="400" y="360" text-anchor="middle" fill="#ffd700" font-size="13" font-family="sans-serif" font-weight="bold">专业平台</text>
+  <g transform="translate(260, 380)">
+    <rect x="0" y="0" width="90" height="30" rx="5" fill="url(#nodeGrad)" stroke="#ffd700" stroke-width="1"/>
+    <text x="45" y="20" text-anchor="middle" fill="#ffd700" font-size="10" font-family="sans-serif">Product Hunt</text>
+    <line x1="45" y1="0" x2="380" y2="295" stroke="#ffd700" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(360, 380)">
+    <rect x="0" y="0" width="60" height="30" rx="5" fill="url(#nodeGrad)" stroke="#ffd700" stroke-width="1"/>
+    <text x="30" y="20" text-anchor="middle" fill="#ffd700" font-size="10" font-family="sans-serif">Dev.to</text>
+    <line x1="30" y1="0" x2="400" y2="295" stroke="#ffd700" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(430, 380)">
+    <rect x="0" y="0" width="60" height="30" rx="5" fill="url(#nodeGrad)" stroke="#ffd700" stroke-width="1"/>
+    <text x="30" y="20" text-anchor="middle" fill="#ffd700" font-size="10" font-family="sans-serif">Medium</text>
+    <line x1="30" y1="0" x2="410" y2="295" stroke="#ffd700" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g transform="translate(500, 380)">
+    <rect x="0" y="0" width="60" height="30" rx="5" fill="url(#nodeGrad)" stroke="#ffd700" stroke-width="1"/>
+    <text x="30" y="20" text-anchor="middle" fill="#ffd700" font-size="10" font-family="sans-serif">arXiv</text>
+    <line x1="30" y1="0" x2="420" y2="295" stroke="#ffd700" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Stats -->
+  <text x="400" y="460" text-anchor="middle" fill="#888" font-size="12" font-family="sans-serif">一个 CLI，零 API 费用，全网信息尽在掌握</text>
+</svg>

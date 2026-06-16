@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg)"/>
+
+  <!-- Left side: gray generic content -->
+  <text x="200" y="45" text-anchor="middle" fill="#888" font-size="18" font-weight="bold" font-family="sans-serif">平庸输出</text>
+
+  <!-- Gray boxes -->
+  <rect x="80" y="70" width="240" height="35" rx="6" fill="#333"/>
+  <text x="200" y="93" text-anchor="middle" fill="#777" font-size="12" font-family="sans-serif">「赋能用户价值」</text>
+
+  <rect x="80" y="115" width="240" height="35" rx="6" fill="#333"/>
+  <text x="200" y="138" text-anchor="middle" fill="#777" font-size="12" font-family="sans-serif">「打造极致体验」</text>
+
+  <rect x="80" y="160" width="240" height="35" rx="6" fill="#333"/>
+  <text x="200" y="183" text-anchor="middle" fill="#777" font-size="12" font-family="sans-serif">「一体化解决方案」</text>
+
+  <rect x="80" y="205" width="240" height="35" rx="6" fill="#333"/>
+  <text x="200" y="228" text-anchor="middle" fill="#777" font-size="12" font-family="sans-serif">「底层逻辑打通」</text>
+
+  <rect x="80" y="250" width="240" height="35" rx="6" fill="#333"/>
+  <text x="200" y="273" text-anchor="middle" fill="#777" font-size="12" font-family="sans-serif">「闭环赋能」</text>
+
+  <!-- Gray emoji -->
+  <text x="200" y="320" text-anchor="middle" fill="#555" font-size="36" font-family="sans-serif">😐</text>
+
+  <!-- Filter in middle -->
+  <rect x="370" y="110" width="160" height="200" rx="20" fill="#1a1a2e" stroke="url(#grad)" stroke-width="3"/>
+  <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" style="stop-color:#f093fb"/>
+    <stop offset="50%" style="stop-color:#f5576c"/>
+    <stop offset="100%" style="stop-color:#43e97b"/>
+  </linearGradient>
+
+  <!-- Funnel shape inside filter -->
+  <polygon points="400,130 500,130 480,290 420,290" fill="none" stroke="#f093fb" stroke-width="1.5" opacity="0.3"/>
+  <!-- Particles going through filter -->
+  <circle cx="450" cy="140" r="3" fill="#888"/>
+  <circle cx="445" cy="155" r="3" fill="#777"/>
+  <circle cx="455" cy="170" r="3" fill="#666"/>
+  <circle cx="448" cy="190" r="3" fill="#f093fb"/>
+  <circle cx="452" cy="210" r="3" fill="#f5576c"/>
+  <circle cx="447" cy="230" r="3" fill="#43e97b"/>
+  <circle cx="453" cy="250" r="3" fill="#f093fb"/>
+  <circle cx="450" cy="270" r="4" fill="#43e97b"/>
+
+  <text x="450" y="340" text-anchor="middle" fill="#f093fb" font-size="14" font-weight="bold" font-family="sans-serif">品味过滤器</text>
+  <text x="450" y="360" text-anchor="middle" fill="#777" font-size="11" font-family="sans-serif">Taste-Filter</text>
+
+  <!-- Right side: colorful content -->
+  <text x="700" y="45" text-anchor="middle" fill="#43e97b" font-size="18" font-weight="bold" font-family="sans-serif">优质输出</text>
+
+  <rect x="580" y="70" width="240" height="35" rx="6" fill="#1a3a2a" stroke="#43e97b" stroke-width="1.5"/>
+  <text x="700" y="93" text-anchor="middle" fill="#43e97b" font-size="12" font-family="sans-serif">「像闪电劈中了脑门」</text>
+
+  <rect x="580" y="115" width="240" height="35" rx="6" fill="#2a1a3a" stroke="#f093fb" stroke-width="1.5"/>
+  <text x="700" y="138" text-anchor="middle" fill="#f093fb" font-size="12" font-family="sans-serif">「这个按钮会呼吸」</text>
+
+  <rect x="580" y="160" width="240" height="35" rx="6" fill="#3a2a1a" stroke="#fa709a" stroke-width="1.5"/>
+  <text x="700" y="183" text-anchor="middle" fill="#fa709a" font-size="12" font-family="sans-serif">「把月亮装进了盒子里」</text>
+
+  <rect x="580" y="205" width="240" height="35" rx="6" fill="#1a3a3a" stroke="#4facfe" stroke-width="1.5"/>
+  <text x="700" y="228" text-anchor="middle" fill="#4facfe" font-size="12" font-family="sans-serif">「用代码写诗」</text>
+
+  <rect x="580" y="250" width="240" height="35" rx="6" fill="#3a1a2a" stroke="#ff6a00" stroke-width="1.5"/>
+  <text x="700" y="273" text-anchor="middle" fill="#ff6a00" font-size="12" font-family="sans-serif">「AI学会说人话了」</text>
+
+  <!-- Colorful emoji -->
+  <text x="700" y="320" text-anchor="middle" fill="#fff" font-size="36" font-family="sans-serif">🤩</text>
+
+  <!-- Bottom title -->
+  <text x="450" y="430" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="sans-serif" opacity="0.7">Taste-Skill · AI品味过滤器</text>
+</svg>

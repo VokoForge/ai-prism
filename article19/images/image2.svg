@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <text x="400" y="40" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold" font-family="sans-serif">品味过滤引擎 · 工作原理</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="70" width="220" height="80" rx="12" fill="#1a1a3e" stroke="#667eea" stroke-width="2"/>
+  <text x="150" y="100" text-anchor="middle" fill="#667eea" font-size="14" font-weight="bold" font-family="sans-serif">第一步：接收原始内容</text>
+  <text x="150" y="125" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">AI输出的任何文本</text>
+  <text x="150" y="142" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">自动送入分析管道</text>
+
+  <!-- Arrow 1 -->
+  <text x="290" y="115" text-anchor="middle" fill="#667eea" font-size="24" font-family="sans-serif">→</text>
+
+  <!-- Step 2 -->
+  <rect x="300" y="70" width="220" height="80" rx="12" fill="#2a1a3a" stroke="#f093fb" stroke-width="2"/>
+  <text x="410" y="100" text-anchor="middle" fill="#f093fb" font-size="14" font-weight="bold" font-family="sans-serif">第二步：品味分析打分</text>
+  <text x="410" y="125" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">检测套路化模式</text>
+  <text x="410" y="142" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">计算创意密度</text>
+
+  <!-- Arrow 2 -->
+  <text x="550" y="115" text-anchor="middle" fill="#f093fb" font-size="24" font-family="sans-serif">→</text>
+
+  <!-- Step 3 -->
+  <rect x="560" y="70" width="200" height="80" rx="12" fill="#1a3a2a" stroke="#43e97b" stroke-width="2"/>
+  <text x="660" y="100" text-anchor="middle" fill="#43e97b" font-size="14" font-weight="bold" font-family="sans-serif">第三步：重写优化</text>
+  <text x="660" y="125" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">注入风格与灵魂</text>
+  <text x="660" y="142" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">保持语义不变</text>
+
+  <!-- Rating scale -->
+  <text x="400" y="195" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold" font-family="sans-serif">品味评分维度</text>
+
+  <!-- Dimension bars -->
+  <text x="120" y="230" text-anchor="middle" fill="#aaa" font-size="12" font-family="sans-serif">原创性</text>
+  <rect x="220" y="222" width="300" height="12" rx="6" fill="#333"/>
+  <rect x="220" y="222" width="250" height="12" rx="6" fill="#43e97b"/>
+  <text x="540" y="233" text-anchor="middle" fill="#43e97b" font-size="11" font-family="sans-serif">8.3分</text>
+
+  <text x="120" y="260" text-anchor="middle" fill="#aaa" font-size="12" font-family="sans-serif">丰富度</text>
+  <rect x="220" y="252" width="300" height="12" rx="6" fill="#333"/>
+  <rect x="220" y="252" width="210" height="12" rx="6" fill="#f093fb"/>
+  <text x="540" y="263" text-anchor="middle" fill="#f093fb" font-size="11" font-family="sans-serif">7.0分</text>
+
+  <text x="120" y="290" text-anchor="middle" fill="#aaa" font-size="12" font-family="sans-serif">自然度</text>
+  <rect x="220" y="282" width="300" height="12" rx="6" fill="#333"/>
+  <rect x="220" y="282" width="270" height="12" rx="6" fill="#4facfe"/>
+  <text x="540" y="293" text-anchor="middle" fill="#4facfe" font-size="11" font-family="sans-serif">9.0分</text>
+
+  <text x="120" y="320" text-anchor="middle" fill="#aaa" font-size="12" font-family="sans-serif">趣味性</text>
+  <rect x="220" y="312" width="300" height="12" rx="6" fill="#333"/>
+  <rect x="220" y="312" width="180" height="12" rx="6" fill="#fa709a"/>
+  <text x="540" y="323" text-anchor="middle" fill="#fa709a" font-size="11" font-family="sans-serif">6.0分</text>
+
+  <!-- Overall score -->
+  <rect x="580" y="195" width="180" height="135" rx="12" fill="#ffffff" opacity="0.05" stroke="#ff6a00" stroke-width="2"/>
+  <text x="670" y="225" text-anchor="middle" fill="#ff6a00" font-size="14" font-weight="bold" font-family="sans-serif">综合品味分</text>
+  <text x="670" y="275" text-anchor="middle" fill="#ff6a00" font-size="42" font-weight="bold" font-family="sans-serif">7.6</text>
+  <text x="670" y="305" text-anchor="middle" fill="#aaa" font-size="11" font-family="sans-serif">超过87%的AI输出</text>
+</svg>

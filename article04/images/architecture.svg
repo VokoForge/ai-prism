@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d1f3c"/>
+    </linearGradient>
+    <filter id="glow4">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg4)" rx="12"/>
+
+  <!-- 标题 -->
+  <text x="450" y="40" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="22" font-weight="bold">Headroom 架构流程图</text>
+
+  <!-- 输入层 -->
+  <g transform="translate(100, 120)">
+    <rect x="-70" y="-30" width="140" height="60" rx="10" fill="#1a3a5c" stroke="#4a8ab8" stroke-width="2"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold">原始日志</text>
+    <text x="0" y="15" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="11">10K+ tokens</text>
+  </g>
+
+  <g transform="translate(100, 220)">
+    <rect x="-70" y="-30" width="140" height="60" rx="10" fill="#1a3a5c" stroke="#4a8ab8" stroke-width="2"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold">文件内容</text>
+    <text x="0" y="15" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="11">5K+ tokens</text>
+  </g>
+
+  <g transform="translate(100, 320)">
+    <rect x="-70" y="-30" width="140" height="60" rx="10" fill="#1a3a5c" stroke="#4a8ab8" stroke-width="2"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold">RAG片段</text>
+    <text x="0" y="15" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="11">8K+ tokens</text>
+  </g>
+
+  <!-- 箭头到Headroom -->
+  <g stroke="#4a8ab8" stroke-width="2" fill="none" marker-end="url(#arrow4)">
+    <path d="M170,120 L260,200"/>
+    <path d="M170,220 L260,220"/>
+    <path d="M170,320 L260,240"/>
+  </g>
+
+  <!-- Headroom核心 -->
+  <g transform="translate(350, 220)">
+    <rect x="-90" y="-60" width="180" height="120" rx="15" fill="#0d2a4a" stroke="#00ff88" stroke-width="3" filter="url(#glow4)"/>
+    <text x="0" y="-25" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="18" font-weight="bold">Headroom</text>
+    <text x="0" y="-5" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="11">智能压缩引擎</text>
+    <text x="0" y="20" text-anchor="middle" fill="#fff" font-family="monospace" font-size="12">语义保留</text>
+    <text x="0" y="38" text-anchor="middle" fill="#fff" font-family="monospace" font-size="12">结构感知</text>
+  </g>
+
+  <!-- 箭头到输出 -->
+  <g stroke="#00ff88" stroke-width="3" fill="none">
+    <path d="M440,220 L520,220"/>
+    <polygon points="520,220 510,215 510,225" fill="#00ff88"/>
+  </g>
+
+  <!-- 输出层 -->
+  <g transform="translate(650, 120)">
+    <rect x="-70" y="-30" width="140" height="60" rx="10" fill="#0d2a4a" stroke="#00ff88" stroke-width="2" filter="url(#glow4)"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="14" font-weight="bold">压缩日志</text>
+    <text x="0" y="15" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="11">400 tokens (-96%)</text>
+  </g>
+
+  <g transform="translate(650, 220)">
+    <rect x="-70" y="-30" width="140" height="60" rx="10" fill="#0d2a4a" stroke="#00ff88" stroke-width="2" filter="url(#glow4)"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="14" font-weight="bold">压缩文件</text>
+    <text x="0" y="15" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="11">300 tokens (-94%)</text>
+  </g>
+
+  <g transform="translate(650, 320)">
+    <rect x="-70" y="-30" width="140" height="60" rx="10" fill="#0d2a4a" stroke="#00ff88" stroke-width="2" filter="url(#glow4)"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="14" font-weight="bold">压缩RAG</text>
+    <text x="0" y="15" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="11">500 tokens (-94%)</text>
+  </g>
+
+  <!-- 箭头从Headroom到输出 -->
+  <g stroke="#00ff88" stroke-width="2" fill="none">
+    <path d="M520,200 L580,120"/>
+    <path d="M520,220 L580,220"/>
+    <path d="M520,240 L580,320"/>
+  </g>
+  <g fill="#00ff88">
+    <polygon points="580,120 570,118 572,128"/>
+    <polygon points="580,220 570,215 570,225"/>
+    <polygon points="580,320 572,312 570,322"/>
+  </g>
+
+  <!-- 底部LLM -->
+  <g transform="translate(450, 430)">
+    <rect x="-120" y="-25" width="240" height="50" rx="10" fill="#1a3a5c" stroke="#6ab0e8" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold">LLM 处理</text>
+  </g>
+
+  <!-- 箭头从输出到LLM -->
+  <g stroke="#6ab0e8" stroke-width="2" fill="none" stroke-dasharray="4,4">
+    <path d="M650,150 L650,400 L570,430"/>
+    <path d="M650,250 L650,400"/>
+    <path d="M650,350 L650,400"/>
+  </g>
+
+  <!-- 节省标注 -->
+  <g transform="translate(450, 120)">
+    <rect x="-50" y="-15" width="100" height="30" rx="15" fill="#00ff88" opacity="0.9"/>
+    <text x="0" y="5" text-anchor="middle" fill="#0a1628" font-family="sans-serif" font-size="12" font-weight="bold">节省 70万$</text>
+  </g>
+</svg>

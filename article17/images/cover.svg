@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1a0c"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#ea580c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  
+  <!-- Training grid floor -->
+  <g opacity="0.15">
+    <line x1="0" y1="220" x2="800" y2="220" stroke="#22c55e" stroke-width="0.5"/>
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#22c55e" stroke-width="0.5"/>
+    <line x1="0" y1="260" x2="800" y2="260" stroke="#22c55e" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#22c55e" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Environment walls -->
+  <rect x="100" y="80" width="600" height="220" rx="4" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3"/>
+  
+  <!-- AI Agent character - center -->
+  <circle cx="400" cy="210" r="25" fill="none" stroke="#f59e0b" stroke-width="2.5" filter="url(#glow)"/>
+  <circle cx="400" cy="210" r="15" fill="#f59e0b" opacity="0.2"/>
+  <text x="400" y="216" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle" filter="url(#glow)">AI</text>
+  
+  <!-- Reward stars around agent -->
+  <polygon points="370,185 373,193 381,193 375,198 377,206 370,201 363,206 365,198 359,193 367,193" fill="#f59e0b" opacity="0.6"/>
+  <polygon points="435,175 438,183 446,183 440,188 442,196 435,191 428,196 430,188 424,183 432,183" fill="#f59e0b" opacity="0.4"/>
+  
+  <!-- Observation rays from agent -->
+  <line x1="400" y1="210" x2="250" y2="135" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+  <line x1="400" y1="210" x2="320" y2="110" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+  <line x1="400" y1="210" x2="500" y2="120" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+  <line x1="400" y1="210" x2="560" y2="140" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Environment objects -->
+  <rect x="180" y="160" width="30" height="30" rx="3" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <rect x="280" y="240" width="25" height="25" rx="3" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <rect x="520" y="170" width="35" height="20" rx="3" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <rect x="550" y="250" width="20" height="35" rx="3" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  
+  <!-- Action arrows -->
+  <text x="355" y="270" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" opacity="0.5">&larr;</text>
+  <text x="440" y="270" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" opacity="0.5">&rarr;</text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" opacity="0.5">&uarr;</text>
+  
+  <!-- HF label top-left -->
+  <rect x="30" y="30" width="120" height="30" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+  <text x="90" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">Hugging Face</text>
+  
+  <!-- Title at bottom -->
+  <rect x="0" y="320" width="800" height="80" fill="rgba(0,0,0,0.7)"/>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f59e0b" text-anchor="middle">OpenEnv — 给AI装上一副"身体"</text>
+  <text x="400" y="378" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">HuggingFace打造的强化学习训练场，让智能体在虚拟世界中学会交互</text>
+</svg>

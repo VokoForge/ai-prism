@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 370">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1a0c"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="370" fill="url(#bg)"/>
+  
+  <text x="350" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#22c55e" text-anchor="middle">OpenEnv 内置六大训练场景</text>
+  
+  <!-- Env 1 -->
+  <rect x="20" y="45" width="200" height="100" rx="6" fill="#1e293b" stroke="#06b6d4"/>
+  <text x="120" y="70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#06b6d4" text-anchor="middle">桌面操作</text>
+  <text x="120" y="90" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">鼠标点击 · 窗口切换</text>
+  <text x="120" y="105" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">文件拖拽 · 快捷键</text>
+  <text x="120" y="120" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">让AI学会操作电脑</text>
+  
+  <!-- Env 2 -->
+  <rect x="240" y="45" width="200" height="100" rx="6" fill="#1e293b" stroke="#a855f7"/>
+  <text x="340" y="70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#a855f7" text-anchor="middle">网页浏览</text>
+  <text x="340" y="90" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">表单填写 · 信息提取</text>
+  <text x="340" y="105" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">页面导航 · 按钮点击</text>
+  <text x="340" y="120" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">网页自动化助手</text>
+  
+  <!-- Env 3 -->
+  <rect x="460" y="45" width="220" height="100" rx="6" fill="#1e293b" stroke="#f59e0b"/>
+  <text x="570" y="70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">终端命令</text>
+  <text x="570" y="90" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">命令行操作 · 脚本编写</text>
+  <text x="570" y="105" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">系统管理 · 开发辅助</text>
+  <text x="570" y="120" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">AI系统管理员</text>
+  
+  <!-- Env 4 -->
+  <rect x="20" y="160" width="200" height="100" rx="6" fill="#1e293b" stroke="#ef4444"/>
+  <text x="120" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">编程环境</text>
+  <text x="120" y="205" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">代码生成 · 调试修复</text>
+  <text x="120" y="220" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">测试验证 · 重构优化</text>
+  <text x="120" y="235" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">AI结对编程搭档</text>
+  
+  <!-- Env 5 -->
+  <rect x="240" y="160" width="200" height="100" rx="6" fill="#1e293b" stroke="#22c55e"/>
+  <text x="340" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#22c55e" text-anchor="middle">机器人仿真</text>
+  <text x="340" y="205" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">机械臂控制 · 运动规划</text>
+  <text x="340" y="220" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">物体抓取 · 路径导航</text>
+  <text x="340" y="235" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">虚拟→现实迁移训练</text>
+  
+  <!-- Env 6 -->
+  <rect x="460" y="160" width="220" height="100" rx="6" fill="#1e293b" stroke="#ec4899"/>
+  <text x="570" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ec4899" text-anchor="middle">API调用</text>
+  <text x="570" y="205" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">REST API · 数据库查询</text>
+  <text x="570" y="220" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">服务编排 · 数据流水线</text>
+  <text x="570" y="235" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">AI自动化工程师</text>
+  
+  <!-- Bottom info -->
+  <rect x="100" y="278" width="500" height="80" rx="8" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="350" y="305" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#22c55e" text-anchor="middle">OpenSSL Gymnasium 标准接口</text>
+  <text x="350" y="328" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">只需定义 观察空间 + 动作空间 + 奖励函数，即可创建新的训练场景</text>
+  <text x="350" y="348" font-family="Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">一行代码启动训练: env = OpenEnv("my-task")</text>
+</svg>

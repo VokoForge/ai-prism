@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="700" height="350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1a3e;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.5"/><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="700" height="350" fill="url(#bg)"/>
+  
+  <!-- Flow chart -->
+  <!-- Step 1: Skill Input -->
+  <rect x="60" y="60" width="140" height="50" rx="8" fill="#0f0f23" stroke="#7b2ff7" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="130" y="82" fill="#7b2ff7" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">技能包输入</text>
+  <text x="130" y="98" fill="#7b2ff7" font-size="8" text-anchor="middle" font-family="sans-serif">Agent Skill Package</text>
+  
+  <!-- Arrow 1 -->
+  <polygon points="202,85 230,85 230,80 245,85 230,90 230,85" fill="#00f0ff" opacity="0.6"/>
+  
+  <!-- Step 2: Static Analysis -->
+  <rect x="250" y="60" width="140" height="50" rx="8" fill="#0f0f23" stroke="#00f0ff" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="320" y="82" fill="#00f0ff" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">静态分析</text>
+  <text x="320" y="98" fill="#00f0ff" font-size="8" text-anchor="middle" font-family="sans-serif">代码签名/依赖检查</text>
+  
+  <!-- Arrow 2 -->
+  <polygon points="392,85 420,85 420,80 435,85 420,90 420,85" fill="#00f0ff" opacity="0.6"/>
+  
+  <!-- Step 3: Sandbox -->
+  <rect x="440" y="60" width="140" height="50" rx="8" fill="#0f0f23" stroke="#00f0ff" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="510" y="82" fill="#00f0ff" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">沙箱执行</text>
+  <text x="510" y="98" fill="#00f0ff" font-size="8" text-anchor="middle" font-family="sans-serif">隔离环境运行</text>
+  
+  <!-- Branch arrows from step 3 -->
+  <polygon points="510,112 510,145 505,145 510,160 515,145 510,145" fill="#00ff88" opacity="0.6"/>
+  
+  <!-- Step 4a: Safe -->
+  <rect x="380" y="165" width="110" height="50" rx="8" fill="#0f0f23" stroke="#00ff88" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="435" y="187" fill="#00ff88" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">安全放行</text>
+  <text x="435" y="203" fill="#00ff88" font-size="8" text-anchor="middle" font-family="sans-serif">通过检测</text>
+  
+  <!-- Step 4b: Danger -->
+  <rect x="510" y="165" width="110" height="50" rx="8" fill="#0f0f23" stroke="#ff2d95" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="565" y="187" fill="#ff2d95" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">拦截告警</text>
+  <text x="565" y="203" fill="#ff2d95" font-size="8" text-anchor="middle" font-family="sans-serif">发现威胁</text>
+  
+  <!-- Report section -->
+  <rect x="60" y="240" width="580" height="80" rx="8" fill="#0f0f23" stroke="#ffcc00" stroke-width="1"/>
+  <text x="350" y="265" fill="#ffcc00" font-size="12" font-weight="bold" text-anchor="middle" font-family="sans-serif">安全扫描报告</text>
+  
+  <!-- Report details -->
+  <text x="150" y="290" fill="#00ff88" font-size="9" text-anchor="middle" font-family="sans-serif">✓ 代码签名验证</text>
+  <text x="350" y="290" fill="#ffcc00" font-size="9" text-anchor="middle" font-family="sans-serif">⚠ 权限过度声明</text>
+  <text x="550" y="290" fill="#ff2d95" font-size="9" text-anchor="middle" font-family="sans-serif">✗ 网络外连风险</text>
+  
+  <text x="150" y="308" fill="#ff2d95" font-size="9" text-anchor="middle" font-family="sans-serif">✗ 可疑依赖调用</text>
+  <text x="350" y="308" fill="#00ff88" font-size="9" text-anchor="middle" font-family="sans-serif">✓ 内存安全</text>
+  <text x="550" y="308" fill="#ffcc00" font-size="9" text-anchor="middle" font-family="sans-serif">⚠ 文件操作范围</text>
+  
+  <!-- Title -->
+  <text x="350" y="25" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">SkillSpector 安全扫描流程</text>
+</svg>

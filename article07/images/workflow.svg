@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="300" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" text-anchor="middle" fill="#00d9ff" font-size="20" font-family="sans-serif" font-weight="bold">markitdown 工作流程</text>
+  
+  <!-- Steps -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="120" height="100" rx="10" fill="url(#boxGrad)" stroke="#00d9ff" stroke-width="2"/>
+    <text x="60" y="35" text-anchor="middle" fill="#00d9ff" font-size="12" font-family="sans-serif" font-weight="bold">输入文档</text>
+    <text x="60" y="55" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">PDF / Word</text>
+    <text x="60" y="70" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">PPT / Excel</text>
+    <text x="60" y="85" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">图片 / 音频</text>
+  </g>
+  
+  <text x="185" y="140" fill="#e94560" font-size="24">→</text>
+  
+  <g transform="translate(210, 80)">
+    <rect x="0" y="0" width="120" height="100" rx="10" fill="url(#boxGrad)" stroke="#ffd700" stroke-width="2"/>
+    <text x="60" y="35" text-anchor="middle" fill="#ffd700" font-size="12" font-family="sans-serif" font-weight="bold">格式检测</text>
+    <text x="60" y="55" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">魔数识别</text>
+    <text x="60" y="70" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">扩展名验证</text>
+    <text x="60" y="85" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">双重确认</text>
+  </g>
+  
+  <text x="345" y="140" fill="#e94560" font-size="24">→</text>
+  
+  <g transform="translate(370, 80)">
+    <rect x="0" y="0" width="120" height="100" rx="10" fill="url(#boxGrad)" stroke="#00ff88" stroke-width="2"/>
+    <text x="60" y="35" text-anchor="middle" fill="#00ff88" font-size="12" font-family="sans-serif" font-weight="bold">专用解析</text>
+    <text x="60" y="55" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">pdfplumber</text>
+    <text x="60" y="70" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">python-docx</text>
+    <text x="60" y="85" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">OCR / 音频</text>
+  </g>
+  
+  <text x="505" y="140" fill="#e94560" font-size="24">→</text>
+  
+  <g transform="translate(530, 80)">
+    <rect x="0" y="0" width="120" height="100" rx="10" fill="url(#boxGrad)" stroke="#e94560" stroke-width="2"/>
+    <text x="60" y="35" text-anchor="middle" fill="#e94560" font-size="12" font-family="sans-serif" font-weight="bold">结构化提取</text>
+    <text x="60" y="55" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">标题层级</text>
+    <text x="60" y="70" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">表格 / 列表</text>
+    <text x="60" y="85" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">过滤噪音</text>
+  </g>
+  
+  <text x="665" y="140" fill="#e94560" font-size="24">→</text>
+  
+  <g transform="translate(690, 80)">
+    <rect x="0" y="0" width="100" height="100" rx="10" fill="#e94560" opacity="0.9"/>
+    <text x="50" y="40" text-anchor="middle" fill="#fff" font-size="13" font-family="sans-serif" font-weight="bold">Markdown</text>
+    <text x="50" y="60" text-anchor="middle" fill="#ffcccc" font-size="10" font-family="sans-serif">语义结构</text>
+    <text x="50" y="75" text-anchor="middle" fill="#ffcccc" font-size="10" font-family="sans-serif">LLM 友好</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <text x="400" y="240" text-anchor="middle" fill="#888" font-size="11" font-family="sans-serif">核心设计：不是简单提取文字，而是保留文档的语义结构</text>
+</svg>

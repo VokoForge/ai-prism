@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="react" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#61dafb"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4"/>
+      <feMerge><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  
+  <!-- React UI mock -->
+  <rect x="30" y="40" width="360" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  
+  <!-- App header -->
+  <rect x="30" y="40" width="360" height="40" rx="10" fill="#2d1a2e"/>
+  <rect x="30" y="70" width="360" height="10" fill="#2d1a2e"/>
+  <text x="210" y="66" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">我的应用 仪表盘</text>
+  
+  <!-- Sidebar -->
+  <rect x="40" y="90" width="80" height="240" rx="4" fill="#0f172a" opacity="0.5"/>
+  <rect x="50" y="100" width="60" height="15" rx="2" fill="#334155"/>
+  <rect x="50" y="125" width="60" height="15" rx="2" fill="#334155"/>
+  <rect x="50" y="150" width="60" height="15" rx="2" fill="#334155"/>
+  
+  <!-- Chat sidebar area -->
+  <rect x="135" y="90" width="245" height="240" rx="4" fill="#0f172a" opacity="0.3"/>
+  <rect x="145" y="100" width="225" height="30" rx="3" fill="#334155"/>
+  <text x="257" y="120" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">用户消息</text>
+  <rect x="150" y="140" width="215" height="40" rx="3" fill="#1e293b"/>
+  <text x="257" y="163" font-family="Arial, sans-serif" font-size="9" fill="#61dafb" text-anchor="middle">AI回复</text>
+  
+  <!-- Copilot panel - overlay -->
+  <rect x="400" y="50" width="370" height="310" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" opacity="0.95"/>
+  
+  <!-- Copilot header -->
+  <rect x="410" y="58" width="350" height="35" rx="6" fill="#312e81"/>
+  <text x="585" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#818cf8" text-anchor="middle">AI 副驾驶</text>
+  
+  <!-- Chat messages in copilot -->
+  <rect x="420" y="105" width="330" height="45" rx="4" fill="#1e293b"/>
+  <text x="430" y="122" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">用户: 帮我分析这个数据表</text>
+  <text x="430" y="140" font-family="Arial, sans-serif" font-size="9" fill="#6366f1">分析中...</text>
+  
+  <rect x="420" y="160" width="330" height="55" rx="4" fill="#312e81" opacity="0.5"/>
+  <text x="430" y="178" font-family="Arial, sans-serif" font-size="10" fill="#818cf8">副驾驶: 发现3个异常值和1个趋势</text>
+  <text x="430" y="195" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">建议: 调整Q3策略，关注区域A的增长</text>
+  
+  <!-- Copilot buttons -->
+  <rect x="420" y="230" width="155" height="30" rx="4" fill="#4f46e5" opacity="0.6"/>
+  <text x="497" y="249" font-family="Arial, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">生成报告</text>
+  <rect x="590" y="230" width="155" height="30" rx="4" fill="#4f46e5" opacity="0.6"/>
+  <text x="667" y="249" font-family="Arial, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">导出图表</text>
+  
+  <!-- Input at bottom -->
+  <rect x="420" y="275" width="330" height="35" rx="4" fill="#1e293b" stroke="#6366f1" stroke-width="1"/>
+  <text x="435" y="297" font-family="Arial, sans-serif" font-size="10" fill="#64748b">输入你的问题...</text>
+  
+  <!-- Connector arrows -->
+  <circle cx="395" cy="200" r="20" fill="#6366f1" opacity="0.3" filter="url(#glow)"/>
+  <text x="395" y="205" font-family="Arial, sans-serif" font-size="18" fill="#818cf8" text-anchor="middle">+</text>
+  
+  <!-- React logo element -->
+  <circle cx="210" cy="310" r="15" fill="none" stroke="#61dafb" stroke-width="1.5" opacity="0.4"/>
+  <text x="210" y="315" font-family="Arial, sans-serif" font-size="10" fill="#61dafb" text-anchor="middle" opacity="0.5">R</text>
+  
+  <!-- Title at bottom -->
+  <rect x="0" y="340" width="800" height="60" fill="rgba(0,0,0,0.7)"/>
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#818cf8" text-anchor="middle">CopilotKit — 给你的React应用装上AI大脑</text>
+  <text x="400" y="392" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">一行代码，任何产品都能拥有智能副驾驶</text>
+</svg>

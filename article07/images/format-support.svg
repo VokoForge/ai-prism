@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#00d9ff" font-size="22" font-family="sans-serif" font-weight="bold" filter="url(#glow)">markitdown 支持的格式</text>
+  
+  <!-- Center Node -->
+  <circle cx="400" cy="250" r="60" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="3" filter="url(#glow)"/>
+  <text x="400" y="245" text-anchor="middle" fill="#fff" font-size="14" font-family="sans-serif" font-weight="bold">markitdown</text>
+  <text x="400" y="262" text-anchor="middle" fill="#aaa" font-size="10" font-family="sans-serif">20+ 格式</text>
+  
+  <!-- Category nodes -->
+  <g id="office">
+    <rect x="120" y="80" width="140" height="70" rx="10" fill="url(#nodeGrad)" stroke="#00d9ff" stroke-width="2"/>
+    <text x="190" y="105" text-anchor="middle" fill="#00d9ff" font-size="13" font-family="sans-serif" font-weight="bold">办公文档</text>
+    <text x="190" y="125" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">PDF / Word / PPT</text>
+    <text x="190" y="140" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">Excel / RTF</text>
+    <line x1="260" y1="115" x2="345" y2="205" stroke="#00d9ff" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <g id="web">
+    <rect x="540" y="80" width="140" height="70" rx="10" fill="url(#nodeGrad)" stroke="#e94560" stroke-width="2"/>
+    <text x="610" y="105" text-anchor="middle" fill="#e94560" font-size="13" font-family="sans-serif" font-weight="bold">网页</text>
+    <text x="610" y="125" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">HTML / URL</text>
+    <text x="610" y="140" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">Markdown</text>
+    <line x1="540" y1="115" x2="455" y2="205" stroke="#e94560" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <g id="media">
+    <rect x="80" y="350" width="140" height="70" rx="10" fill="url(#nodeGrad)" stroke="#ffd700" stroke-width="2"/>
+    <text x="150" y="375" text-anchor="middle" fill="#ffd700" font-size="13" font-family="sans-serif" font-weight="bold">媒体</text>
+    <text x="150" y="395" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">图片 (OCR)</text>
+    <text x="150" y="410" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">音频转文字</text>
+    <line x1="180" y1="350" x2="355" y2="295" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <g id="data">
+    <rect x="580" y="350" width="140" height="70" rx="10" fill="url(#nodeGrad)" stroke="#00ff88" stroke-width="2"/>
+    <text x="650" y="375" text-anchor="middle" fill="#00ff88" font-size="13" font-family="sans-serif" font-weight="bold">代码/数据</text>
+    <text x="650" y="395" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">CSV / JSON / XML</text>
+    <text x="650" y="410" text-anchor="middle" fill="#ccc" font-size="10" font-family="sans-serif">ZIP / EPUB</text>
+    <line x1="580" y1="350" x2="445" y2="295" stroke="#00ff88" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Output -->
+  <g id="output">
+    <rect x="320" y="400" width="160" height="50" rx="10" fill="#e94560" opacity="0.9"/>
+    <text x="400" y="425" text-anchor="middle" fill="#fff" font-size="14" font-family="sans-serif" font-weight="bold">Markdown 输出</text>
+    <text x="400" y="442" text-anchor="middle" fill="#ffcccc" font-size="10" font-family="sans-serif">LLM 最友好的格式</text>
+    <line x1="400" y1="400" x2="400" y2="310" stroke="#e94560" stroke-width="3" opacity="0.8"/>
+  </g>
+</svg>

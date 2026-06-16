@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bgc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d1f3c"/>
+    </linearGradient>
+    <linearGradient id="redBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4444"/>
+      <stop offset="100%" stop-color="#cc0000"/>
+    </linearGradient>
+    <linearGradient id="greenBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="100%" stop-color="#00cc66"/>
+    </linearGradient>
+    <filter id="glowc">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="500" fill="url(#bgc)" rx="12"/>
+
+  <text x="450" y="45" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="22" font-weight="bold">Token消耗对比：Before vs After</text>
+
+  <!-- 场景1: 日志分析 -->
+  <g transform="translate(80, 100)">
+    <text x="0" y="0" fill="#8ab8e8" font-family="sans-serif" font-size="14" font-weight="bold">日志分析</text>
+    <!-- Before -->
+    <rect x="100" y="-15" width="400" height="25" rx="5" fill="url(#redBar)" opacity="0.8"/>
+    <text x="510" y="2" fill="#ff8888" font-family="sans-serif" font-size="12">10,000 tokens</text>
+    <!-- After -->
+    <rect x="100" y="18" width="28" height="25" rx="5" fill="url(#greenBar)" filter="url(#glowc)"/>
+    <text x="135" y="35" fill="#00ff88" font-family="sans-serif" font-size="12" font-weight="bold">280 tokens (-97%)</text>
+  </g>
+
+  <!-- 场景2: 代码审查 -->
+  <g transform="translate(80, 180)">
+    <text x="0" y="0" fill="#8ab8e8" font-family="sans-serif" font-size="14" font-weight="bold">代码审查</text>
+    <!-- Before -->
+    <rect x="100" y="-15" width="350" height="25" rx="5" fill="url(#redBar)" opacity="0.8"/>
+    <text x="460" y="2" fill="#ff8888" font-family="sans-serif" font-size="12">8,500 tokens</text>
+    <!-- After -->
+    <rect x="100" y="18" width="42" height="25" rx="5" fill="url(#greenBar)" filter="url(#glowc)"/>
+    <text x="148" y="35" fill="#00ff88" font-family="sans-serif" font-size="12" font-weight="bold">420 tokens (-95%)</text>
+  </g>
+
+  <!-- 场景3: RAG检索 -->
+  <g transform="translate(80, 260)">
+    <text x="0" y="0" fill="#8ab8e8" font-family="sans-serif" font-size="14" font-weight="bold">RAG检索</text>
+    <!-- Before -->
+    <rect x="100" y="-15" width="300" height="25" rx="5" fill="url(#redBar)" opacity="0.8"/>
+    <text x="410" y="2" fill="#ff8888" font-family="sans-serif" font-size="12">7,200 tokens</text>
+    <!-- After -->
+    <rect x="100" y="18" width="50" height="25" rx="5" fill="url(#greenBar)" filter="url(#glowc)"/>
+    <text x="156" y="35" fill="#00ff88" font-family="sans-serif" font-size="12" font-weight="bold">500 tokens (-93%)</text>
+  </g>
+
+  <!-- 场景4: 文档处理 -->
+  <g transform="translate(80, 340)">
+    <text x="0" y="0" fill="#8ab8e8" font-family="sans-serif" font-size="14" font-weight="bold">文档处理</text>
+    <!-- Before -->
+    <rect x="100" y="-15" width="500" height="25" rx="5" fill="url(#redBar)" opacity="0.8"/>
+    <text x="610" y="2" fill="#ff8888" font-family="sans-serif" font-size="12">12,000 tokens</text>
+    <!-- After -->
+    <rect x="100" y="18" width="60" height="25" rx="5" fill="url(#greenBar)" filter="url(#glowc)"/>
+    <text x="166" y="35" fill="#00ff88" font-family="sans-serif" font-size="12" font-weight="bold">600 tokens (-95%)</text>
+  </g>
+
+  <!-- 图例 -->
+  <g transform="translate(80, 420)">
+    <rect x="0" y="-10" width="20" height="15" rx="3" fill="url(#redBar)"/>
+    <text x="30" y="2" fill="#ff8888" font-family="sans-serif" font-size="12">压缩前</text>
+    <rect x="120" y="-10" width="20" height="15" rx="3" fill="url(#greenBar)"/>
+    <text x="150" y="2" fill="#00ff88" font-family="sans-serif" font-size="12">压缩后</text>
+  </g>
+
+  <!-- 底部总结 -->
+  <g transform="translate(450, 470)">
+    <text x="0" y="0" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="16" font-weight="bold" filter="url(#glowc)">平均节省 95% Token = 节省 60-95% 成本</text>
+  </g>
+</svg>

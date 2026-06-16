@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="700" height="350" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="350" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#58a6ff" text-anchor="middle">Cosmos 平台架构全景</text>
+  
+  <!-- Layer 1: Data -->
+  <rect x="30" y="50" width="640" height="55" rx="6" fill="#1a2332" stroke="#30363d" stroke-width="1"/>
+  <text x="350" y="72" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#79c0ff" text-anchor="middle">数据层 — 海量视频 · 物理模型 · 传感器数据 · 合成数据</text>
+  <text x="350" y="92" font-family="Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">YouTube 2000万小时视频 + 物理引擎生成 + Carla/Issac Sim仿真数据</text>
+  
+  <!-- Arrow -->
+  <polygon points="350,112 340,118 360,118" fill="#58a6ff"/>
+  
+  <!-- Layer 2: Model -->
+  <rect x="30" y="120" width="200" height="80" rx="6" fill="#1a2332" stroke="#76b900" stroke-width="1.5"/>
+  <text x="130" y="148" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#76b900" text-anchor="middle">视频生成模型</text>
+  <text x="130" y="166" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Diffusion Transformer</text>
+  <text x="130" y="182" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">文本→视频 / 图像→视频</text>
+  
+  <rect x="250" y="120" width="200" height="80" rx="6" fill="#1a2332" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="350" y="148" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#a855f7" text-anchor="middle">世界基础模型</text>
+  <text x="350" y="166" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Navier-Stokes 物理仿真</text>
+  <text x="350" y="182" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">刚体/流体/光影模拟</text>
+  
+  <rect x="470" y="120" width="200" height="80" rx="6" fill="#1a2332" stroke="#d29922" stroke-width="1.5"/>
+  <text x="570" y="148" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#d29922" text-anchor="middle">策略训练模型</text>
+  <text x="570" y="166" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">强化学习策略网络</text>
+  <text x="570" y="182" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">机器人操控 / 自动驾驶</text>
+  
+  <!-- Arrow -->
+  <polygon points="350,208 340,214 360,214" fill="#58a6ff"/>
+  
+  <!-- Layer 3: Tokenizer -->
+  <rect x="30" y="215" width="640" height="40" rx="6" fill="#1a2332" stroke="#30363d" stroke-width="1"/>
+  <text x="350" y="240" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f0883e" text-anchor="middle">统一分词器 — 把视觉信号、物理状态、动作指令压缩成统一令牌(TOKEN)</text>
+  
+  <!-- Arrow -->
+  <polygon points="350,262 340,268 360,268" fill="#58a6ff"/>
+  
+  <!-- Layer 4: Applications -->
+  <rect x="30" y="270" width="150" height="60" rx="6" fill="#0d2b1e" stroke="#76b900" stroke-width="1"/>
+  <text x="105" y="298" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#76b900" text-anchor="middle">机器人训练</text>
+  <text x="105" y="316" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">虚拟→现实迁移</text>
+  
+  <rect x="193" y="270" width="150" height="60" rx="6" fill="#0d2b1e" stroke="#76b900" stroke-width="1"/>
+  <text x="268" y="298" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#76b900" text-anchor="middle">自动驾驶</text>
+  <text x="268" y="316" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">极端场景生成</text>
+  
+  <rect x="356" y="270" width="150" height="60" rx="6" fill="#0d2b1e" stroke="#76b900" stroke-width="1"/>
+  <text x="431" y="298" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#76b900" text-anchor="middle">影视制作</text>
+  <text x="431" y="316" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">AI视频生成</text>
+  
+  <rect x="520" y="270" width="150" height="60" rx="6" fill="#0d2b1e" stroke="#76b900" stroke-width="1"/>
+  <text x="595" y="298" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#76b900" text-anchor="middle">工业仿真</text>
+  <text x="595" y="316" font-family="Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">数字孪生工厂</text>
+</svg>

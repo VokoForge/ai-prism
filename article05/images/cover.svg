@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="swiftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="50%" stop-color="#f7931e"/>
+      <stop offset="100%" stop-color="#ff6b35"/>
+    </linearGradient>
+    <linearGradient id="linuxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffcc00"/>
+      <stop offset="100%" stop-color="#ff9900"/>
+    </linearGradient>
+    <filter id="glow5">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow5">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bgGrad5)"/>
+
+  <!-- 背景网格 -->
+  <g stroke="#1a3a5c" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="120" x2="1280" y2="120"/>
+    <line x1="0" y1="240" x2="1280" y2="240"/>
+    <line x1="0" y1="360" x2="1280" y2="360"/>
+    <line x1="0" y1="480" x2="1280" y2="480"/>
+    <line x1="0" y1="600" x2="1280" y2="600"/>
+    <line x1="160" y1="0" x2="160" y2="720"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="480" y1="0" x2="480" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="800" y1="0" x2="800" y2="720"/>
+    <line x1="960" y1="0" x2="960" y2="720"/>
+    <line x1="1120" y1="0" x2="1120" y2="720"/>
+  </g>
+
+  <!-- 背景装饰 -->
+  <circle cx="200" cy="150" r="80" fill="#ff6b35" opacity="0.05"/>
+  <circle cx="1100" cy="580" r="120" fill="#4a9eff" opacity="0.05"/>
+
+  <!-- 苹果Logo形状的容器 -->
+  <g transform="translate(640, 340)">
+    <!-- 容器外框（苹果形状简化） -->
+    <path d="M-100,-80 Q-100,-130 0,-130 Q100,-130 100,-80 L100,80 Q100,130 0,130 Q-100,130 -100,80 Z" 
+          fill="#0d2a4a" stroke="#c0c0c0" stroke-width="4" filter="url(#glow5)" opacity="0.9"/>
+    <!-- 苹果叶子 -->
+    <ellipse cx="20" cy="-145" rx="15" ry="25" fill="#4caf50" transform="rotate(-30 20 -145)"/>
+    
+    <!-- 容器内部 -->
+    <rect x="-80" y="-60" width="160" height="160" rx="20" fill="#0a1f3a" opacity="0.8"/>
+    
+    <!-- Linux企鹅 -->
+    <g transform="translate(0, 20)">
+      <!-- 身体 -->
+      <ellipse cx="0" cy="0" rx="35" ry="45" fill="#333"/>
+      <!-- 肚子 -->
+      <ellipse cx="0" cy="10" rx="22" ry="28" fill="#fff"/>
+      <!-- 眼睛 -->
+      <ellipse cx="-12" cy="-20" rx="8" ry="10" fill="#fff"/>
+      <ellipse cx="12" cy="-20" rx="8" ry="10" fill="#fff"/>
+      <circle cx="-10" cy="-18" r="4" fill="#000"/>
+      <circle cx="10" cy="-18" r="4" fill="#000"/>
+      <!-- 嘴巴 -->
+      <ellipse cx="0" cy="-5" rx="10" ry="6" fill="#ff9900"/>
+      <!-- 脚 -->
+      <ellipse cx="-18" cy="48" rx="12" ry="8" fill="#ff9900"/>
+      <ellipse cx="18" cy="48" rx="12" ry="8" fill="#ff9900"/>
+    </g>
+    
+    <!-- Swift代码流光装饰 -->
+    <g opacity="0.8">
+      <rect x="-70" y="-50" width="50" height="4" rx="2" fill="#ff6b35" filter="url(#glow5)"/>
+      <rect x="-70" y="-40" width="80" height="4" rx="2" fill="#f7931e" opacity="0.7"/>
+      <rect x="-70" y="-30" width="35" height="4" rx="2" fill="#ff6b35" opacity="0.5"/>
+      <rect x="20" y="-50" width="60" height="4" rx="2" fill="#ff6b35" filter="url(#glow5)"/>
+      <rect x="20" y="-40" width="40" height="4" rx="2" fill="#f7931e" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Swift代码流光（周围） -->
+  <g opacity="0.6">
+    <rect x="200" y="200" width="120" height="6" rx="3" fill="#ff6b35" filter="url(#glow5)"/>
+    <rect x="220" y="220" width="80" height="4" rx="2" fill="#f7931e"/>
+    <rect x="180" y="240" width="100" height="4" rx="2" fill="#ff6b35" opacity="0.5"/>
+    
+    <rect x="960" y="180" width="100" height="6" rx="3" fill="#ff6b35" filter="url(#glow5)"/>
+    <rect x="980" y="200" width="70" height="4" rx="2" fill="#f7931e"/>
+    <rect x="940" y="220" width="90" height="4" rx="2" fill="#ff6b35" opacity="0.5"/>
+    
+    <rect x="300" y="500" width="80" height="4" rx="2" fill="#4a9eff" opacity="0.6"/>
+    <rect x="900" y="520" width="100" height="4" rx="2" fill="#4a9eff" opacity="0.5"/>
+  </g>
+
+  <!-- 银白色光芒装饰 -->
+  <g stroke="#c0c0c0" stroke-width="2" opacity="0.4">
+    <line x1="500" y1="200" x2="540" y2="240"/>
+    <line x1="780" y1="200" x2="740" y2="240"/>
+    <line x1="500" y1="480" x2="540" y2="440"/>
+    <line x1="780" y1="480" x2="740" y2="440"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="640" y="650" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="48" font-weight="bold" filter="url(#glow5)">Apple Container</text>
+  <text x="640" y="690" text-anchor="middle" fill="#c0c0c0" font-family="sans-serif" font-size="22" font-weight="bold" filter="url(#glow5)">macOS原生容器工具 · Apple官方出品</text>
+
+  <!-- 星星 -->
+  <g transform="translate(640, 80)">
+    <text x="0" y="0" text-anchor="middle" fill="#ffd700" font-family="sans-serif" font-size="20" filter="url(#glow5)">⭐ 36K+ Stars</text>
+  </g>
+</svg>

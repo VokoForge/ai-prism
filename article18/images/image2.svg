@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="100%" style="stop-color:#302b63"/>
+    </linearGradient>
+    <linearGradient id="cat1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="cat2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+    <linearGradient id="cat3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe"/>
+      <stop offset="100%" style="stop-color:#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="cat4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b"/>
+      <stop offset="100%" style="stop-color:#38f9d7"/>
+    </linearGradient>
+    <linearGradient id="cat5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a"/>
+      <stop offset="100%" style="stop-color:#fee140"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="400" y="45" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" font-family="sans-serif">AI技能市场 · 一站式产品工作台</text>
+
+  <!-- Category 1: 发现 -->
+  <rect x="30" y="70" width="230" height="130" rx="12" fill="url(#cat1)" opacity="0.15"/>
+  <rect x="30" y="70" width="230" height="130" rx="12" fill="none" stroke="url(#cat1)" stroke-width="2"/>
+  <text x="145" y="100" text-anchor="middle" fill="#667eea" font-size="16" font-weight="bold" font-family="sans-serif">需求发现</text>
+  <text x="145" y="125" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">用户访谈分析</text>
+  <text x="145" y="145" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">痛点挖掘</text>
+  <text x="145" y="165" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">市场调研生成</text>
+  <text x="145" y="185" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold" font-family="sans-serif">25个技能</text>
+
+  <!-- Category 2: 策略 -->
+  <rect x="285" y="70" width="230" height="130" rx="12" fill="url(#cat2)" opacity="0.15"/>
+  <rect x="285" y="70" width="230" height="130" rx="12" fill="none" stroke="url(#cat2)" stroke-width="2"/>
+  <text x="400" y="100" text-anchor="middle" fill="#f093fb" font-size="16" font-weight="bold" font-family="sans-serif">产品策略</text>
+  <text x="400" y="125" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">路线图规划</text>
+  <text x="400" y="145" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">优先级排序</text>
+  <text x="400" y="165" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">商业模型论证</text>
+  <text x="400" y="185" text-anchor="middle" fill="#f093fb" font-size="11" font-weight="bold" font-family="sans-serif">20个技能</text>
+
+  <!-- Category 3: 执行 -->
+  <rect x="540" y="70" width="230" height="130" rx="12" fill="url(#cat3)" opacity="0.15"/>
+  <rect x="540" y="70" width="230" height="130" rx="12" fill="none" stroke="url(#cat3)" stroke-width="2"/>
+  <text x="655" y="100" text-anchor="middle" fill="#4facfe" font-size="16" font-weight="bold" font-family="sans-serif">敏捷执行</text>
+  <text x="655" y="125" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">需求拆解</text>
+  <text x="655" y="145" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">PRD生成</text>
+  <text x="655" y="165" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">验收标准编写</text>
+  <text x="655" y="185" text-anchor="middle" fill="#4facfe" font-size="11" font-weight="bold" font-family="sans-serif">30个技能</text>
+
+  <!-- Category 4: 上线 -->
+  <rect x="30" y="220" width="230" height="130" rx="12" fill="url(#cat4)" opacity="0.15"/>
+  <rect x="30" y="220" width="230" height="130" rx="12" fill="none" stroke="url(#cat4)" stroke-width="2"/>
+  <text x="145" y="250" text-anchor="middle" fill="#43e97b" font-size="16" font-weight="bold" font-family="sans-serif">上线发布</text>
+  <text x="145" y="275" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">发布策略</text>
+  <text x="145" y="295" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">版本说明</text>
+  <text x="145" y="315" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">灰度方案</text>
+  <text x="145" y="335" text-anchor="middle" fill="#43e97b" font-size="11" font-weight="bold" font-family="sans-serif">15个技能</text>
+
+  <!-- Category 5: 增长 -->
+  <rect x="285" y="220" width="230" height="130" rx="12" fill="url(#cat5)" opacity="0.15"/>
+  <rect x="285" y="220" width="230" height="130" rx="12" fill="none" stroke="url(#cat5)" stroke-width="2"/>
+  <text x="400" y="250" text-anchor="middle" fill="#fa709a" font-size="16" font-weight="bold" font-family="sans-serif">数据增长</text>
+  <text x="400" y="275" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">A/B实验设计</text>
+  <text x="400" y="295" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">漏斗分析</text>
+  <text x="400" y="315" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">留存优化</text>
+  <text x="400" y="335" text-anchor="middle" fill="#fa709a" font-size="11" font-weight="bold" font-family="sans-serif">20个技能</text>
+
+  <!-- Integration arrow -->
+  <rect x="540" y="220" width="230" height="130" rx="12" fill="#ffffff" opacity="0.05"/>
+  <rect x="540" y="220" width="230" height="130" rx="12" fill="none" stroke="#ff6a00" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="655" y="255" text-anchor="middle" fill="#ff6a00" font-size="16" font-weight="bold" font-family="sans-serif">一键串联</text>
+  <text x="655" y="280" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">技能之间自动衔接</text>
+  <text x="655" y="300" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">上下文无缝传递</text>
+  <text x="655" y="320" text-anchor="middle" fill="#ccc" font-size="11" font-family="sans-serif">工作流全自动</text>
+  <text x="655" y="340" text-anchor="middle" fill="#ff6a00" font-size="11" font-weight="bold" font-family="sans-serif">社区持续贡献</text>
+</svg>

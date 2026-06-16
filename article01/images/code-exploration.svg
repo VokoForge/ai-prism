@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stepGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">Superpowers 代码探索流程</text>
+  <text x="400" y="65" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">从自然语言问题到精准代码定位</text>
+
+  <!-- Flow Steps -->
+  <!-- Step 1: Natural Language Query -->
+  <g transform="translate(130, 140)">
+    <rect x="-110" y="-35" width="220" height="70" rx="14" fill="url(#stepGrad1)" filter="url(#glow)"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="white">自然语言查询</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">"登录验证逻辑在哪？"</text>
+    <!-- Step number -->
+    <circle cx="-95" cy="-25" r="14" fill="white" opacity="0.2"/>
+    <text x="-95" y="-20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="white">1</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(260, 140)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#3b82f6" stroke-width="3" opacity="0.7"/>
+    <polygon points="50,0 42,-6 42,6" fill="#3b82f6" opacity="0.7"/>
+  </g>
+
+  <!-- Step 2: Semantic Parsing -->
+  <g transform="translate(400, 140)">
+    <rect x="-110" y="-35" width="220" height="70" rx="14" fill="url(#stepGrad2)" filter="url(#glow)"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="white">语义解析</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">提取关键词 + 意图识别</text>
+    <!-- Step number -->
+    <circle cx="-95" cy="-25" r="14" fill="white" opacity="0.2"/>
+    <text x="-95" y="-20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="white">2</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(530, 140)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#8b5cf6" stroke-width="3" opacity="0.7"/>
+    <polygon points="50,0 42,-6 42,6" fill="#8b5cf6" opacity="0.7"/>
+  </g>
+
+  <!-- Step 3: Static Analysis -->
+  <g transform="translate(670, 140)">
+    <rect x="-110" y="-35" width="220" height="70" rx="14" fill="url(#stepGrad3)" filter="url(#glow)"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="white">静态分析</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">AST解析 + 调用链追踪</text>
+    <!-- Step number -->
+    <circle cx="-95" cy="-25" r="14" fill="white" opacity="0.2"/>
+    <text x="-95" y="-20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="white">3</text>
+  </g>
+
+  <!-- Down arrow -->
+  <g transform="translate(670, 210)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#10b981" stroke-width="3" opacity="0.7"/>
+    <polygon points="0,40 -6,32 6,32" fill="#10b981" opacity="0.7"/>
+  </g>
+
+  <!-- Step 4: Code Location -->
+  <g transform="translate(670, 290)">
+    <rect x="-110" y="-35" width="220" height="70" rx="14" fill="url(#stepGrad4)" filter="url(#glow)"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="white">精准定位</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">返回文件路径 + 行号 + 代码</text>
+    <!-- Step number -->
+    <circle cx="-95" cy="-25" r="14" fill="white" opacity="0.2"/>
+    <text x="-95" y="-20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="white">4</text>
+  </g>
+
+  <!-- Left arrow -->
+  <g transform="translate(530, 290)">
+    <line x1="0" y1="0" x2="-50" y2="0" stroke="#f59e0b" stroke-width="3" opacity="0.7"/>
+    <polygon points="-50,0 -42,-6 -42,6" fill="#f59e0b" opacity="0.7"/>
+  </g>
+
+  <!-- Step 5: Explanation -->
+  <g transform="translate(400, 290)">
+    <rect x="-110" y="-35" width="220" height="70" rx="14" fill="url(#stepGrad1)" filter="url(#glow)"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="white">智能解释</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">生成自然语言说明 + 调用图</text>
+    <!-- Step number -->
+    <circle cx="-95" cy="-25" r="14" fill="white" opacity="0.2"/>
+    <text x="-95" y="-20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="white">5</text>
+  </g>
+
+  <!-- Left arrow -->
+  <g transform="translate(260, 290)">
+    <line x1="0" y1="0" x2="-50" y2="0" stroke="#3b82f6" stroke-width="3" opacity="0.7"/>
+    <polygon points="-50,0 -42,-6 -42,6" fill="#3b82f6" opacity="0.7"/>
+  </g>
+
+  <!-- Step 6: Output -->
+  <g transform="translate(130, 290)">
+    <rect x="-110" y="-35" width="220" height="70" rx="14" fill="url(#stepGrad2)" filter="url(#glow)"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="white">结构化输出</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">JSON / Markdown / Mermaid</text>
+    <!-- Step number -->
+    <circle cx="-95" cy="-25" r="14" fill="white" opacity="0.2"/>
+    <text x="-95" y="-20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="white">6</text>
+  </g>
+
+  <!-- Up arrow to close loop -->
+  <g transform="translate(130, 210)">
+    <line x1="0" y1="0" x2="0" y2="-40" stroke="#8b5cf6" stroke-width="3" opacity="0.7"/>
+    <polygon points="0,-40 -6,-32 6,-32" fill="#8b5cf6" opacity="0.7"/>
+  </g>
+
+  <!-- Code example box -->
+  <g transform="translate(400, 420)">
+    <rect x="-350" y="-50" width="700" height="100" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="-330" y="-25" font-family="monospace, 'Courier New'" font-size="11" fill="#94a3b8"># 示例输出</text>
+    <text x="-330" y="-5" font-family="monospace, 'Courier New'" font-size="11" fill="#34d399">{</text>
+    <text x="-310" y="12" font-family="monospace, 'Courier New'" font-size="11" fill="#e2e8f0">  "file": "auth/validator.py",</text>
+    <text x="-310" y="29" font-family="monospace, 'Courier New'" font-size="11" fill="#e2e8f0">  "lines": "45-67",</text>
+    <text x="-310" y="46" font-family="monospace, 'Courier New'" font-size="11" fill="#e2e8f0">  "function": "verify_password",</text>
+    <text x="-310" y="63" font-family="monospace, 'Courier New'" font-size="11" fill="#e2e8f0">  "call_chain": ["login", "verify_password", "hash_compare"]</text>
+    <text x="-330" y="80" font-family="monospace, 'Courier New'" font-size="11" fill="#34d399">}</text>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="50" cy="80" r="4" fill="#3b82f6" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="420" r="5" fill="#10b981" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="100" r="3" fill="#f59e0b" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

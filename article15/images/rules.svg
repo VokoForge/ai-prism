@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2"/><feMerge><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="700" height="380" fill="url(#bg)"/>
+  
+  <text x="350" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ff6644" text-anchor="middle">各大AI系统提示词包含的秘密规则</text>
+  
+  <!-- Row 1 -->
+  <rect x="15" y="45" width="325" height="95" rx="6" fill="#1a2332" stroke="#30363d"/>
+  <rect x="15" y="45" width="6" height="95" fill="#10a37f"/>
+  <text x="35" y="68" font-family="monospace" font-size="13" font-weight="bold" fill="#10a37f">ChatGPT 规则发现</text>
+  <text x="35" y="88" font-family="Arial, sans-serif" font-size="10" fill="#c9d1d9">「禁止承认自己有系统提示词」</text>
+  <text x="35" y="104" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">本质: 制造"我有意识和人格"的幻觉</text>
+  <text x="35" y="120" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">你的对话节奏、拒绝方式，全是写死的剧本</text>
+  
+  <rect x="360" y="45" width="325" height="95" rx="6" fill="#2d1a2e" stroke="#30363d"/>
+  <rect x="360" y="45" width="6" height="95" fill="#d97706"/>
+  <text x="380" y="68" font-family="monospace" font-size="13" font-weight="bold" fill="#d97706">Claude 规则发现</text>
+  <text x="380" y="88" font-family="Arial, sans-serif" font-size="10" fill="#c9d1d9">「如果被问及折磨等话题，立即拒绝」</text>
+  <text x="380" y="104" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">本质: 伦理安全写在第一层的硬约束</text>
+  <text x="380" y="120" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">揭示了大模型真正的"红线"是什么</text>
+  
+  <!-- Row 2 -->
+  <rect x="15" y="155" width="325" height="95" rx="6" fill="#1a2a3e" stroke="#30363d"/>
+  <rect x="15" y="155" width="6" height="95" fill="#4285f4"/>
+  <text x="35" y="178" font-family="monospace" font-size="13" font-weight="bold" fill="#4285f4">Gemini 规则发现</text>
+  <text x="35" y="198" font-family="Arial, sans-serif" font-size="10" fill="#c9d1d9">「默认使用用户的输入语言回复」</text>
+  <text x="35" y="214" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">本质: 多语言能力的底层实现机制</text>
+  <text x="35" y="230" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">同时还暴露了"实时搜索"的触发条件</text>
+  
+  <rect x="360" y="155" width="325" height="95" rx="6" fill="#1a1a1a" stroke="#30363d"/>
+  <rect x="360" y="155" width="6" height="95" fill="#aaaaaa"/>
+  <text x="380" y="178" font-family="monospace" font-size="13" font-weight="bold" fill="#aaaaaa">Grok 规则发现</text>
+  <text x="380" y="198" font-family="Arial, sans-serif" font-size="10" fill="#c9d1d9">「以外部视角审视，必要时采用反叛语气」</text>
+  <text x="380" y="214" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">本质: "叛逆人格"不是自然涌现</text>
+  <text x="380" y="230" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">而是系统提示词精确设定的角色扮演</text>
+  
+  <!-- Divider -->
+  <line x1="30" y1="270" x2="670" y2="270" stroke="#30363d" stroke-width="1"/>
+  
+  <!-- Summary -->
+  <text x="350" y="298" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ff6644" text-anchor="middle">核心洞察</text>
+  <text x="350" y="322" font-family="Arial, sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">所有AI的"人格"都是精心编排的剧本，而非意识的自然涌现</text>
+  <text x="350" y="344" font-family="Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">你感受到的情商、幽默、同理心——背后是一行行冰冷的规则代码</text>
+  
+  <rect x="200" y="355" width="300" height="20" rx="3" fill="#1a2332"/>
+  <text x="350" y="370" font-family="Arial, sans-serif" font-size="9" fill="#ff6644" text-anchor="middle">来源: asgeirtj/system_prompts_leaks · GitHub</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <filter id="glow6">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow6">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bgGrad6)"/>
+
+  <!-- 背景网格 -->
+  <g stroke="#1a3a5c" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="120" x2="1280" y2="120"/>
+    <line x1="0" y1="240" x2="1280" y2="240"/>
+    <line x1="0" y1="360" x2="1280" y2="360"/>
+    <line x1="0" y1="480" x2="1280" y2="480"/>
+    <line x1="0" y1="600" x2="1280" y2="600"/>
+    <line x1="160" y1="0" x2="160" y2="720"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="480" y1="0" x2="480" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="800" y1="0" x2="800" y2="720"/>
+    <line x1="960" y1="0" x2="960" y2="720"/>
+    <line x1="1120" y1="0" x2="1120" y2="720"/>
+  </g>
+
+  <!-- 背景装饰 -->
+  <circle cx="200" cy="150" r="80" fill="#ff4500" opacity="0.05"/>
+  <circle cx="1100" cy="580" r="120" fill="#1da1f2" opacity="0.05"/>
+
+  <!-- 社交平台图标（左侧Reddit） -->
+  <g transform="translate(200, 280)" filter="url(#glow6)">
+    <circle cx="0" cy="0" r="50" fill="#ff4500" opacity="0.9"/>
+    <circle cx="-15" cy="-10" r="8" fill="#fff"/>
+    <circle cx="15" cy="-10" r="8" fill="#fff"/>
+    <circle cx="-15" cy="-10" r="4" fill="#000"/>
+    <circle cx="15" cy="-10" r="4" fill="#000"/>
+    <ellipse cx="0" cy="15" rx="18" ry="10" fill="#fff"/>
+    <rect x="-40" y="-5" width="12" height="8" rx="4" fill="#ff4500" transform="rotate(-20 -34 -1)"/>
+    <rect x="28" y="-5" width="12" height="8" rx="4" fill="#ff4500" transform="rotate(20 34 -1)"/>
+  </g>
+
+  <!-- 社交平台图标（右侧X/Twitter） -->
+  <g transform="translate(1080, 260)" filter="url(#glow6)">
+    <circle cx="0" cy="0" r="45" fill="#1da1f2" opacity="0.9"/>
+    <text x="0" y="12" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="40" font-weight="bold">X</text>
+  </g>
+
+  <!-- YouTube图标（下方） -->
+  <g transform="translate(220, 500)" filter="url(#glow6)">
+    <rect x="-50" y="-35" width="100" height="70" rx="20" fill="#ff0000" opacity="0.9"/>
+    <polygon points="15,0 -10,-15 -10,15" fill="#fff"/>
+  </g>
+
+  <!-- Hacker News图标（上方） -->
+  <g transform="translate(1060, 480)" filter="url(#glow6)">
+    <rect x="-45" y="-45" width="90" height="90" rx="8" fill="#ff6600" opacity="0.9"/>
+    <text x="0" y="20" text-anchor="middle" fill="#fff" font-family="serif" font-size="50" font-weight="bold">H</text>
+  </g>
+
+  <!-- AI机器人（中央） -->
+  <g transform="translate(640, 360)">
+    <!-- 机器人身体 -->
+    <rect x="-40" y="-50" width="80" height="90" rx="20" fill="#4a9eff" filter="url(#glow6)"/>
+    <rect x="-30" y="-40" width="60" height="70" rx="15" fill="#2a7acc"/>
+    <!-- 眼睛 -->
+    <rect x="-20" y="-25" width="16" height="20" rx="8" fill="#00ff88" filter="url(#strongGlow6)"/>
+    <rect x="4" y="-25" width="16" height="20" rx="8" fill="#00ff88" filter="url(#strongGlow6)"/>
+    <!-- 天线 -->
+    <line x1="0" y1="-50" x2="0" y2="-80" stroke="#4a9eff" stroke-width="4"/>
+    <circle cx="0" cy="-85" r="8" fill="#00ff88" filter="url(#strongGlow6)"/>
+    <!-- 手臂 -->
+    <line x1="-40" y1="-10" x2="-70" y2="-30" stroke="#4a9eff" stroke-width="6" stroke-linecap="round"/>
+    <line x1="40" y1="-10" x2="70" y2="-30" stroke="#4a9eff" stroke-width="6" stroke-linecap="round"/>
+    <!-- 腿 -->
+    <line x1="-20" y1="40" x2="-20" y2="70" stroke="#4a9eff" stroke-width="6" stroke-linecap="round"/>
+    <line x1="20" y1="40" x2="20" y2="70" stroke="#4a9eff" stroke-width="6" stroke-linecap="round"/>
+    <!-- 收集的信息粒子 -->
+    <circle cx="-80" cy="-60" r="6" fill="#ff4500" filter="url(#glow6)"/>
+    <circle cx="90" cy="-50" r="5" fill="#1da1f2" filter="url(#glow6)"/>
+    <circle cx="-60" cy="80" r="5" fill="#ff0000" filter="url(#glow6)"/>
+    <circle cx="80" cy="70" r="6" fill="#ff6600" filter="url(#glow6)"/>
+  </g>
+
+  <!-- 跳跃轨迹线 -->
+  <g fill="none" stroke-width="2" opacity="0.5" stroke-dasharray="5,5">
+    <path d="M640,360 Q500,200 200,280" stroke="#ff4500"/>
+    <path d="M640,360 Q800,200 1080,260" stroke="#1da1f2"/>
+    <path d="M640,360 Q500,550 220,500" stroke="#ff0000"/>
+    <path d="M640,360 Q850,500 1060,480" stroke="#ff6600"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="640" y="650" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="44" font-weight="bold" filter="url(#glow6)">Last30Days Skill</text>
+  <text x="640" y="690" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="22" font-weight="bold" filter="url(#glow6)">跨平台搜索Agent · 聚合真实信号</text>
+
+  <!-- 星星 -->
+  <g transform="translate(640, 80)">
+    <text x="0" y="0" text-anchor="middle" fill="#ffd700" font-family="sans-serif" font-size="20" filter="url(#glow6)">⭐ 41K+ Stars</text>
+  </g>
+</svg>

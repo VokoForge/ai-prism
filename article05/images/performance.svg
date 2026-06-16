@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg5p" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d1f3c"/>
+    </linearGradient>
+    <filter id="glow5p">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg5p)" rx="12"/>
+
+  <text x="450" y="45" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="22" font-weight="bold">启动速度对比：Apple Container vs Docker Desktop</text>
+
+  <!-- 坐标轴 -->
+  <g stroke="#4a8ab8" stroke-width="2">
+    <line x1="100" y1="420" x2="800" y2="420"/>
+    <line x1="100" y1="420" x2="100" y2="80"/>
+  </g>
+
+  <!-- Y轴标签 -->
+  <g fill="#8ab8e8" font-family="sans-serif" font-size="12">
+    <text x="80" y="425" text-anchor="end">0s</text>
+    <text x="80" y="340" text-anchor="end">2s</text>
+    <text x="80" y="255" text-anchor="end">4s</text>
+    <text x="80" y="170" text-anchor="end">6s</text>
+    <text x="80" y="85" text-anchor="end">8s</text>
+  </g>
+
+  <!-- 网格线 -->
+  <g stroke="#1a3a5c" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="100" y1="340" x2="800" y2="340"/>
+    <line x1="100" y1="255" x2="800" y2="255"/>
+    <line x1="100" y1="170" x2="800" y2="170"/>
+    <line x1="100" y1="85" x2="800" y2="85"/>
+  </g>
+
+  <!-- Docker Desktop 柱状图 -->
+  <g transform="translate(250, 420)">
+    <rect x="-40" y="-340" width="80" height="340" rx="5" fill="#ff4444" opacity="0.7"/>
+    <text x="0" y="-350" text-anchor="middle" fill="#ff8888" font-family="sans-serif" font-size="14" font-weight="bold">8.2s</text>
+    <text x="0" y="25" text-anchor="middle" fill="#ff8888" font-family="sans-serif" font-size="13">Docker Desktop</text>
+  </g>
+
+  <!-- Apple Container 柱状图 -->
+  <g transform="translate(450, 420)">
+    <rect x="-40" y="-42" width="80" height="42" rx="5" fill="#00ff88" filter="url(#glow5p)"/>
+    <text x="0" y="-52" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="14" font-weight="bold">0.8s</text>
+    <text x="0" y="25" text-anchor="middle" fill="#00ff88" font-family="sans-serif" font-size="13">Apple Container</text>
+  </g>
+
+  <!-- 原生Linux 柱状图 -->
+  <g transform="translate(650, 420)">
+    <rect x="-40" y="-32" width="80" height="32" rx="5" fill="#4a9eff" opacity="0.8"/>
+    <text x="0" y="-42" text-anchor="middle" fill="#6ab0e8" font-family="sans-serif" size="14" font-weight="bold">0.5s</text>
+    <text x="0" y="25" text-anchor="middle" fill="#6ab0e8" font-family="sans-serif" font-size="13">原生 Linux</text>
+  </g>
+
+  <!-- 性能提升标注 -->
+  <g transform="translate(350, 200)">
+    <path d="M0,0 L80,-80" fill="none" stroke="#00ff88" stroke-width="2" marker-end="url(#arrow5p)"/>
+    <text x="40" y="-40" fill="#00ff88" font-family="sans-serif" font-size="14" font-weight="bold">快 10x</text>
+  </g>
+
+  <!-- 底部说明 -->
+  <g transform="translate(450, 480)">
+    <text x="0" y="0" text-anchor="middle" fill="#8ab8e8" font-family="sans-serif" font-size="12">测试环境：MacBook Pro M3 Pro, 18GB RAM, 容器镜像：ubuntu:latest</text>
+  </g>
+</svg>

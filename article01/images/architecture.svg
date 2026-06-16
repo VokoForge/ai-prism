@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skillGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skillGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skillGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">Superpowers 架构图</text>
+  <text x="400" y="65" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">AI Agent 技能框架核心组件</text>
+
+  <!-- Central Brain / Agent Core -->
+  <g transform="translate(400, 250)">
+    <!-- Outer glow ring -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.4" filter="url(#glow)">
+      <animate attributeName="r" values="75;85;75" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.2;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Main brain circle -->
+    <circle cx="0" cy="0" r="60" fill="url(#brainGrad)" filter="url(#strongGlow)"/>
+    <!-- Brain pattern lines -->
+    <path d="M -30 -10 Q -15 -25 0 -15 Q 15 -25 30 -10" fill="none" stroke="white" stroke-width="2" opacity="0.8"/>
+    <path d="M -35 5 Q -20 15 0 5 Q 20 15 35 5" fill="none" stroke="white" stroke-width="2" opacity="0.8"/>
+    <path d="M -25 20 Q -10 30 0 20 Q 10 30 25 20" fill="none" stroke="white" stroke-width="2" opacity="0.8"/>
+    <!-- Center text -->
+    <text x="0" y="5" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="white">Agent</text>
+    <text x="0" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">Core</text>
+  </g>
+
+  <!-- Skills around the brain -->
+  <!-- Skill 1: Code Explorer -->
+  <g transform="translate(180, 150)">
+    <rect x="-70" y="-30" width="140" height="60" rx="12" fill="url(#skillGrad1)" filter="url(#glow)"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="white">Code Explorer</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">代码探索</text>
+    <!-- Connection line to center -->
+    <line x1="70" y1="0" x2="150" y2="85" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Skill 2: Document Writer -->
+  <g transform="translate(620, 150)">
+    <rect x="-70" y="-30" width="140" height="60" rx="12" fill="url(#skillGrad2)" filter="url(#glow)"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="white">Doc Writer</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">文档生成</text>
+    <!-- Connection line to center -->
+    <line x1="-70" y1="0" x2="-150" y2="85" stroke="#10b981" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Skill 3: Test Runner -->
+  <g transform="translate(180, 350)">
+    <rect x="-70" y="-30" width="140" height="60" rx="12" fill="url(#skillGrad3)" filter="url(#glow)"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="white">Test Runner</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">测试执行</text>
+    <!-- Connection line to center -->
+    <line x1="70" y1="0" x2="150" y2="-85" stroke="#f59e0b" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Skill 4: Security Scanner -->
+  <g transform="translate(620, 350)">
+    <rect x="-70" y="-30" width="140" height="60" rx="12" fill="url(#skillGrad1)" filter="url(#glow)"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="white">Security Scan</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">安全扫描</text>
+    <!-- Connection line to center -->
+    <line x1="-70" y1="0" x2="-150" y2="-85" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Skill 5: ReAct Engine (top) -->
+  <g transform="translate(400, 120)">
+    <rect x="-65" y="-25" width="130" height="50" rx="10" fill="#8b5cf6" filter="url(#glow)"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="white">ReAct Engine</text>
+    <text x="0" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">推理引擎</text>
+    <!-- Connection line to center -->
+    <line x1="0" y1="25" x2="0" y2="65" stroke="#8b5cf6" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Skill 6: Context Manager (bottom) -->
+  <g transform="translate(400, 380)">
+    <rect x="-65" y="-25" width="130" height="50" rx="10" fill="#ec4899" filter="url(#glow)"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="white">Context Manager</text>
+    <text x="0" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">上下文管理</text>
+    <!-- Connection line to center -->
+    <line x1="0" y1="-25" x2="0" y2="-65" stroke="#ec4899" stroke-width="2" opacity="0.6" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Data flow arrows -->
+  <g fill="#94a3b8" opacity="0.5">
+    <circle cx="400" cy="250" r="3">
+      <animate attributeName="cx" values="340;250;340" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="250;200;250" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="250" r="3">
+      <animate attributeName="cx" values="460;550;460" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="250;300;250" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 450)">
+    <rect x="0" y="-10" width="12" height="12" rx="3" fill="url(#brainGrad)"/>
+    <text x="20" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">Agent Core</text>
+    <rect x="100" y="-10" width="12" height="12" rx="3" fill="url(#skillGrad1)"/>
+    <text x="120" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">Skill Module</text>
+    <line x1="220" y1="-4" x2="240" y2="-4" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="248" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#94a3b8">Data Flow</text>
+  </g>
+</svg>
